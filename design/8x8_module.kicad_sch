@@ -1408,6 +1408,12 @@
 		(uuid "015cdc2c-76ac-4223-8afa-8b38350d0bca")
 	)
 	(junction
+		(at 158.115 97.155)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "041803b7-5f52-4032-b20c-cf7cd5a7cc8c")
+	)
+	(junction
 		(at 84.455 43.815)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1432,22 +1438,28 @@
 		(uuid "09e3c7f3-dba7-4f00-b9f1-ffa24e9b66f6")
 	)
 	(junction
-		(at 158.115 68.58)
+		(at 180.34 78.105)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0a18c7ad-4aeb-4345-a773-e9d4c0ec5951")
+		(uuid "09e48feb-fdcd-41ce-baec-7587f4ae8aa7")
 	)
 	(junction
-		(at 172.72 59.69)
+		(at 180.34 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0affa2df-081a-4771-8375-a7982a239b55")
+		(uuid "0adf2f38-5327-4e88-bf7b-007b9edbeed1")
 	)
 	(junction
-		(at 142.875 106.045)
+		(at 180.34 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "13d6b2a7-8e93-4594-b406-1a99c0b78cdb")
+		(uuid "0da7f325-bda0-4e14-adc5-b8d318e7b304")
+	)
+	(junction
+		(at 180.34 97.155)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ffd8043-0289-4500-90cd-4202643c4e88")
 	)
 	(junction
 		(at 168.91 84.455)
@@ -1456,28 +1468,34 @@
 		(uuid "16b92e38-a1c6-4505-868a-5beb58fea72d")
 	)
 	(junction
-		(at 142.875 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "16dd153b-ad10-4e82-9586-f19c8297c257")
-	)
-	(junction
 		(at 38.1 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "173c617e-9bbc-4bab-8987-b58c077e3e18")
 	)
 	(junction
-		(at 135.255 115.57)
+		(at 135.255 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "18b203fe-226e-4d0f-beb2-2e3c9aed6d93")
+		(uuid "1be51b97-720b-4a66-b096-2fc3035cf291")
+	)
+	(junction
+		(at 165.1 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1c960822-118c-4704-af33-a5f1634373e5")
 	)
 	(junction
 		(at 168.91 122.555)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1dcdb620-381e-4e9a-ab37-87997c634f2c")
+	)
+	(junction
+		(at 142.875 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1dff93a9-3dcd-4807-bbba-9c1a637f36e1")
 	)
 	(junction
 		(at 176.53 103.505)
@@ -1492,46 +1510,16 @@
 		(uuid "20afb414-3ce7-4749-9181-6566d53ffd7c")
 	)
 	(junction
-		(at 135.255 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "21409a41-8e20-452e-a99b-8a7f8a70cd08")
-	)
-	(junction
-		(at 165.1 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "21b632ec-aaae-4ff9-870c-6d575eaff16c")
-	)
-	(junction
 		(at 184.15 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "242800f0-41f0-44ff-8370-44265eb3343d")
 	)
 	(junction
-		(at 135.255 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2859647b-9068-481c-9271-db00218df62f")
-	)
-	(junction
 		(at 176.53 75.565)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "29c15c54-1f5d-4be0-9449-7a876612ad75")
-	)
-	(junction
-		(at 180.34 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2aad89c9-2613-4df1-b83c-c7427b50d4c7")
-	)
-	(junction
-		(at 142.875 97.155)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2b309595-1109-401b-92dc-d9f2e194fdd0")
 	)
 	(junction
 		(at 184.15 102.87)
@@ -1552,22 +1540,28 @@
 		(uuid "2dedaefe-e1ba-41c0-a0b2-d57c2a08af0c")
 	)
 	(junction
-		(at 158.115 97.155)
+		(at 142.875 78.105)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "31c93cf8-440c-4a71-a346-dcbf0941076e")
+		(uuid "2fdf73c5-ff25-40cb-9a6f-af77ee35162a")
 	)
 	(junction
-		(at 135.255 106.045)
+		(at 180.34 106.045)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "35ee1ae1-8030-49c4-8e6d-005c317f8282")
+		(uuid "32f26d6f-6314-4a16-983a-e94c5b71e2a7")
 	)
 	(junction
-		(at 150.495 97.155)
+		(at 135.255 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "37e81d31-fd5e-491d-ae98-cdf0765896d7")
+		(uuid "354e7f76-cafc-4057-b32a-f6ac512388be")
+	)
+	(junction
+		(at 172.72 106.045)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "39cd7355-d6cb-42c3-8bb5-494a8803eccb")
 	)
 	(junction
 		(at 146.685 122.555)
@@ -1576,40 +1570,22 @@
 		(uuid "3a1e9285-f8eb-4000-bd04-55395dcbdaec")
 	)
 	(junction
-		(at 158.115 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3a7bbab4-8b51-4ae3-900f-1f6c1b25b121")
-	)
-	(junction
-		(at 165.1 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3b42308f-a437-4c1f-a6bf-b43d7619b90f")
-	)
-	(junction
 		(at 154.94 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3cd6eba1-9b33-4942-a65e-2c22054cf195")
 	)
 	(junction
-		(at 142.875 87.63)
+		(at 135.255 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3e1f87c6-274b-4d5b-a76f-c493ed2d4409")
+		(uuid "41c6d17e-de78-4fb5-a04e-40f0284da975")
 	)
 	(junction
-		(at 172.72 78.105)
+		(at 165.1 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "43be66a7-a23d-466b-be58-b8e201dd182e")
-	)
-	(junction
-		(at 135.255 97.155)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4588640d-fdf8-40d9-bf79-d0d035dcccae")
+		(uuid "46bb0317-8281-4641-9c8b-e7fa63594c7d")
 	)
 	(junction
 		(at 192.405 122.555)
@@ -1618,16 +1594,22 @@
 		(uuid "4a8bfa3e-78dd-4a7b-a67c-fe209709e199")
 	)
 	(junction
-		(at 150.495 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4cbb8835-21b3-4708-8735-8f7150739d24")
-	)
-	(junction
 		(at 154.94 103.505)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4e3eb820-012a-45ff-8891-8134a54e5ed0")
+	)
+	(junction
+		(at 135.255 97.155)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "503cf146-d6c4-48a6-bcf2-81195c012c84")
+	)
+	(junction
+		(at 135.255 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "504a94b6-5e87-43ad-84ad-d93a87af4738")
 	)
 	(junction
 		(at 184.15 112.395)
@@ -1642,22 +1624,10 @@
 		(uuid "53d5ddc0-28f0-4573-a92a-415f76ee8065")
 	)
 	(junction
-		(at 165.1 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5412c930-f94d-4b85-a722-33738c45e4be")
-	)
-	(junction
 		(at 139.065 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5510e614-6f75-4915-b765-834f4ca9a561")
-	)
-	(junction
-		(at 180.34 106.045)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5776ed16-8b96-4116-ac78-b9867c10a8ec")
 	)
 	(junction
 		(at 168.91 93.98)
@@ -1666,10 +1636,10 @@
 		(uuid "57b68d84-69e8-4cc5-a07f-9a9886ab8b93")
 	)
 	(junction
-		(at 150.495 59.69)
+		(at 142.875 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "59569fea-b898-4854-878f-cb451057a100")
+		(uuid "5ba81746-d776-4a7b-97a2-d79936313ce4")
 	)
 	(junction
 		(at 146.685 66.04)
@@ -1684,10 +1654,10 @@
 		(uuid "5fb5a47e-4109-45dd-835b-3fe5b9aa6758")
 	)
 	(junction
-		(at 158.115 106.045)
+		(at 150.495 106.045)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6571a2b2-23c2-421d-9c8a-b0ac59c82b84")
+		(uuid "613f486c-987f-4c5a-80ec-80087897cbf0")
 	)
 	(junction
 		(at 180.34 51.435)
@@ -1696,10 +1666,28 @@
 		(uuid "67122241-4b01-438a-acc9-b61a3a7a90a3")
 	)
 	(junction
+		(at 150.495 97.155)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "694edcfa-ab5e-414d-98bc-04f8c674d209")
+	)
+	(junction
 		(at 146.685 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "69f209c5-e105-4913-98cd-581ad41249f1")
+	)
+	(junction
+		(at 172.72 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6a530bd1-5fe6-4a4c-b69e-239994185be0")
+	)
+	(junction
+		(at 142.875 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6b99fe7c-e2c3-440d-b199-f4f857a5f29e")
 	)
 	(junction
 		(at 176.53 113.03)
@@ -1708,10 +1696,16 @@
 		(uuid "6bacf967-9b7b-4495-9847-a5e0804b9ca4")
 	)
 	(junction
-		(at 172.72 97.155)
+		(at 150.495 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6f5a3c46-3aeb-4aff-9748-b085a263babe")
+		(uuid "6f79d78a-7b49-4493-a263-298e5222a6eb")
+	)
+	(junction
+		(at 165.1 106.045)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "70f0bdec-cb5c-4ee5-97cf-848a77c8c700")
 	)
 	(junction
 		(at 146.685 103.505)
@@ -1720,10 +1714,10 @@
 		(uuid "7152d217-952e-459c-bd8b-b1b404bbf87c")
 	)
 	(junction
-		(at 158.115 78.105)
+		(at 180.34 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "742746ce-b78d-438e-83f3-b607c9a14e53")
+		(uuid "71caeeec-539f-4448-8cd1-73e3c2ff0852")
 	)
 	(junction
 		(at 176.53 84.455)
@@ -1738,40 +1732,22 @@
 		(uuid "7bce1e16-0196-48ef-be0a-862dcad8c4ac")
 	)
 	(junction
-		(at 180.34 97.155)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7d0186f2-56d5-42e2-aa64-851955560c3c")
-	)
-	(junction
 		(at 176.53 122.555)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "814ea73e-d887-4f7a-b19a-ccedd2be3c7a")
 	)
 	(junction
-		(at 165.1 115.57)
+		(at 135.255 78.105)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "865470ff-f88b-4056-aada-16351767fe09")
+		(uuid "85ffb723-af1f-4edf-b7ad-a3efdf9e3c5a")
 	)
 	(junction
-		(at 158.115 115.57)
+		(at 172.72 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "86f47514-fe38-4f60-9464-190714a6bb5f")
-	)
-	(junction
-		(at 172.72 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "87f47d03-21b8-4e35-85e2-e162bcbdc847")
-	)
-	(junction
-		(at 135.255 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "89d8eb54-ea93-46ff-87ac-174c07a4591a")
+		(uuid "864e2733-ae0c-40d9-8240-4709b158622d")
 	)
 	(junction
 		(at 139.065 64.77)
@@ -1792,16 +1768,10 @@
 		(uuid "8cdaed6c-7dba-4568-99eb-10dc281ae292")
 	)
 	(junction
-		(at 165.1 106.045)
+		(at 165.1 97.155)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8ea92254-48bb-4e7b-822c-7d4fd68004bc")
-	)
-	(junction
-		(at 180.34 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8fc772be-457b-4c83-9f92-c5bf284353e1")
+		(uuid "8f50108e-7ae2-46f1-8a5c-1a89daeac63f")
 	)
 	(junction
 		(at 161.29 66.04)
@@ -1840,28 +1810,34 @@
 		(uuid "986d8428-a051-4b3f-82e1-3eba031f3f58")
 	)
 	(junction
+		(at 172.72 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "99a36ae5-b491-4859-9d0c-3a991a83d165")
+	)
+	(junction
+		(at 150.495 78.105)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "99a862cb-63fe-47ce-bead-ebfc14ddf0b1")
+	)
+	(junction
 		(at 192.405 112.395)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9c7580c7-f0fd-402b-9014-f851f689b3ad")
 	)
 	(junction
-		(at 135.255 78.105)
+		(at 158.115 106.045)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9ccdf4dc-fdc3-4858-b03d-1d2242f2f857")
+		(uuid "9ce6f27f-c3c8-4b1b-929f-e3fdc6576782")
 	)
 	(junction
 		(at 161.29 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9dba45ff-6ad6-4502-b661-269b45bfd04b")
-	)
-	(junction
-		(at 150.495 106.045)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9fbabbe1-e05a-4245-aa14-a04e8eb2f4fe")
 	)
 	(junction
 		(at 165.1 51.435)
@@ -1876,16 +1852,22 @@
 		(uuid "a8fff281-23f6-49fa-a548-99e7f8268fec")
 	)
 	(junction
-		(at 142.875 78.105)
+		(at 165.1 78.105)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "adc8d831-af37-4a73-ac2e-8a6ce4052b7f")
+		(uuid "ac865d21-0ab1-46f3-ba03-2d4156e2aab3")
 	)
 	(junction
-		(at 150.495 68.58)
+		(at 165.1 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b106ce4c-7dba-4a1d-a47c-974d3363add8")
+		(uuid "af116a36-267b-4c02-8299-ec64ed6d553f")
+	)
+	(junction
+		(at 180.34 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b23ce851-c772-44e4-93d4-b5bd8908b00f")
 	)
 	(junction
 		(at 139.065 93.98)
@@ -1906,22 +1888,22 @@
 		(uuid "b5ce0e74-103f-4a48-b37b-48e00b5c55e8")
 	)
 	(junction
-		(at 150.495 78.105)
+		(at 142.875 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b6e977b3-a2e8-4b9e-b61a-c2e4c3b37af0")
-	)
-	(junction
-		(at 180.34 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b91c0bb8-e942-4e93-b05d-61a1945583ae")
+		(uuid "b8323a0c-8aaa-4ecc-8d15-1cc973f38c1f")
 	)
 	(junction
 		(at 150.495 51.435)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b98238e4-aec0-4d97-8647-17d0c1eeebee")
+	)
+	(junction
+		(at 158.115 78.105)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba03f57d-e45a-49c8-9bea-ee4487a09c75")
 	)
 	(junction
 		(at 168.91 103.505)
@@ -1936,22 +1918,22 @@
 		(uuid "ba6d8c47-04e7-4410-bb40-873017d1065d")
 	)
 	(junction
-		(at 180.34 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bac00fc4-c5ca-4b74-8902-b24739eba46f")
-	)
-	(junction
 		(at 139.065 103.505)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bbb971c0-8067-4130-9eea-0b69a110cd24")
 	)
 	(junction
-		(at 165.1 78.105)
+		(at 135.255 106.045)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bbd7f97c-dd7d-4d4c-ace0-d828600d8a61")
+		(uuid "bc1b4710-1b50-4cbc-b161-f68e47ce8029")
+	)
+	(junction
+		(at 158.115 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bcde1fc6-5053-4484-b09f-1ae514db2a71")
 	)
 	(junction
 		(at 192.405 93.98)
@@ -1966,6 +1948,18 @@
 		(uuid "bd3fb5f4-4231-4e7a-9806-94957e9ca702")
 	)
 	(junction
+		(at 158.115 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0e3fc66-53e4-480d-9cca-39c6ee62e908")
+	)
+	(junction
+		(at 142.875 106.045)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c272b7ae-72e8-4aed-a019-0b59371f2251")
+	)
+	(junction
 		(at 139.065 122.555)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1976,12 +1970,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9d87986-9eaa-4e78-afb4-953cf101cd86")
-	)
-	(junction
-		(at 172.72 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cdb3538f-0ee4-4bb4-a230-d9cb8e5e9b93")
 	)
 	(junction
 		(at 161.29 113.03)
@@ -2002,16 +1990,22 @@
 		(uuid "d36f6e25-40ce-4d1e-a2f0-23fd7d6356ef")
 	)
 	(junction
-		(at 172.72 87.63)
+		(at 150.495 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d4c65ec4-a345-4535-bfc9-31d1eed53002")
+		(uuid "d9540159-c8e4-4ee7-b072-f9d0b0c4867b")
 	)
 	(junction
-		(at 142.875 59.69)
+		(at 165.1 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "dc740ac7-642d-458b-9367-17b60545833e")
+		(uuid "db816830-777e-4d6b-8d18-067a64208f44")
+	)
+	(junction
+		(at 172.72 78.105)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dd1fc69e-d617-40f2-a7e7-e9440fc7f208")
 	)
 	(junction
 		(at 146.685 85.09)
@@ -2020,22 +2014,34 @@
 		(uuid "de6829fc-34ea-4332-9575-8591784a0853")
 	)
 	(junction
-		(at 180.34 78.105)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e0ee2194-7021-4530-9185-8642f7c3f9f3")
-	)
-	(junction
 		(at 176.53 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e34703b7-dde2-4a08-8ab5-10aa20c93446")
 	)
 	(junction
+		(at 158.115 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e43efce9-bb7f-414a-8685-7f1f4d1ab466")
+	)
+	(junction
+		(at 172.72 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e5cfabdd-73ea-4510-bd6e-1ccd3614fd2b")
+	)
+	(junction
 		(at 150.495 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e804501a-32ac-43cf-991c-bbea97d01a5d")
+		(uuid "e641d3b9-230b-48d8-828b-cb6d917338cb")
+	)
+	(junction
+		(at 172.72 97.155)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e8804c05-8d1c-4984-adf4-a39186beeb54")
 	)
 	(junction
 		(at 184.15 93.98)
@@ -2044,10 +2050,10 @@
 		(uuid "ebacac9a-b173-48d5-a7f6-a622a948e106")
 	)
 	(junction
-		(at 158.115 59.69)
+		(at 150.495 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ed5c4475-736b-41c7-b866-4a311fb26609")
+		(uuid "edabb53b-f900-4f12-ac45-266b8feeb58a")
 	)
 	(junction
 		(at 184.15 122.555)
@@ -2056,28 +2062,22 @@
 		(uuid "f1ff5b7d-a24c-4f34-a4ed-402e3896478b")
 	)
 	(junction
-		(at 172.72 106.045)
+		(at 158.115 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f54afb0d-ee2f-4cf7-b7c2-addcee709aa0")
+		(uuid "f215b69c-4cac-4229-9251-4fa3c9d10883")
+	)
+	(junction
+		(at 142.875 97.155)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f2fad1a0-7fd1-460f-bc86-1b67c427d2d0")
 	)
 	(junction
 		(at 135.255 51.435)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f5f725e3-9afc-4875-a076-b56ba44702f5")
-	)
-	(junction
-		(at 142.875 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f9d07676-6f54-4eb4-a670-e94d9ca0ec9a")
-	)
-	(junction
-		(at 165.1 97.155)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fa740465-810f-4fd8-95fc-1f9b23817268")
 	)
 	(junction
 		(at 161.29 85.09)
@@ -2090,6 +2090,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff810e67-ec8f-44bf-9e04-105ddbf24fb0")
+	)
+	(wire
+		(pts
+			(xy 142.875 87.63) (xy 150.495 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "001d490f-c1bf-41c4-824a-03c9ed3e2360")
 	)
 	(wire
 		(pts
@@ -2173,6 +2183,26 @@
 	)
 	(wire
 		(pts
+			(xy 142.875 97.155) (xy 150.495 97.155)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07db5a3f-e050-4275-b4b9-d2c5c3b12362")
+	)
+	(wire
+		(pts
+			(xy 172.72 78.105) (xy 180.34 78.105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07ecb678-d99f-4f56-bc8d-7b27ed63d96e")
+	)
+	(wire
+		(pts
 			(xy 142.875 111.125) (xy 142.875 113.03)
 		)
 		(stroke
@@ -2213,13 +2243,13 @@
 	)
 	(wire
 		(pts
-			(xy 135.255 87.63) (xy 142.875 87.63)
+			(xy 142.875 68.58) (xy 150.495 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0c784e5d-4350-4670-b345-1ba67e562397")
+		(uuid "0c1872a9-bc5d-4a20-bae5-314d11d7cc2b")
 	)
 	(wire
 		(pts
@@ -2240,6 +2270,16 @@
 			(type default)
 		)
 		(uuid "0d0a4c95-3dcc-4c9f-9166-6d9847f2277d")
+	)
+	(wire
+		(pts
+			(xy 142.875 106.045) (xy 150.495 106.045)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d508144-f6be-46f1-9083-da3e0a51d91a")
 	)
 	(wire
 		(pts
@@ -2283,16 +2323,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.255 87.63) (xy 128.905 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1141e002-972d-4cec-92f2-5259385258be")
-	)
-	(wire
-		(pts
 			(xy 50.165 50.165) (xy 38.1 50.165)
 		)
 		(stroke
@@ -2333,16 +2363,6 @@
 	)
 	(wire
 		(pts
-			(xy 150.495 115.57) (xy 158.115 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13452f40-cadf-4ee8-92d6-1920245b19e0")
-	)
-	(wire
-		(pts
 			(xy 142.875 73.66) (xy 142.875 74.93)
 		)
 		(stroke
@@ -2350,16 +2370,6 @@
 			(type default)
 		)
 		(uuid "13737d3d-ec73-4771-abc8-824b77752d3c")
-	)
-	(wire
-		(pts
-			(xy 180.34 68.58) (xy 187.96 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1380f5cc-d572-4ffc-923e-ee395f31a376")
 	)
 	(wire
 		(pts
@@ -2480,6 +2490,16 @@
 			(type default)
 		)
 		(uuid "1c623691-0af3-43a0-8fdc-8c32b2c1d491")
+	)
+	(wire
+		(pts
+			(xy 165.1 97.155) (xy 172.72 97.155)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d06c570-e0f3-481d-a5a3-507a61284a53")
 	)
 	(wire
 		(pts
@@ -2753,6 +2773,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.875 59.69) (xy 150.495 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f26cd26-4ebf-4766-9e02-0f16dbe7604d")
+	)
+	(wire
+		(pts
 			(xy 94.615 74.295) (xy 120.015 74.295)
 		)
 		(stroke
@@ -2783,6 +2813,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 87.63) (xy 180.34 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "346f1bfd-8d13-4a06-8ac0-753ffee62dd7")
+	)
+	(wire
+		(pts
 			(xy 176.53 56.515) (xy 176.53 66.04)
 		)
 		(stroke
@@ -2810,6 +2850,26 @@
 			(type default)
 		)
 		(uuid "36fb1cae-7459-42f2-af25-1226b8c08503")
+	)
+	(wire
+		(pts
+			(xy 158.115 115.57) (xy 165.1 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37ab16ba-7c32-4205-ac41-29b7fe68aa9e")
+	)
+	(wire
+		(pts
+			(xy 150.495 97.155) (xy 158.115 97.155)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38001687-ab88-429c-8855-dfec042624a2")
 	)
 	(wire
 		(pts
@@ -2860,16 +2920,6 @@
 			(type default)
 		)
 		(uuid "3bdaff0d-80fc-4bd1-8851-97d5455dd0b3")
-	)
-	(wire
-		(pts
-			(xy 142.875 78.105) (xy 150.495 78.105)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3cb84cc6-0453-4df6-9b96-3b0d6eb46c55")
 	)
 	(wire
 		(pts
@@ -2943,13 +2993,23 @@
 	)
 	(wire
 		(pts
-			(xy 150.495 87.63) (xy 158.115 87.63)
+			(xy 150.495 68.58) (xy 158.115 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3f7e11e4-9430-4b7e-ab91-45cfcceeab2e")
+		(uuid "41a2ec3f-0d21-4920-816f-1b77110571bb")
+	)
+	(wire
+		(pts
+			(xy 150.495 115.57) (xy 158.115 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42022db3-9a2a-45fd-9533-a543379580b6")
 	)
 	(wire
 		(pts
@@ -2960,6 +3020,16 @@
 			(type default)
 		)
 		(uuid "439938b0-73f8-41dc-8700-01a3494fe19b")
+	)
+	(wire
+		(pts
+			(xy 158.115 106.045) (xy 165.1 106.045)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43dbed3e-1777-4909-8867-ad535550bdc7")
 	)
 	(wire
 		(pts
@@ -2983,6 +3053,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.255 97.155) (xy 142.875 97.155)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "488eec51-d40a-4776-9b25-b514ba7717c0")
+	)
+	(wire
+		(pts
 			(xy 158.115 102.235) (xy 158.115 103.505)
 		)
 		(stroke
@@ -3000,16 +3080,6 @@
 			(type default)
 		)
 		(uuid "4bba3492-9b08-449b-be4e-12a3d5ee7274")
-	)
-	(wire
-		(pts
-			(xy 150.495 106.045) (xy 158.115 106.045)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c082529-7461-48ff-9965-833a05f1dd7d")
 	)
 	(wire
 		(pts
@@ -3033,16 +3103,6 @@
 	)
 	(wire
 		(pts
-			(xy 150.495 97.155) (xy 158.115 97.155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e3ea898-b9cb-4efa-b1a9-3d90c8234362")
-	)
-	(wire
-		(pts
 			(xy 176.53 84.455) (xy 176.53 93.98)
 		)
 		(stroke
@@ -3063,26 +3123,6 @@
 	)
 	(wire
 		(pts
-			(xy 123.825 115.57) (xy 135.255 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f2c7d4f-e83f-4b66-9970-0d0a8fcc8236")
-	)
-	(wire
-		(pts
-			(xy 165.1 68.58) (xy 172.72 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4fe14dfb-4ad0-4834-9c17-6fc55ae0eb1f")
-	)
-	(wire
-		(pts
 			(xy 187.96 84.455) (xy 192.405 84.455)
 		)
 		(stroke
@@ -3100,16 +3140,6 @@
 			(type default)
 		)
 		(uuid "51cd5846-9b8c-4b04-8d7f-eb521b02aaab")
-	)
-	(wire
-		(pts
-			(xy 135.255 97.155) (xy 142.875 97.155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "52715e56-beea-4226-995c-bc7c25b84f75")
 	)
 	(wire
 		(pts
@@ -3173,16 +3203,6 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 68.58) (xy 180.34 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5bd90a42-99e4-42f0-ad56-2f145a4c7168")
-	)
-	(wire
-		(pts
 			(xy 139.065 84.455) (xy 139.065 93.98)
 		)
 		(stroke
@@ -3190,26 +3210,6 @@
 			(type default)
 		)
 		(uuid "5c0d32a2-28a4-423c-a9ca-3f855a35b64c")
-	)
-	(wire
-		(pts
-			(xy 158.115 87.63) (xy 165.1 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c232973-2fc9-4cda-ba43-92c8777e7528")
-	)
-	(wire
-		(pts
-			(xy 150.495 78.105) (xy 158.115 78.105)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d7b9062-6f6b-4bdd-a8a4-3c918e5118e9")
 	)
 	(wire
 		(pts
@@ -3223,13 +3223,13 @@
 	)
 	(wire
 		(pts
-			(xy 158.115 115.57) (xy 165.1 115.57)
+			(xy 180.34 97.155) (xy 187.96 97.155)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "60ea2f88-dea7-4c3d-beed-5247f1afe7bd")
+		(uuid "5dcb4a13-f43a-4c43-b5cb-74a9151c1a0b")
 	)
 	(wire
 		(pts
@@ -3273,6 +3273,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 78.105) (xy 172.72 78.105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64dfbc23-0e72-490e-97d3-a690efec06da")
+	)
+	(wire
+		(pts
 			(xy 165.1 74.93) (xy 168.91 74.93)
 		)
 		(stroke
@@ -3293,16 +3303,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.255 97.155) (xy 127.635 97.155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6715abad-5d0d-4eda-b2bf-54ee25fc2810")
-	)
-	(wire
-		(pts
 			(xy 192.405 122.555) (xy 192.405 139.065)
 		)
 		(stroke
@@ -3320,6 +3320,16 @@
 			(type default)
 		)
 		(uuid "676c0fb2-6d32-4a88-81b7-69d9c7b99a47")
+	)
+	(wire
+		(pts
+			(xy 158.115 78.105) (xy 165.1 78.105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "679f3384-85c7-428e-968f-a7153e9e2b80")
 	)
 	(wire
 		(pts
@@ -3373,16 +3383,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.875 87.63) (xy 150.495 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6aab6852-8e0b-4d98-ab11-dfde5bf34796")
-	)
-	(wire
-		(pts
 			(xy 168.91 122.555) (xy 168.91 133.35)
 		)
 		(stroke
@@ -3403,43 +3403,23 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 59.69) (xy 180.34 59.69)
+			(xy 158.115 87.63) (xy 165.1 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6ce5e766-0d12-4162-b645-c7e00275b9a4")
+		(uuid "6cc835a0-6b25-4191-b8cb-9805f987a8e8")
 	)
 	(wire
 		(pts
-			(xy 165.1 106.045) (xy 172.72 106.045)
+			(xy 125.73 106.045) (xy 135.255 106.045)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6eb0c202-e814-4be4-abd4-4977ad249e78")
-	)
-	(wire
-		(pts
-			(xy 142.875 97.155) (xy 150.495 97.155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "709300fd-2668-489c-86bc-7a1b7d198379")
-	)
-	(wire
-		(pts
-			(xy 165.1 78.105) (xy 172.72 78.105)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7199757c-b100-4d7d-b81b-4f45a89020e5")
 	)
 	(wire
 		(pts
@@ -3460,6 +3440,16 @@
 			(type default)
 		)
 		(uuid "725e201d-b97d-4413-9244-753062edb4bb")
+	)
+	(wire
+		(pts
+			(xy 180.34 106.045) (xy 187.96 106.045)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "727146bc-08f8-4c63-8728-dcaa32eb8389")
 	)
 	(wire
 		(pts
@@ -3573,13 +3563,23 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 87.63) (xy 187.96 87.63)
+			(xy 128.905 87.63) (xy 135.255 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7a225af2-8c91-4c07-b655-c05d1d0320de")
+	)
+	(wire
+		(pts
+			(xy 150.495 106.045) (xy 158.115 106.045)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ad9cf87-d401-4867-b1f2-36def3bf73c5")
 	)
 	(wire
 		(pts
@@ -3603,6 +3603,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.115 59.69) (xy 165.1 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d0f4987-e637-47db-8736-d2a7eee71e28")
+	)
+	(wire
+		(pts
 			(xy 165.1 111.125) (xy 165.1 112.395)
 		)
 		(stroke
@@ -3610,6 +3620,16 @@
 			(type default)
 		)
 		(uuid "7d9ac32a-f8da-4816-b662-f414d435fe36")
+	)
+	(wire
+		(pts
+			(xy 172.72 115.57) (xy 180.34 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f4de76f-371d-4870-8cb6-648f60fee26c")
 	)
 	(wire
 		(pts
@@ -3653,16 +3673,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 78.105) (xy 187.96 78.105)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81d186b2-43e0-439e-ad76-610d9792ddf1")
-	)
-	(wire
-		(pts
 			(xy 168.91 93.98) (xy 168.91 103.505)
 		)
 		(stroke
@@ -3683,13 +3693,33 @@
 	)
 	(wire
 		(pts
-			(xy 158.115 78.105) (xy 165.1 78.105)
+			(xy 180.34 87.63) (xy 187.96 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8488a239-fb6a-4614-bf9d-b32251ca2a4f")
+	)
+	(wire
+		(pts
+			(xy 130.175 78.105) (xy 135.255 78.105)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "848a10a7-25b6-4226-beb4-1693443032cf")
+	)
+	(wire
+		(pts
+			(xy 172.72 68.58) (xy 180.34 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84a41cb3-c518-4faa-b635-00a6fc9ed3a4")
 	)
 	(wire
 		(pts
@@ -3773,6 +3803,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.255 106.045) (xy 142.875 106.045)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8820672c-6607-4628-9892-5041561822a4")
+	)
+	(wire
+		(pts
 			(xy 142.875 120.65) (xy 142.875 122.555)
 		)
 		(stroke
@@ -3783,6 +3823,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.875 115.57) (xy 150.495 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88817159-2be1-418d-a5ba-7cf7f20dcc48")
+	)
+	(wire
+		(pts
 			(xy 187.96 122.555) (xy 192.405 122.555)
 		)
 		(stroke
@@ -3790,6 +3840,26 @@
 			(type default)
 		)
 		(uuid "8892204e-aab7-4ed0-a923-3780b708bc4e")
+	)
+	(wire
+		(pts
+			(xy 165.1 59.69) (xy 172.72 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "890b9599-e351-4776-be0d-56e71ca43a0e")
+	)
+	(wire
+		(pts
+			(xy 172.72 97.155) (xy 180.34 97.155)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89b0d64f-04af-412e-b908-ee9d1c967b5d")
 	)
 	(wire
 		(pts
@@ -3823,13 +3893,13 @@
 	)
 	(wire
 		(pts
-			(xy 142.875 68.58) (xy 150.495 68.58)
+			(xy 172.72 106.045) (xy 180.34 106.045)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8c486162-b9dc-4e2f-9ac3-1d15cdfcc964")
+		(uuid "8e6006d7-e491-4782-874e-2b8384a55885")
 	)
 	(wire
 		(pts
@@ -3843,33 +3913,13 @@
 	)
 	(wire
 		(pts
-			(xy 158.115 97.155) (xy 165.1 97.155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8fc17c8e-077c-4608-a2df-39d4025dd7af")
-	)
-	(wire
-		(pts
-			(xy 135.255 68.58) (xy 142.875 68.58)
+			(xy 131.445 68.58) (xy 135.255 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8ff5f2be-a0a5-4c80-b5cd-91b66e613bf5")
-	)
-	(wire
-		(pts
-			(xy 135.255 106.045) (xy 142.875 106.045)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "905aa845-3ef8-4232-a1b4-f9c94bd16dd9")
 	)
 	(wire
 		(pts
@@ -3893,23 +3943,13 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 106.045) (xy 187.96 106.045)
+			(xy 165.1 115.57) (xy 172.72 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "933aedf8-6382-459e-941f-d63f8058b917")
-	)
-	(wire
-		(pts
-			(xy 165.1 59.69) (xy 172.72 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94023edf-cd8e-4fbe-aead-85644da6f977")
+		(uuid "9322a20a-b833-4dee-b612-42eceb63df81")
 	)
 	(wire
 		(pts
@@ -3943,16 +3983,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.875 59.69) (xy 150.495 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96cb38cb-5276-4dac-a017-e6559e1b67f7")
-	)
-	(wire
-		(pts
 			(xy 107.95 89.535) (xy 107.95 139.065)
 		)
 		(stroke
@@ -3983,16 +4013,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.255 59.69) (xy 132.715 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "999dc50d-6db2-41ee-9535-1f31e9f71fd6")
-	)
-	(wire
-		(pts
 			(xy 168.91 74.93) (xy 168.91 84.455)
 		)
 		(stroke
@@ -4000,6 +4020,16 @@
 			(type default)
 		)
 		(uuid "99a94612-9910-4493-8a2d-3408012887a4")
+	)
+	(wire
+		(pts
+			(xy 135.255 87.63) (xy 142.875 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b14c84f-ad80-47c1-8af8-ba79a634b599")
 	)
 	(wire
 		(pts
@@ -4113,43 +4143,13 @@
 	)
 	(wire
 		(pts
-			(xy 142.875 106.045) (xy 150.495 106.045)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3e88e17-0a1b-4381-ab9e-4b730328d70b")
-	)
-	(wire
-		(pts
-			(xy 172.72 115.57) (xy 180.34 115.57)
+			(xy 123.825 115.57) (xy 135.255 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a54a8b46-8b67-4fdf-8541-1aa2c434465f")
-	)
-	(wire
-		(pts
-			(xy 158.115 68.58) (xy 165.1 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5dc5425-d381-4de9-98ac-ebbfd59c6997")
-	)
-	(wire
-		(pts
-			(xy 172.72 97.155) (xy 180.34 97.155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a687cc0c-3397-4b2a-aff4-bf098f4c7219")
 	)
 	(wire
 		(pts
@@ -4160,16 +4160,6 @@
 			(type default)
 		)
 		(uuid "a6b39cbe-e7f8-4cb4-9e50-7e6eb8dbaad8")
-	)
-	(wire
-		(pts
-			(xy 172.72 106.045) (xy 180.34 106.045)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a87813f7-1d37-404e-a864-7c00e43befba")
 	)
 	(wire
 		(pts
@@ -4203,6 +4193,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.255 115.57) (xy 142.875 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9d68161-2272-4703-8909-37e668fc3f18")
+	)
+	(wire
+		(pts
 			(xy 130.175 78.105) (xy 130.175 59.055)
 		)
 		(stroke
@@ -4210,6 +4210,16 @@
 			(type default)
 		)
 		(uuid "abf6a2f1-da11-4502-a87c-33a0050cea87")
+	)
+	(wire
+		(pts
+			(xy 165.1 87.63) (xy 172.72 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acd23cb2-4c74-449d-ae61-de5163f6856e")
 	)
 	(wire
 		(pts
@@ -4233,16 +4243,6 @@
 	)
 	(wire
 		(pts
-			(xy 150.495 68.58) (xy 158.115 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b122e4be-2466-4b40-acea-10b980e504dd")
-	)
-	(wire
-		(pts
 			(xy 150.495 111.125) (xy 150.495 113.03)
 		)
 		(stroke
@@ -4260,16 +4260,6 @@
 			(type default)
 		)
 		(uuid "b1af72ee-a653-420d-be9d-cdac9d71ddbf")
-	)
-	(wire
-		(pts
-			(xy 180.34 115.57) (xy 187.96 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b2069169-e916-48e5-a4a1-503116f32b90")
 	)
 	(wire
 		(pts
@@ -4300,16 +4290,6 @@
 			(type default)
 		)
 		(uuid "b5e5091b-a470-482d-8666-1446f62e069a")
-	)
-	(wire
-		(pts
-			(xy 165.1 87.63) (xy 172.72 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6a654ad-42ff-4650-8829-8c01e341eaed")
 	)
 	(wire
 		(pts
@@ -4383,6 +4363,16 @@
 	)
 	(wire
 		(pts
+			(xy 150.495 78.105) (xy 158.115 78.105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba1d0020-455e-49b3-b2d5-8d00d4ece3f1")
+	)
+	(wire
+		(pts
 			(xy 180.34 102.235) (xy 180.34 102.87)
 		)
 		(stroke
@@ -4430,16 +4420,6 @@
 			(type default)
 		)
 		(uuid "bc733199-b978-4ac4-9bc0-68cddacf24f3")
-	)
-	(wire
-		(pts
-			(xy 165.1 97.155) (xy 172.72 97.155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bce50afd-63aa-4b66-92e7-0b3c5040735f")
 	)
 	(wire
 		(pts
@@ -4503,16 +4483,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.115 106.045) (xy 165.1 106.045)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1b56f0d-244d-45fb-8c50-56dc350b9d6d")
-	)
-	(wire
-		(pts
 			(xy 142.875 85.09) (xy 146.685 85.09)
 		)
 		(stroke
@@ -4523,6 +4493,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.115 97.155) (xy 165.1 97.155)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3394163-4435-4b90-b3f4-850e48643e35")
+	)
+	(wire
+		(pts
 			(xy 64.77 86.995) (xy 74.295 86.995)
 		)
 		(stroke
@@ -4530,6 +4510,16 @@
 			(type default)
 		)
 		(uuid "c33a5464-201b-4c7c-8674-599ffe17b51c")
+	)
+	(wire
+		(pts
+			(xy 165.1 106.045) (xy 172.72 106.045)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3bcfdce-835c-4769-93e7-6925e39fb87e")
 	)
 	(wire
 		(pts
@@ -4550,26 +4540,6 @@
 			(type default)
 		)
 		(uuid "c5ac9df3-41c4-4ee5-84fb-74dfe0b68aba")
-	)
-	(wire
-		(pts
-			(xy 135.255 68.58) (xy 131.445 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c64866aa-fa61-4948-9032-b0b28daa1258")
-	)
-	(wire
-		(pts
-			(xy 150.495 59.69) (xy 158.115 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c77b3350-3a2e-411d-aaf6-41ad223277e0")
 	)
 	(wire
 		(pts
@@ -4623,16 +4593,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 106.045) (xy 135.255 106.045)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbbe82e9-42fc-4e38-8462-7131d05f6e3f")
-	)
-	(wire
-		(pts
 			(xy 94.615 71.755) (xy 121.92 71.755)
 		)
 		(stroke
@@ -4650,6 +4610,16 @@
 			(type default)
 		)
 		(uuid "cd2dc0d9-bd58-48ad-9aa7-295bdb70d39c")
+	)
+	(wire
+		(pts
+			(xy 135.255 59.69) (xy 142.875 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd5e5b54-d767-4c31-80c8-65ff22229b2b")
 	)
 	(wire
 		(pts
@@ -4693,13 +4663,13 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 59.69) (xy 187.96 59.69)
+			(xy 135.255 78.105) (xy 142.875 78.105)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d0ef6e41-90a5-4ddc-a825-1139ebbb282e")
+		(uuid "cf84fec4-f0a9-49b3-9fb9-35666811e79d")
 	)
 	(wire
 		(pts
@@ -4753,16 +4723,6 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 78.105) (xy 180.34 78.105)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d47e8eb2-1676-498e-a5db-994c231a41d1")
-	)
-	(wire
-		(pts
 			(xy 94.615 86.995) (xy 110.49 86.995)
 		)
 		(stroke
@@ -4773,7 +4733,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 97.155) (xy 187.96 97.155)
+			(xy 127.635 97.155) (xy 135.255 97.155)
 		)
 		(stroke
 			(width 0)
@@ -4793,13 +4753,43 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 115.57) (xy 172.72 115.57)
+			(xy 180.34 115.57) (xy 187.96 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "db464466-81d7-4836-ad3b-9c1325f55d3e")
+		(uuid "d6973a93-1495-44c4-b195-1cf580709449")
+	)
+	(wire
+		(pts
+			(xy 180.34 78.105) (xy 187.96 78.105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d77cea59-0d12-4f46-bf75-79568ab81e2b")
+	)
+	(wire
+		(pts
+			(xy 142.875 78.105) (xy 150.495 78.105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da327d0d-865a-4611-b0e0-0567ae8c04be")
+	)
+	(wire
+		(pts
+			(xy 180.34 68.58) (xy 187.96 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db21804c-124e-4226-872f-e1dbe5d3e3d4")
 	)
 	(wire
 		(pts
@@ -4843,16 +4833,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.255 78.105) (xy 142.875 78.105)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e38bdd41-aed6-4854-9b12-62203dc3b841")
-	)
-	(wire
-		(pts
 			(xy 135.255 75.565) (xy 139.065 75.565)
 		)
 		(stroke
@@ -4873,17 +4853,17 @@
 	)
 	(wire
 		(pts
-			(xy 135.255 78.105) (xy 130.175 78.105)
+			(xy 165.1 68.58) (xy 172.72 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e5a02bec-f5da-4019-9d68-288500e8c2e6")
+		(uuid "e5a091d0-671b-45c4-922a-524ec7320ba6")
 	)
 	(wire
 		(pts
-			(xy 135.255 59.69) (xy 142.875 59.69)
+			(xy 132.715 59.69) (xy 135.255 59.69)
 		)
 		(stroke
 			(width 0)
@@ -4923,16 +4903,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.255 115.57) (xy 142.875 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e8bee322-9684-4472-bd2d-044f9e5a8027")
-	)
-	(wire
-		(pts
 			(xy 180.34 93.98) (xy 184.15 93.98)
 		)
 		(stroke
@@ -4940,6 +4910,16 @@
 			(type default)
 		)
 		(uuid "eb8b8ff2-f20f-4cc6-818d-1612e3884a50")
+	)
+	(wire
+		(pts
+			(xy 135.255 68.58) (xy 142.875 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec03e398-a3e7-4b66-a6a2-f54472a71cc9")
 	)
 	(wire
 		(pts
@@ -4953,13 +4933,13 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 87.63) (xy 180.34 87.63)
+			(xy 150.495 59.69) (xy 158.115 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ee7cbeb4-1d85-4162-9f8a-6ff11fb554bc")
+		(uuid "ee5f484a-399e-4d34-bbe8-a07454efff3a")
 	)
 	(wire
 		(pts
@@ -4970,6 +4950,16 @@
 			(type default)
 		)
 		(uuid "ee9a29a7-f2dc-4c47-930a-37d0894d63f2")
+	)
+	(wire
+		(pts
+			(xy 180.34 59.69) (xy 187.96 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f06e84ae-9f8b-4745-a35c-ff15416e020f")
 	)
 	(wire
 		(pts
@@ -4993,6 +4983,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.115 68.58) (xy 165.1 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1ff22fa-1707-4a38-871f-7262dce9a78a")
+	)
+	(wire
+		(pts
 			(xy 84.455 43.18) (xy 84.455 43.815)
 		)
 		(stroke
@@ -5010,6 +5010,16 @@
 			(type default)
 		)
 		(uuid "f42abd61-ae0f-4945-9309-8cb8fb3be909")
+	)
+	(wire
+		(pts
+			(xy 150.495 87.63) (xy 158.115 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f452b88b-ec86-4868-94f5-0b9a5921361b")
 	)
 	(wire
 		(pts
@@ -5040,6 +5050,16 @@
 			(type default)
 		)
 		(uuid "f65b84f2-2fc9-4779-97d2-9cd55583a9cd")
+	)
+	(wire
+		(pts
+			(xy 172.72 59.69) (xy 180.34 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f69c7933-d66a-4e8a-9d7c-418bbd94400a")
 	)
 	(wire
 		(pts
@@ -5103,16 +5123,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.875 115.57) (xy 150.495 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8ed3815-9ec3-42ca-ba50-99976a54127c")
-	)
-	(wire
-		(pts
 			(xy 172.72 66.04) (xy 176.53 66.04)
 		)
 		(stroke
@@ -5140,16 +5150,6 @@
 			(type default)
 		)
 		(uuid "fd99ce01-bdd2-4cfe-b371-5f000689f6c9")
-	)
-	(wire
-		(pts
-			(xy 158.115 59.69) (xy 165.1 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fde17132-78d9-44e1-9905-91c7690fe7ae")
 	)
 	(wire
 		(pts
@@ -5377,16 +5377,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 172.72 99.695 270)
+		(at 165.1 99.695 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "02b46896-d9cb-4245-99e5-d26ba6e76ca0")
-		(property "Reference" "D55"
-			(at 175.26 98.4884 90)
+		(uuid "00b31691-d51a-4092-ba6a-a16844f7a417")
+		(property "Reference" "D39"
+			(at 167.64 98.4884 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5395,7 +5395,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 175.26 101.0284 90)
+			(at 167.64 101.0284 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5404,8 +5404,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 172.72 99.695 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 165.1 99.695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5414,7 +5414,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 172.72 99.695 90)
+			(at 165.1 99.695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5423,7 +5423,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 172.72 99.695 0)
+			(at 165.1 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5432,7 +5432,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 172.72 99.695 0)
+			(at 165.1 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5441,15 +5441,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "9e6a2e98-addb-42cf-9de7-db60f9bce8b3")
+			(uuid "ec2068cb-4e33-43ee-a08a-ef4847aae347")
 		)
 		(pin "2"
-			(uuid "a9e65862-2974-4a9f-b942-a93067c4f9b8")
+			(uuid "f7ebf070-b7e0-4e8c-a57b-bd87de554836")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D55")
+					(reference "D39")
 					(unit 1)
 				)
 			)
@@ -5457,16 +5457,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 180.34 99.695 270)
+		(at 180.34 71.12 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "03c0800e-b5a7-40e0-a93d-ab730e5dcc08")
-		(property "Reference" "D59"
-			(at 182.88 98.4884 90)
+		(uuid "05091111-4339-4909-b152-7cdeac9cb7c9")
+		(property "Reference" "D52"
+			(at 182.88 69.9134 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5475,7 +5475,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 182.88 101.0284 90)
+			(at 182.88 72.4534 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5484,8 +5484,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 180.34 99.695 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 180.34 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5494,7 +5494,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 180.34 99.695 90)
+			(at 180.34 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5503,7 +5503,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 180.34 99.695 0)
+			(at 180.34 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5512,7 +5512,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 180.34 99.695 0)
+			(at 180.34 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5521,15 +5521,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "0d4ce57b-cdf6-486a-9aab-8422f39b62d7")
+			(uuid "25acbabc-25e1-46e5-adfd-03114f14d5b2")
 		)
 		(pin "2"
-			(uuid "2db8bb07-3a2f-4402-827a-ff1425ba04eb")
+			(uuid "8982b859-c266-40ad-8497-7db0330cb97f")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D59")
+					(reference "D52")
 					(unit 1)
 				)
 			)
@@ -5537,16 +5537,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 187.96 108.585 270)
+		(at 142.875 62.23 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0a87ab0d-e0e1-4c45-b4c2-395f897e26ec")
-		(property "Reference" "D64"
-			(at 190.5 107.3784 90)
+		(uuid "06ddc78b-6fa9-468f-879a-95a44f016b1a")
+		(property "Reference" "D11"
+			(at 145.415 61.0234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5555,7 +5555,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 190.5 109.9184 90)
+			(at 145.415 63.5634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5564,8 +5564,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 187.96 108.585 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 142.875 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5574,7 +5574,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 108.585 90)
+			(at 142.875 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5583,7 +5583,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 187.96 108.585 0)
+			(at 142.875 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5592,7 +5592,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 187.96 108.585 0)
+			(at 142.875 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5601,15 +5601,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "4feb0933-95c4-4600-b7e6-4ab18a4b58f7")
+			(uuid "bc1c2e7d-aa58-48a7-9da6-dda646270e7b")
 		)
 		(pin "2"
-			(uuid "e042dd94-a387-41e2-a5ed-01ef157e369f")
+			(uuid "635aa030-db53-4857-84b0-527f5963a138")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D64")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -5625,7 +5625,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "10f47458-cfb5-4df6-97fd-96d1cbb6b7ad")
-		(property "Reference" "C13"
+		(property "Reference" "C4"
 			(at 53.34 52.7112 0)
 			(effects
 				(font
@@ -5679,167 +5679,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 150.495 90.17 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "13937da8-8cae-4423-9eaa-b28326830a5c")
-		(property "Reference" "D42"
-			(at 153.035 88.9634 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 153.035 91.5034 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 150.495 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 150.495 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 150.495 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 150.495 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c0a2306d-7e87-4e29-9d3c-9be05a562957")
-		)
-		(pin "2"
-			(uuid "8275fee8-3e8f-4bab-9f7e-d30083919819")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D42")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 187.96 118.11 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "16de399d-bcf8-4ae0-a003-4f88d8de8f82")
-		(property "Reference" "D65"
-			(at 190.5 116.9034 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 190.5 119.4434 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 187.96 118.11 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 187.96 118.11 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 187.96 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 187.96 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a1487a3e-ea6e-46b4-8b7a-092b7e4a49f1")
-		)
-		(pin "2"
-			(uuid "695437cc-4977-4397-9361-844765800ae6")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D65")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -5854,8 +5694,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1bdf2357-a3f8-473e-be64-3edfd6aded24")
-		(property "Reference" "D48"
+		(uuid "15890a90-27f9-4fa8-9de0-5f4e5bb530fc")
+		(property "Reference" "D32"
 			(at 160.655 107.3784 90)
 			(effects
 				(font
@@ -5874,7 +5714,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 158.115 108.585 90)
 			(effects
 				(font
@@ -5911,15 +5751,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "a9f9c71d-66b1-42bc-a2b5-809b632260b1")
+			(uuid "b5636de5-76b8-4da0-9456-6dd63c45abd5")
 		)
 		(pin "2"
-			(uuid "77c7099e-a154-4fe1-be9d-1b850232a1eb")
+			(uuid "ce6fe1a4-0242-4a6b-8f80-b0fc2204a797")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D48")
+					(reference "D32")
 					(unit 1)
 				)
 			)
@@ -5927,16 +5767,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 165.1 80.645 270)
+		(at 142.875 80.645 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1da60321-1c71-436b-82b7-db9b588680ba")
-		(property "Reference" "D27"
-			(at 167.64 79.4384 90)
+		(uuid "1761ea98-4b53-4282-b5ec-d147f8cb8064")
+		(property "Reference" "D13"
+			(at 145.415 79.4384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5945,7 +5785,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 167.64 81.9784 90)
+			(at 145.415 81.9784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5954,8 +5794,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 165.1 80.645 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 142.875 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5964,7 +5804,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 80.645 90)
+			(at 142.875 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5973,7 +5813,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 165.1 80.645 0)
+			(at 142.875 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5982,7 +5822,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 165.1 80.645 0)
+			(at 142.875 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5991,10 +5831,410 @@
 			)
 		)
 		(pin "1"
-			(uuid "c39a3dc8-f779-4759-91c3-6b2db4a4da47")
+			(uuid "44c21ec7-ed68-48e1-9731-5608ae5946ec")
 		)
 		(pin "2"
-			(uuid "a366814e-7570-453f-b37f-cae60344c5c2")
+			(uuid "91d76b7d-268e-4905-9071-55cc8944dbba")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 187.96 99.695 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a5c075f-cf8e-4eec-9e6e-0db4495df318")
+		(property "Reference" "D63"
+			(at 190.5 98.4884 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 190.5 101.0284 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 187.96 99.695 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 187.96 99.695 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 187.96 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 187.96 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aab1d748-6644-4bb4-ba23-1653add60a9a")
+		)
+		(pin "2"
+			(uuid "5fa647e0-ec4e-4b7a-9c64-f5eb9c6e1db6")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D63")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 135.255 71.12 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22287875-148a-4e03-a781-7b136124917d")
+		(property "Reference" "D4"
+			(at 137.795 69.9134 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 137.795 72.4534 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 135.255 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 135.255 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 135.255 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 135.255 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a9c97772-32af-4940-a08c-baf838f4add7")
+		)
+		(pin "2"
+			(uuid "b0a85907-994f-4a9a-ab89-34ec98bdd204")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 158.115 99.695 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "240e9bb2-9528-4324-97cf-89d841e8ab82")
+		(property "Reference" "D31"
+			(at 160.655 98.4884 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 160.655 101.0284 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 158.115 99.695 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.115 99.695 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 158.115 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 158.115 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e8600270-8d82-4f66-85fa-549fff6e5e69")
+		)
+		(pin "2"
+			(uuid "bceacfa5-5959-4384-a01b-89fa65fa1349")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 180.34 99.695 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "24d29f62-94fd-4a98-aa35-5d16647efea2")
+		(property "Reference" "D55"
+			(at 182.88 98.4884 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 182.88 101.0284 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 180.34 99.695 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 180.34 99.695 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 180.34 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 180.34 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b95a4bd-26dd-4a48-bf65-6b4e8d56d04c")
+		)
+		(pin "2"
+			(uuid "f6f62e59-d9de-4c8d-8ee1-8bbfdead90fe")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 158.115 62.23 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a833747-27f2-4d18-95d4-6fe6c207aa04")
+		(property "Reference" "D27"
+			(at 160.655 61.0234 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 160.655 63.5634 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 158.115 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.115 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 158.115 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 158.115 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93962a69-597c-44b7-897a-c2ef4dd62dd1")
+		)
+		(pin "2"
+			(uuid "312664e1-bbd6-465a-b422-c90cc694207a")
 		)
 		(instances
 			(project "RocketClock"
@@ -6014,8 +6254,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "232e10b8-1a17-4b41-9c5e-e38e4870238a")
-		(property "Reference" "D46"
+		(uuid "2ce3c5c4-7fb5-44af-8c63-ecde0447b938")
+		(property "Reference" "D30"
 			(at 160.655 88.9634 90)
 			(effects
 				(font
@@ -6034,7 +6274,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 158.115 90.17 90)
 			(effects
 				(font
@@ -6071,15 +6311,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c2d6bff4-b095-4239-8fd0-9afe3ddcdb0a")
+			(uuid "6b97df54-4b72-4abc-a603-28e5983129fc")
 		)
 		(pin "2"
-			(uuid "11602ec4-bef3-4863-8945-d693fa33ab5d")
+			(uuid "efa462e3-b664-4034-909f-17b43f6a0e30")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D46")
+					(reference "D30")
 					(unit 1)
 				)
 			)
@@ -6087,16 +6327,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 135.255 90.17 270)
+		(at 180.34 108.585 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2574ea3f-04dc-443b-b50a-76816c201aad")
-		(property "Reference" "D34"
-			(at 137.795 88.9634 90)
+		(uuid "2d906b41-bf50-403e-b7cf-9413442a2d08")
+		(property "Reference" "D56"
+			(at 182.88 107.3784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6105,7 +6345,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 137.795 91.5034 90)
+			(at 182.88 109.9184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6114,8 +6354,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 135.255 90.17 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 180.34 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6124,7 +6364,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.255 90.17 90)
+			(at 180.34 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6133,7 +6373,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 135.255 90.17 0)
+			(at 180.34 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6142,7 +6382,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 135.255 90.17 0)
+			(at 180.34 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6151,15 +6391,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "2d7c65d4-f2be-4afb-9097-52c8641c584d")
+			(uuid "1de43186-a727-4c6d-bb15-31956176dc1f")
 		)
 		(pin "2"
-			(uuid "d0fc0150-3718-43fe-a6b5-284e07cf6bd8")
+			(uuid "52128953-f6f9-42a1-90e5-5937d208c70d")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D34")
+					(reference "D56")
 					(unit 1)
 				)
 			)
@@ -6167,16 +6407,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 158.115 62.23 270)
+		(at 165.1 62.23 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "283a7137-5139-4531-9b13-60e1f903ae4e")
-		(property "Reference" "D13"
-			(at 160.655 61.0234 90)
+		(uuid "2ff3f72e-6b69-4095-bfe3-2a264d776a05")
+		(property "Reference" "D35"
+			(at 167.64 61.0234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6185,7 +6425,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 160.655 63.5634 90)
+			(at 167.64 63.5634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6194,8 +6434,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 158.115 62.23 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 165.1 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6204,7 +6444,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 158.115 62.23 90)
+			(at 165.1 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6213,7 +6453,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 158.115 62.23 0)
+			(at 165.1 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6222,7 +6462,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 158.115 62.23 0)
+			(at 165.1 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6231,15 +6471,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "bc6a92e5-a4b3-4e8b-8ca6-6d205cd2110a")
+			(uuid "043e5b6e-ae46-4f8e-b0b2-b54f78971249")
 		)
 		(pin "2"
-			(uuid "1b54c0ea-3c5f-4dd6-b66d-527fb8903eb2")
+			(uuid "ef1a6740-b859-4cd5-adb9-2a7ed432e05c")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D13")
+					(reference "D35")
 					(unit 1)
 				)
 			)
@@ -6247,16 +6487,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 165.1 118.11 270)
+		(at 172.72 80.645 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2a6e64d9-2332-409f-8799-ec5937e6b250")
-		(property "Reference" "D53"
-			(at 167.64 116.9034 90)
+		(uuid "3a852d13-1bae-4157-a815-dedeb0798fc6")
+		(property "Reference" "D45"
+			(at 175.26 79.4384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6265,7 +6505,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 167.64 119.4434 90)
+			(at 175.26 81.9784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6274,8 +6514,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 165.1 118.11 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 172.72 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6284,7 +6524,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 118.11 90)
+			(at 172.72 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6293,7 +6533,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 165.1 118.11 0)
+			(at 172.72 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6302,7 +6542,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 165.1 118.11 0)
+			(at 172.72 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6311,15 +6551,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "62eb4191-12dc-4cb4-8a15-fb711f209258")
+			(uuid "5c87598a-bae0-45ea-9375-2e2c7bb54dfd")
 		)
 		(pin "2"
-			(uuid "e441724c-1384-4188-99e4-deb5403ce5c9")
+			(uuid "26d8495e-8251-4153-9ad3-99f24264500d")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D53")
+					(reference "D45")
 					(unit 1)
 				)
 			)
@@ -6327,16 +6567,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 142.875 99.695 270)
+		(at 165.1 71.12 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "31d13d95-9883-41a0-82e2-d55bd4d41d73")
-		(property "Reference" "D39"
-			(at 145.415 98.4884 90)
+		(uuid "3af6e97d-648d-4033-8887-77a6b7ade5e3")
+		(property "Reference" "D36"
+			(at 167.64 69.9134 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6345,7 +6585,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 145.415 101.0284 90)
+			(at 167.64 72.4534 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6354,8 +6594,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 142.875 99.695 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 165.1 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6364,7 +6604,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 142.875 99.695 90)
+			(at 165.1 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6373,7 +6613,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 142.875 99.695 0)
+			(at 165.1 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6382,7 +6622,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 142.875 99.695 0)
+			(at 165.1 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6391,15 +6631,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c0a5d1e7-7eca-44f1-aed4-d7b0f930ab1a")
+			(uuid "173f0d0a-394b-4a80-9a4b-f0e005c8e096")
 		)
 		(pin "2"
-			(uuid "60b30acc-f7cd-4ea5-a07d-6a3737422ed8")
+			(uuid "4c68594d-eef4-4a02-bad2-13d5b02ab665")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D39")
+					(reference "D36")
 					(unit 1)
 				)
 			)
@@ -6415,7 +6655,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b44d176-2e0f-4aec-8806-2621497b61eb")
-		(property "Reference" "D5"
+		(property "Reference" "D26"
 			(at 160.655 52.7684 90)
 			(effects
 				(font
@@ -6434,7 +6674,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 158.115 53.975 90)
 			(effects
 				(font
@@ -6479,87 +6719,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 142.875 108.585 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4915875e-0d19-4675-b41d-8c5a5a575d57")
-		(property "Reference" "D40"
-			(at 145.415 107.3784 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 145.415 109.9184 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 142.875 108.585 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 142.875 108.585 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 142.875 108.585 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 142.875 108.585 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "848ad951-105d-4ac3-8914-be638dbcffb1")
-		)
-		(pin "2"
-			(uuid "1f8f7cce-338a-49b4-af06-72e4aadcfd84")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D40")
+					(reference "D26")
 					(unit 1)
 				)
 			)
@@ -6575,7 +6735,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49b6d7a4-d574-41a0-8ab6-016e1e2e1a66")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR012"
 			(at 84.455 46.99 0)
 			(effects
 				(font
@@ -6625,7 +6785,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "#PWR024")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -6633,16 +6793,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 150.495 62.23 270)
+		(at 187.96 71.12 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4aa672de-9fd4-430a-b365-e21e2351526b")
-		(property "Reference" "D12"
-			(at 153.035 61.0234 90)
+		(uuid "4a21f650-8d05-44e7-a428-329a9f86072d")
+		(property "Reference" "D60"
+			(at 190.5 69.9134 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6651,7 +6811,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 153.035 63.5634 90)
+			(at 190.5 72.4534 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6660,8 +6820,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 150.495 62.23 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 187.96 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6670,7 +6830,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 150.495 62.23 90)
+			(at 187.96 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6679,7 +6839,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 150.495 62.23 0)
+			(at 187.96 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6688,7 +6848,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 150.495 62.23 0)
+			(at 187.96 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6697,15 +6857,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "e6b002f7-f79b-4372-9fa1-1714482e5418")
+			(uuid "f05925e2-c8ca-4ad5-b358-0c9015ed0534")
 		)
 		(pin "2"
-			(uuid "2c8beca4-25d7-483b-b195-c9534ea0d7c8")
+			(uuid "253c0cc6-2d5f-4176-82e5-4c13e7d87e66")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D12")
+					(reference "D60")
 					(unit 1)
 				)
 			)
@@ -6713,16 +6873,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 135.255 80.645 270)
+		(at 150.495 99.695 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4b153f7d-d7e9-42c1-b6c6-19f032553a49")
-		(property "Reference" "D19"
-			(at 137.795 79.4384 90)
+		(uuid "4e80f7d3-f1bd-46e8-9210-9f808af82556")
+		(property "Reference" "D23"
+			(at 153.035 98.4884 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6731,7 +6891,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 137.795 81.9784 90)
+			(at 153.035 101.0284 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6740,8 +6900,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 135.255 80.645 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 150.495 99.695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6750,7 +6910,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.255 80.645 90)
+			(at 150.495 99.695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6759,7 +6919,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 135.255 80.645 0)
+			(at 150.495 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6768,7 +6928,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 135.255 80.645 0)
+			(at 150.495 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6777,15 +6937,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "9d810672-5263-4369-b69d-3bb3387eb9e0")
+			(uuid "22672930-23ee-4e75-9823-9865c2dfb4d0")
 		)
 		(pin "2"
-			(uuid "ff55f27c-153b-46dc-8e58-670195cb20ad")
+			(uuid "b4200ae7-f424-482a-8777-d8d6044b1e65")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D19")
+					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -6801,7 +6961,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "509acbb0-fa57-4397-9a64-63c328933644")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR013"
 			(at 84.455 106.045 0)
 			(effects
 				(font
@@ -6851,7 +7011,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "#PWR020")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -6859,16 +7019,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 165.1 99.695 270)
+		(at 172.72 108.585 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "517fbd7d-78b3-4529-9ca5-3284bcc5becf")
-		(property "Reference" "D51"
-			(at 167.64 98.4884 90)
+		(uuid "53f3d7dd-b70d-4853-93bc-cb3266c5919f")
+		(property "Reference" "D48"
+			(at 175.26 107.3784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6877,7 +7037,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 167.64 101.0284 90)
+			(at 175.26 109.9184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6886,8 +7046,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 165.1 99.695 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 172.72 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6896,7 +7056,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 99.695 90)
+			(at 172.72 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6905,7 +7065,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 165.1 99.695 0)
+			(at 172.72 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6914,7 +7074,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 165.1 99.695 0)
+			(at 172.72 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6923,15 +7083,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "6a5d2447-c1ee-47e3-af9f-52240fc28db9")
+			(uuid "ad180926-17cb-4191-90aa-12e933d806bd")
 		)
 		(pin "2"
-			(uuid "0042b010-e289-4358-9ff2-2c40847d2328")
+			(uuid "654b2b9e-0288-4636-a0fe-70fbb7948fd1")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D51")
+					(reference "D48")
 					(unit 1)
 				)
 			)
@@ -6939,16 +7099,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 135.255 118.11 270)
+		(at 135.255 99.695 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "56aa4ebb-2a74-4c8a-8d04-14984d5072f1")
-		(property "Reference" "D37"
-			(at 137.795 116.9034 90)
+		(uuid "563fb92d-f8f9-426b-94a4-d7cf8e2a0de7")
+		(property "Reference" "D7"
+			(at 137.795 98.4884 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6957,7 +7117,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 137.795 119.4434 90)
+			(at 137.795 101.0284 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6966,8 +7126,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 135.255 118.11 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 135.255 99.695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6976,7 +7136,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.255 118.11 90)
+			(at 135.255 99.695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6985,7 +7145,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 135.255 118.11 0)
+			(at 135.255 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6994,7 +7154,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 135.255 118.11 0)
+			(at 135.255 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7003,15 +7163,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "4ee52fab-e7c9-4ba9-8990-21b606ce7b27")
+			(uuid "aabd4ec4-468c-415f-a2e2-1e16e918c0e5")
 		)
 		(pin "2"
-			(uuid "69e19a88-681c-4b69-82a3-12d99192a27f")
+			(uuid "c10b4e0b-06b0-4907-bfc9-f27094bd2028")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D37")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -7019,16 +7179,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 142.875 80.645 270)
+		(at 142.875 90.17 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5f7bc0bc-be9f-467e-8c8f-b82268cfde52")
-		(property "Reference" "D21"
-			(at 145.415 79.4384 90)
+		(uuid "5acde768-d758-4ac8-bb26-15209b434477")
+		(property "Reference" "D14"
+			(at 145.415 88.9634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7037,7 +7197,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 145.415 81.9784 90)
+			(at 145.415 91.5034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7046,8 +7206,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 142.875 80.645 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 142.875 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7056,7 +7216,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 142.875 80.645 90)
+			(at 142.875 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7065,7 +7225,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 142.875 80.645 0)
+			(at 142.875 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7074,7 +7234,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 142.875 80.645 0)
+			(at 142.875 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7083,15 +7243,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "0ceca6e0-b1b5-4a07-8fcf-e64d812a9402")
+			(uuid "6e2ff87b-1b5f-485f-8528-6292450ff185")
 		)
 		(pin "2"
-			(uuid "574dd5b0-31ec-4e13-aeb7-2f124a2b13e3")
+			(uuid "4b9ec7c3-f8c2-44e0-beff-e3be3725509e")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D21")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -7099,16 +7259,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 158.115 80.645 270)
+		(at 150.495 108.585 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "61ffd523-4272-458a-b3f3-ec509cc2492a")
-		(property "Reference" "D25"
-			(at 160.655 79.4384 90)
+		(uuid "622e0da5-7a2b-4344-b56a-43dfd5286e85")
+		(property "Reference" "D24"
+			(at 153.035 107.3784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7117,7 +7277,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 160.655 81.9784 90)
+			(at 153.035 109.9184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7126,8 +7286,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 158.115 80.645 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 150.495 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7136,7 +7296,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 158.115 80.645 90)
+			(at 150.495 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7145,7 +7305,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 158.115 80.645 0)
+			(at 150.495 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7154,7 +7314,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 158.115 80.645 0)
+			(at 150.495 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7163,15 +7323,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c1bc967c-c8e7-49f4-8367-f19565ceb971")
+			(uuid "6515155b-96ed-48fa-8640-335a76b4e972")
 		)
 		(pin "2"
-			(uuid "051bc29c-9a22-482d-8af4-2deca76cd775")
+			(uuid "39015765-6463-4e74-bf97-32b42753457a")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D25")
+					(reference "D24")
 					(unit 1)
 				)
 			)
@@ -7187,7 +7347,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "688ad25d-c03c-4a4c-a12a-b9685d310da2")
-		(property "Reference" "D3"
+		(property "Reference" "D10"
 			(at 145.415 52.7684 90)
 			(effects
 				(font
@@ -7206,7 +7366,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 142.875 53.975 90)
 			(effects
 				(font
@@ -7251,7 +7411,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D3")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -7267,7 +7427,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "69e169e7-bf9e-474d-b827-7641fceff350")
-		(property "Reference" "D7"
+		(property "Reference" "D42"
 			(at 175.26 52.7684 90)
 			(effects
 				(font
@@ -7286,7 +7446,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 172.72 53.975 90)
 			(effects
 				(font
@@ -7331,7 +7491,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D7")
+					(reference "D42")
 					(unit 1)
 				)
 			)
@@ -7339,16 +7499,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 150.495 80.645 270)
+		(at 180.34 118.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6a5431d2-6f69-41c5-b9ab-e8f5f38b7684")
-		(property "Reference" "D23"
-			(at 153.035 79.4384 90)
+		(uuid "6a95655e-94cb-4b3b-b817-552656b54018")
+		(property "Reference" "D57"
+			(at 182.88 116.9034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7357,7 +7517,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 153.035 81.9784 90)
+			(at 182.88 119.4434 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7366,8 +7526,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 150.495 80.645 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 180.34 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7376,7 +7536,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 150.495 80.645 90)
+			(at 180.34 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7385,7 +7545,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 150.495 80.645 0)
+			(at 180.34 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7394,7 +7554,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 150.495 80.645 0)
+			(at 180.34 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7403,15 +7563,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "3798d677-b946-4ebf-9379-95c830653617")
+			(uuid "eaadd46c-5977-47ad-b1aa-f7357671d7e0")
 		)
 		(pin "2"
-			(uuid "9e4ea51d-e07d-4df4-8c91-b957463b946b")
+			(uuid "505f3dc2-ba50-4bc8-8fb7-77cf2f7b282a")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D23")
+					(reference "D57")
 					(unit 1)
 				)
 			)
@@ -7419,16 +7579,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 180.34 90.17 270)
+		(at 172.72 71.12 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6b0662b7-aed1-417f-ad7e-3f682e0f4263")
-		(property "Reference" "D58"
-			(at 182.88 88.9634 90)
+		(uuid "6afb1bf5-29ea-4d34-9b5b-6501893589c1")
+		(property "Reference" "D44"
+			(at 175.26 69.9134 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7437,7 +7597,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 182.88 91.5034 90)
+			(at 175.26 72.4534 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7446,8 +7606,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 180.34 90.17 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 172.72 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7456,7 +7616,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 180.34 90.17 90)
+			(at 172.72 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7465,7 +7625,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 180.34 90.17 0)
+			(at 172.72 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7474,7 +7634,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 180.34 90.17 0)
+			(at 172.72 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7483,15 +7643,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "0a60031c-cd2c-40f1-ab59-02cfbb82d061")
+			(uuid "2585871e-66eb-4edd-bb14-44f9f314722f")
 		)
 		(pin "2"
-			(uuid "746af6de-8e3a-4788-8b58-758ad37f94e7")
+			(uuid "c3864ddf-d6e8-4e63-b300-0f482c0f8560")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D58")
+					(reference "D44")
 					(unit 1)
 				)
 			)
@@ -7499,96 +7659,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 180.34 71.12 270)
+		(at 150.495 71.12 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6b350939-c50d-45e4-a0ec-b7d5efc0016d")
-		(property "Reference" "D30"
-			(at 182.88 69.9134 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 182.88 72.4534 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 180.34 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 180.34 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 180.34 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 180.34 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "95f18a7c-d211-4af0-aa68-eba5861d6430")
-		)
-		(pin "2"
-			(uuid "9ba522b4-a230-4a1c-ae72-6bd1f63cc854")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 142.875 71.12 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7010d29b-abc0-41e8-a52c-034f7763d17c")
+		(uuid "7249202a-2488-4d5a-88b4-fd6d26c8e952")
 		(property "Reference" "D20"
-			(at 145.415 69.9134 90)
+			(at 153.035 69.9134 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7597,7 +7677,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 145.415 72.4534 90)
+			(at 153.035 72.4534 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7606,8 +7686,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 142.875 71.12 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 150.495 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7616,7 +7696,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 142.875 71.12 90)
+			(at 150.495 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7625,7 +7705,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 142.875 71.12 0)
+			(at 150.495 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7634,7 +7714,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 142.875 71.12 0)
+			(at 150.495 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7643,10 +7723,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "3d63b505-7fe7-4c7d-9055-216f8d32db88")
+			(uuid "01b1d6cb-713c-4d08-8f51-6a17ebed9352")
 		)
 		(pin "2"
-			(uuid "cdaaecea-0ddc-4d4a-920b-f222fe0e6f2f")
+			(uuid "51d67599-b019-4c6b-a6ef-5c5915f9e58c")
 		)
 		(instances
 			(project "RocketClock"
@@ -7659,16 +7739,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 187.96 90.17 270)
+		(at 172.72 99.695 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "7335bde8-ba52-43b1-b580-deb69ef10257")
-		(property "Reference" "D62"
-			(at 190.5 88.9634 90)
+		(uuid "74b0ac3a-45c5-4cee-af85-a794f7d53bf3")
+		(property "Reference" "D47"
+			(at 175.26 98.4884 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7677,7 +7757,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 190.5 91.5034 90)
+			(at 175.26 101.0284 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7686,8 +7766,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 187.96 90.17 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 172.72 99.695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7696,7 +7776,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 90.17 90)
+			(at 172.72 99.695 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7705,7 +7785,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 187.96 90.17 0)
+			(at 172.72 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7714,7 +7794,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 187.96 90.17 0)
+			(at 172.72 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7723,15 +7803,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "55115594-e9b6-47f6-8f3f-3b48416b0928")
+			(uuid "cf02759e-3596-4b7e-9391-d3c5ee689e49")
 		)
 		(pin "2"
-			(uuid "df696d7c-a2ad-4ca1-9c61-d9737f5670ac")
+			(uuid "748e6c71-a8cf-4597-97c2-ff445c9dc0f8")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D62")
+					(reference "D47")
 					(unit 1)
 				)
 			)
@@ -7747,7 +7827,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74fb4dba-49f7-4ac6-86df-47d8d7be3688")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR011"
 			(at 38.1 66.04 0)
 			(effects
 				(font
@@ -7797,7 +7877,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "#PWR026")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -7805,16 +7885,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 165.1 90.17 270)
+		(at 135.255 62.23 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "75a584cd-f0c4-4f4c-b295-1bb3d819d808")
-		(property "Reference" "D50"
-			(at 167.64 88.9634 90)
+		(uuid "78cb4e1d-6903-43ed-9d40-64f4e28a9eb1")
+		(property "Reference" "D3"
+			(at 137.795 61.0234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7823,7 +7903,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 167.64 91.5034 90)
+			(at 137.795 63.5634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7832,8 +7912,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 165.1 90.17 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 135.255 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7842,7 +7922,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 90.17 90)
+			(at 135.255 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7851,7 +7931,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 165.1 90.17 0)
+			(at 135.255 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7860,7 +7940,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 165.1 90.17 0)
+			(at 135.255 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7869,15 +7949,175 @@
 			)
 		)
 		(pin "1"
-			(uuid "13cbda9e-a2a4-4416-a754-78acc748a954")
+			(uuid "b9e76d02-df52-47bc-8534-5e253b94c933")
 		)
 		(pin "2"
-			(uuid "8933c6b8-acae-4514-98af-2fdd19ab9e7e")
+			(uuid "e29cf800-2378-41eb-aa90-78d1d396a731")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D50")
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 158.115 71.12 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7dbc461f-d825-43b1-9047-ba0e0da4ff9c")
+		(property "Reference" "D28"
+			(at 160.655 69.9134 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 160.655 72.4534 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 158.115 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.115 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 158.115 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 158.115 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "618cd2bf-ad18-419f-b7ea-586bd5c70910")
+		)
+		(pin "2"
+			(uuid "2dc81fe6-f949-4870-85a7-daf31b253073")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 165.1 108.585 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7f8d9a7b-b796-41be-a3ad-8f88ea81b995")
+		(property "Reference" "D40"
+			(at 167.64 107.3784 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 167.64 109.9184 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 165.1 108.585 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 108.585 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 165.1 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 165.1 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8e231dd9-87d1-4610-8552-5f60babd6313")
+		)
+		(pin "2"
+			(uuid "dcc0e668-1140-4b92-8990-b71729200e67")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D40")
 					(unit 1)
 				)
 			)
@@ -7893,7 +8133,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8053362e-01f3-4166-88ab-ff76a5f62bf5")
-		(property "Reference" "D6"
+		(property "Reference" "D34"
 			(at 167.64 52.7684 90)
 			(effects
 				(font
@@ -7912,7 +8152,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 165.1 53.975 90)
 			(effects
 				(font
@@ -7957,7 +8197,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D6")
+					(reference "D34")
 					(unit 1)
 				)
 			)
@@ -7965,16 +8205,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 172.72 71.12 270)
+		(at 150.495 80.645 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "820105b5-7cc3-4bc9-ade7-810b411ab806")
-		(property "Reference" "D28"
-			(at 175.26 69.9134 90)
+		(uuid "811adf4a-1642-4660-b35f-e1444a4a40fc")
+		(property "Reference" "D21"
+			(at 153.035 79.4384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7983,7 +8223,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 175.26 72.4534 90)
+			(at 153.035 81.9784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7992,8 +8232,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 172.72 71.12 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 150.495 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8002,7 +8242,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 172.72 71.12 90)
+			(at 150.495 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8011,7 +8251,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 172.72 71.12 0)
+			(at 150.495 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8020,7 +8260,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 172.72 71.12 0)
+			(at 150.495 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8029,15 +8269,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "7014721a-19e4-4004-a162-df308d44b64d")
+			(uuid "ef728a47-f60a-4f84-9744-bba7b9a38d1c")
 		)
 		(pin "2"
-			(uuid "e49f4d2f-fc0b-487f-bc4f-bc4395759b69")
+			(uuid "04259d1b-c60e-4048-b5bc-08ca54311796")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D28")
+					(reference "D21")
 					(unit 1)
 				)
 			)
@@ -8045,16 +8285,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 180.34 118.11 270)
+		(at 135.255 80.645 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8487b7be-c22a-43b7-be9c-6496399f41c2")
-		(property "Reference" "D61"
-			(at 182.88 116.9034 90)
+		(uuid "84a1ed52-9215-47bd-96e6-af635cd68046")
+		(property "Reference" "D5"
+			(at 137.795 79.4384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8063,7 +8303,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 182.88 119.4434 90)
+			(at 137.795 81.9784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8072,8 +8312,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 180.34 118.11 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 135.255 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8082,7 +8322,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 180.34 118.11 90)
+			(at 135.255 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8091,7 +8331,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 180.34 118.11 0)
+			(at 135.255 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8100,7 +8340,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 180.34 118.11 0)
+			(at 135.255 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8109,15 +8349,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "6b71377f-25cc-4967-b39d-bfb2c5306be7")
+			(uuid "5277b274-266d-4ec9-b2e8-927b438baf33")
 		)
 		(pin "2"
-			(uuid "a9b2e760-188f-41d4-93b9-d97d422040c6")
+			(uuid "1c1bc4ef-154e-453c-b372-a4ed0dfab48f")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D61")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -8125,16 +8365,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 142.875 62.23 270)
+		(at 165.1 90.17 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8d09b365-901a-4072-a641-2a762d3fc97d")
-		(property "Reference" "D11"
-			(at 145.415 61.0234 90)
+		(uuid "93a4268b-3e86-461d-9038-1628c9ce05a4")
+		(property "Reference" "D38"
+			(at 167.64 88.9634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8143,7 +8383,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 145.415 63.5634 90)
+			(at 167.64 91.5034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8152,8 +8392,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 142.875 62.23 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 165.1 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8162,7 +8402,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 142.875 62.23 90)
+			(at 165.1 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8171,7 +8411,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 142.875 62.23 0)
+			(at 165.1 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8180,7 +8420,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 142.875 62.23 0)
+			(at 165.1 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8189,15 +8429,95 @@
 			)
 		)
 		(pin "1"
-			(uuid "2e35daef-9f3e-43dc-a673-46daff9306eb")
+			(uuid "91e859e2-d18a-4927-9fb7-4d8ad5df1276")
 		)
 		(pin "2"
-			(uuid "b8b70a2e-027f-490d-8d55-1f91d91c7df6")
+			(uuid "47fb7dc5-8769-42cb-9005-0495526a9670")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D11")
+					(reference "D38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 135.255 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97973f43-0688-4f40-8607-9727c51bc5ac")
+		(property "Reference" "D9"
+			(at 137.795 116.9034 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 137.795 119.4434 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 135.255 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 135.255 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 135.255 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 135.255 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6ffe20b1-152d-476e-a90b-8ab2571f45e1")
+		)
+		(pin "2"
+			(uuid "e6379c6f-1a38-4a8d-b6d5-b164cef0cdba")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -8212,8 +8532,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9645afdc-b11e-4831-bf27-e912cda91443")
-		(property "Reference" "D49"
+		(uuid "9840819e-9f92-42b5-ac0f-aed494d27a3e")
+		(property "Reference" "D33"
 			(at 160.655 116.9034 90)
 			(effects
 				(font
@@ -8232,7 +8552,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 158.115 118.11 90)
 			(effects
 				(font
@@ -8269,15 +8589,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "2b86630d-c273-44a5-92a1-5e395b67099f")
+			(uuid "e024b2d3-5f6c-4cbd-b8c1-2665c3d7e761")
 		)
 		(pin "2"
-			(uuid "cced58f2-1b63-4509-8954-4853235baf2e")
+			(uuid "0285c32c-8dcb-4991-a00f-5223aae6e2ae")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D49")
+					(reference "D33")
 					(unit 1)
 				)
 			)
@@ -8285,16 +8605,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 150.495 108.585 270)
+		(at 187.96 108.585 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9732237d-2951-4e35-9030-edaa7794cbb1")
-		(property "Reference" "D44"
-			(at 153.035 107.3784 90)
+		(uuid "9be3f7f4-be9b-4fef-935a-2652e7362220")
+		(property "Reference" "D64"
+			(at 190.5 107.3784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8303,7 +8623,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 153.035 109.9184 90)
+			(at 190.5 109.9184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8312,8 +8632,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 150.495 108.585 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 187.96 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8322,7 +8642,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 150.495 108.585 90)
+			(at 187.96 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8331,7 +8651,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 150.495 108.585 0)
+			(at 187.96 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8340,7 +8660,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 150.495 108.585 0)
+			(at 187.96 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8349,175 +8669,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "e1bf7853-a07d-4997-b959-06d102c79e7f")
+			(uuid "9b6499af-ece4-47ce-af01-0d1d6a753de9")
 		)
 		(pin "2"
-			(uuid "368bf5d9-eb12-4809-96f9-684bae359ab0")
+			(uuid "f55f6a78-1b56-4b81-ae5f-f255b2eda9ba")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D44")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 180.34 62.23 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9babefe2-8cce-463c-a83c-8e19f74ec441")
-		(property "Reference" "D16"
-			(at 182.88 61.0234 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 182.88 63.5634 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 180.34 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 180.34 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 180.34 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 180.34 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "313b4588-e752-475e-80f7-25e5d0e308b4")
-		)
-		(pin "2"
-			(uuid "6d4757a8-29b0-42d4-9cf9-a373ad40fec7")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 158.115 71.12 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9c893ab2-0913-485f-8caa-76e665c42621")
-		(property "Reference" "D24"
-			(at 160.655 69.9134 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 160.655 72.4534 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 158.115 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 158.115 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 158.115 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 158.115 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a69c1364-82b5-4013-a4c2-168f74720c0b")
-		)
-		(pin "2"
-			(uuid "1b2acff5-9879-4fc8-9db0-cee042fe3370")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D24")
+					(reference "D64")
 					(unit 1)
 				)
 			)
@@ -8533,7 +8693,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ca9e176-c2cd-4637-9cb7-43eb16bda447")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR010"
 			(at 38.1 52.07 0)
 			(effects
 				(font
@@ -8583,7 +8743,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "#PWR025")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -8599,7 +8759,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e419ac4-f2fe-46ca-8647-33a69c943fa4")
-		(property "Reference" "D9"
+		(property "Reference" "D58"
 			(at 190.5 52.7684 90)
 			(effects
 				(font
@@ -8618,7 +8778,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 187.96 53.975 90)
 			(effects
 				(font
@@ -8663,7 +8823,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D9")
+					(reference "D58")
 					(unit 1)
 				)
 			)
@@ -8671,16 +8831,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 135.255 108.585 270)
+		(at 180.34 62.23 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a64b8687-dd1c-4f1e-9c31-20759ead0a3b")
-		(property "Reference" "D36"
-			(at 137.795 107.3784 90)
+		(uuid "9f50176d-2904-4e60-9fbd-60df764075fb")
+		(property "Reference" "D51"
+			(at 182.88 61.0234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8689,7 +8849,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 137.795 109.9184 90)
+			(at 182.88 63.5634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8698,8 +8858,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 135.255 108.585 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 180.34 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8708,7 +8868,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.255 108.585 90)
+			(at 180.34 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8717,7 +8877,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 135.255 108.585 0)
+			(at 180.34 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8726,7 +8886,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 135.255 108.585 0)
+			(at 180.34 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8735,95 +8895,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "d6ca2cfd-8731-4a8a-a8ed-4978eac2f485")
+			(uuid "396f394f-4b68-49d9-8a99-b6819e686b82")
 		)
 		(pin "2"
-			(uuid "cfe01984-aeb9-4239-a00a-1f4945998798")
+			(uuid "01931553-b920-4cf8-b75c-976c39bfa0df")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D36")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 180.34 108.585 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a97a6f15-5571-4ee5-a24b-c95a8e22a957")
-		(property "Reference" "D60"
-			(at 182.88 107.3784 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 182.88 109.9184 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 180.34 108.585 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 180.34 108.585 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 180.34 108.585 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 180.34 108.585 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a03bae0f-984b-4a12-8e8e-b090b7d16c1e")
-		)
-		(pin "2"
-			(uuid "4ea4b046-1c8d-4e1c-bb30-e829111c1bd9")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D60")
+					(reference "D51")
 					(unit 1)
 				)
 			)
@@ -8839,7 +8919,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a9ddf2f1-57a7-4689-b793-6d2db4d0e041")
-		(property "Reference" "U6"
+		(property "Reference" "U2"
 			(at 86.5983 44.45 0)
 			(effects
 				(font
@@ -8959,7 +9039,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "U6")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -8967,16 +9047,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 172.72 118.11 270)
+		(at 180.34 80.645 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "aaf3492d-5808-4986-ad94-9bb30afde122")
-		(property "Reference" "D57"
-			(at 175.26 116.9034 90)
+		(uuid "adf9c510-d265-4237-9f78-7f960686b8fe")
+		(property "Reference" "D53"
+			(at 182.88 79.4384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8985,7 +9065,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 175.26 119.4434 90)
+			(at 182.88 81.9784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8994,8 +9074,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 172.72 118.11 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 180.34 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9004,7 +9084,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 172.72 118.11 90)
+			(at 180.34 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9013,7 +9093,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 172.72 118.11 0)
+			(at 180.34 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9022,7 +9102,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 172.72 118.11 0)
+			(at 180.34 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9031,15 +9111,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "64d60271-4608-4fa0-826d-67d4bcebc3d0")
+			(uuid "67899011-fc97-47c0-8ddf-e836f1c22589")
 		)
 		(pin "2"
-			(uuid "041d0b2a-4e73-4b7d-9e7b-508cabfa88ad")
+			(uuid "2aa948a4-c94e-41f6-a1b7-dcbb0a6999bf")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D57")
+					(reference "D53")
 					(unit 1)
 				)
 			)
@@ -9047,16 +9127,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 165.1 71.12 270)
+		(at 187.96 80.645 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "abe644b2-4b76-4210-b8c2-464d2035dc8b")
-		(property "Reference" "D26"
-			(at 167.64 69.9134 90)
+		(uuid "b345cfe2-644d-4393-b7b4-f1c7bcecaca6")
+		(property "Reference" "D61"
+			(at 190.5 79.4384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9065,7 +9145,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 167.64 72.4534 90)
+			(at 190.5 81.9784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9074,8 +9154,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 165.1 71.12 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 187.96 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9084,7 +9164,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 71.12 90)
+			(at 187.96 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9093,7 +9173,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 165.1 71.12 0)
+			(at 187.96 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9102,7 +9182,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 165.1 71.12 0)
+			(at 187.96 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9111,255 +9191,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "7c89fdab-ad00-4995-b1d8-8f692146a8c7")
+			(uuid "2e381941-ffa6-4eb0-87c0-3cae91dd9b4c")
 		)
 		(pin "2"
-			(uuid "556e1fe8-2b4d-4922-89bd-b973a728331f")
+			(uuid "6f816572-c42c-4aa5-847a-cb6e97ef0f8b")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 172.72 62.23 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ad07dd9b-5fcf-414d-ad85-7a7c5761d0ca")
-		(property "Reference" "D15"
-			(at 175.26 61.0234 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 175.26 63.5634 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 172.72 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 172.72 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 172.72 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 172.72 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "52024db0-e59d-4d85-95dd-da5c7e8d3d53")
-		)
-		(pin "2"
-			(uuid "018d7f8a-205c-4a8b-98e7-abd4ee601ddf")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 150.495 118.11 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b17b014d-0645-40bc-8e87-e1457fa0c684")
-		(property "Reference" "D45"
-			(at 153.035 116.9034 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 153.035 119.4434 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 150.495 118.11 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 150.495 118.11 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 150.495 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 150.495 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "630a0bc4-3afa-4d24-b578-a7e764a18e66")
-		)
-		(pin "2"
-			(uuid "55f65709-3d57-4bef-a25b-2e2a84276e08")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D45")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 135.255 62.23 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b98abffe-26be-430b-a6de-45402e817f8c")
-		(property "Reference" "D10"
-			(at 137.795 61.0234 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 137.795 63.5634 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 135.255 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 135.255 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 135.255 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 135.255 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "083de0fd-5cd0-44b4-87a2-dbd8d5190074")
-		)
-		(pin "2"
-			(uuid "4d44f96a-7ef2-4877-91c4-3f131d7e5be5")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D10")
+					(reference "D61")
 					(unit 1)
 				)
 			)
@@ -9374,8 +9214,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ba0628c2-d5c1-4321-855c-4c10119e662b")
-		(property "Reference" "D54"
+		(uuid "b3849987-ce28-45f1-9d95-dab6bcd89b28")
+		(property "Reference" "D46"
 			(at 175.26 88.9634 90)
 			(effects
 				(font
@@ -9394,7 +9234,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 172.72 90.17 90)
 			(effects
 				(font
@@ -9431,15 +9271,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "dcd3ac05-c215-47da-8586-f179d36fe722")
+			(uuid "f54d9cd6-75d1-456d-bc2b-a628b4c754d1")
 		)
 		(pin "2"
-			(uuid "063d8a96-9444-4f4a-ba61-f0879919981d")
+			(uuid "df6e78c6-2bbe-4853-9ffb-0b37fa15882e")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D54")
+					(reference "D46")
 					(unit 1)
 				)
 			)
@@ -9447,16 +9287,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 165.1 108.585 270)
+		(at 158.115 80.645 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ba73f0a7-c47c-43f5-8be8-d9c8f7f3ba5f")
-		(property "Reference" "D52"
-			(at 167.64 107.3784 90)
+		(uuid "bac215be-9392-4d5c-b486-b1996e08e1fe")
+		(property "Reference" "D29"
+			(at 160.655 79.4384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9465,7 +9305,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 167.64 109.9184 90)
+			(at 160.655 81.9784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9474,8 +9314,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 165.1 108.585 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 158.115 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9484,7 +9324,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 108.585 90)
+			(at 158.115 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9493,7 +9333,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 165.1 108.585 0)
+			(at 158.115 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9502,7 +9342,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 165.1 108.585 0)
+			(at 158.115 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9511,15 +9351,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "7b75c8fc-fabf-4875-9b04-d8d3b1bdfa2d")
+			(uuid "f239a1fc-83bf-406f-9ab8-1ec457a6f223")
 		)
 		(pin "2"
-			(uuid "e55f829a-a03e-4343-90f9-ab6cae713c5b")
+			(uuid "61303826-10bd-4f96-9cb9-b9326e15ac4e")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D52")
+					(reference "D29")
 					(unit 1)
 				)
 			)
@@ -9527,16 +9367,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 150.495 99.695 270)
+		(at 150.495 62.23 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "bd07c893-2d0f-40b9-a64a-ef4c1696d351")
-		(property "Reference" "D43"
-			(at 153.035 98.4884 90)
+		(uuid "bd33a803-c9ca-4cf6-b20f-695e6bc756ce")
+		(property "Reference" "D19"
+			(at 153.035 61.0234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9545,7 +9385,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 153.035 101.0284 90)
+			(at 153.035 63.5634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9554,8 +9394,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 150.495 99.695 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 150.495 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9564,7 +9404,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 150.495 99.695 90)
+			(at 150.495 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9573,7 +9413,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 150.495 99.695 0)
+			(at 150.495 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9582,7 +9422,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 150.495 99.695 0)
+			(at 150.495 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9591,15 +9431,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "a5f339b4-8f3e-42d4-9816-c732b32abfa4")
+			(uuid "24352039-25c7-4528-91ac-639028a4db01")
 		)
 		(pin "2"
-			(uuid "2e184e73-7b2a-4ce0-bf3b-76e2df733035")
+			(uuid "4f91e379-0e8b-46d5-a97b-61f7aec3b71f")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D43")
+					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -9615,7 +9455,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd806d81-e8b5-49cf-92e8-12a3c3626a36")
-		(property "Reference" "D4"
+		(property "Reference" "D18"
 			(at 153.035 52.7684 90)
 			(effects
 				(font
@@ -9634,7 +9474,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 150.495 53.975 90)
 			(effects
 				(font
@@ -9679,166 +9519,6 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 142.875 90.17 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c4bffd63-2bb8-4d30-89a0-730c1dda244b")
-		(property "Reference" "D38"
-			(at 145.415 88.9634 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 145.415 91.5034 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 142.875 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 142.875 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 142.875 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 142.875 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6b88b545-c51f-45dc-af01-b6102fbb4968")
-		)
-		(pin "2"
-			(uuid "335f22f2-d480-48c5-b977-0df5dc4f9eb1")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 135.255 71.12 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c684e0cc-2e41-4013-81d3-ee0af17b37f8")
-		(property "Reference" "D18"
-			(at 137.795 69.9134 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 137.795 72.4534 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 135.255 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 135.255 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 135.255 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 135.255 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bbf833b1-5073-45d1-b02e-675de927db31")
-		)
-		(pin "2"
-			(uuid "e0f9b24e-8531-4419-8153-9536698cb644")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
 					(reference "D18")
 					(unit 1)
 				)
@@ -9847,16 +9527,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 187.96 62.23 270)
+		(at 187.96 90.17 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "cc2e6ca2-e93c-4a28-8085-34700fd6b95e")
-		(property "Reference" "D17"
-			(at 190.5 61.0234 90)
+		(uuid "c379dcf2-7cac-45bb-8afe-b021d2278050")
+		(property "Reference" "D62"
+			(at 190.5 88.9634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9865,7 +9545,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 190.5 63.5634 90)
+			(at 190.5 91.5034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9874,8 +9554,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 187.96 62.23 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 187.96 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9884,7 +9564,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 62.23 90)
+			(at 187.96 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9893,7 +9573,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 187.96 62.23 0)
+			(at 187.96 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9902,7 +9582,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 187.96 62.23 0)
+			(at 187.96 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9911,15 +9591,415 @@
 			)
 		)
 		(pin "1"
-			(uuid "a0e54241-0021-4b3e-9cf8-9677f11f8493")
+			(uuid "c2acac50-3522-4eba-a87d-e148c1022293")
 		)
 		(pin "2"
-			(uuid "ed42dc4e-0dc1-4885-abc3-45d4ba6fe42a")
+			(uuid "39e1c9ed-166f-4b23-9571-3d86d730c637")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D17")
+					(reference "D62")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 142.875 108.585 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5b3bcf2-1ca0-4159-a14e-c4e28961c838")
+		(property "Reference" "D16"
+			(at 145.415 107.3784 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 145.415 109.9184 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 142.875 108.585 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.875 108.585 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 142.875 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 142.875 108.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "64efa915-93b7-4402-88d0-ad5e18757907")
+		)
+		(pin "2"
+			(uuid "87ee8820-a89a-4789-8f07-3e7dd923b6c4")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 142.875 99.695 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c9390059-0c9e-4f38-b3de-a75fdd736358")
+		(property "Reference" "D15"
+			(at 145.415 98.4884 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 145.415 101.0284 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 142.875 99.695 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.875 99.695 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 142.875 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 142.875 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd591e0f-3cb0-47f2-8f6e-0d3115e7bfba")
+		)
+		(pin "2"
+			(uuid "a9198f46-43fc-4706-8ede-97968f251f0f")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 187.96 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c96dddda-48bd-4e7a-8d66-7bb76faa62b6")
+		(property "Reference" "D65"
+			(at 190.5 116.9034 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 190.5 119.4434 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 187.96 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 187.96 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 187.96 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 187.96 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "785a4010-8f9d-44e5-b41e-623117df67b3")
+		)
+		(pin "2"
+			(uuid "0e5f45cc-7db4-48c9-a4a5-932d308a5cb3")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D65")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 150.495 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "caafcb39-02e0-4cb8-b76b-317d954ee416")
+		(property "Reference" "D22"
+			(at 153.035 88.9634 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 153.035 91.5034 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 150.495 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 150.495 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 150.495 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 150.495 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9666cad-21c5-42a7-96c5-c78de5b4c02e")
+		)
+		(pin "2"
+			(uuid "88e47a9c-bcf5-45ff-95b1-c36f3969af5e")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 172.72 62.23 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cc92b7db-6a63-4218-b781-e27efc52a89c")
+		(property "Reference" "D43"
+			(at 175.26 61.0234 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 175.26 63.5634 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 172.72 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 172.72 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 172.72 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 172.72 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cda61a2c-60e1-4773-bcbf-3c1917379cc5")
+		)
+		(pin "2"
+			(uuid "e8f6b13c-7dde-4420-947c-906ae8294068")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D43")
 					(unit 1)
 				)
 			)
@@ -9935,7 +10015,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cea11500-fc3d-477a-b56b-943015107001")
-		(property "Reference" "R10"
+		(property "Reference" "R2"
 			(at 67.31 45.7199 0)
 			(effects
 				(font
@@ -9989,7 +10069,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "R10")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -10005,7 +10085,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ced4542e-7ee3-4a62-99b3-08358b8a6d8c")
-		(property "Reference" "C12"
+		(property "Reference" "C3"
 			(at 40.64 52.7112 0)
 			(effects
 				(font
@@ -10059,7 +10139,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "C12")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -10067,16 +10147,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 180.34 80.645 270)
+		(at 142.875 118.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d08f66db-f90b-4f1c-98ce-06142e9d36f5")
-		(property "Reference" "D31"
-			(at 182.88 79.4384 90)
+		(uuid "d0bc7bc5-4449-4e6a-883e-1fa03fcac1e8")
+		(property "Reference" "D17"
+			(at 145.415 116.9034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10085,7 +10165,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 182.88 81.9784 90)
+			(at 145.415 119.4434 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10094,8 +10174,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 180.34 80.645 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 142.875 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10104,7 +10184,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 180.34 80.645 90)
+			(at 142.875 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10113,7 +10193,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 180.34 80.645 0)
+			(at 142.875 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10122,7 +10202,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 180.34 80.645 0)
+			(at 142.875 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10131,15 +10211,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "97da0251-d279-4be1-877e-f7adfcbcd8b9")
+			(uuid "518b7e06-5f37-428b-876e-73c546ce4389")
 		)
 		(pin "2"
-			(uuid "ecc8dca6-11d5-451d-a509-529921b454c4")
+			(uuid "d44406a2-5a2d-49a7-96a0-2569cb0d54bb")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D31")
+					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -10147,16 +10227,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 172.72 80.645 270)
+		(at 142.875 71.12 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d223b846-5cdd-47f2-ac14-6f147fd5b52f")
-		(property "Reference" "D29"
-			(at 175.26 79.4384 90)
+		(uuid "d33ee1e9-460c-417a-a856-16ea69ec6cb1")
+		(property "Reference" "D12"
+			(at 145.415 69.9134 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10165,7 +10245,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 175.26 81.9784 90)
+			(at 145.415 72.4534 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10174,8 +10254,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 172.72 80.645 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 142.875 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10184,7 +10264,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 172.72 80.645 90)
+			(at 142.875 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10193,7 +10273,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 172.72 80.645 0)
+			(at 142.875 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10202,7 +10282,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 172.72 80.645 0)
+			(at 142.875 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10211,15 +10291,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "05420ce8-7a44-4c91-b4f5-087b70bb7458")
+			(uuid "be7955d9-9c56-4634-a000-ba5064c0e94c")
 		)
 		(pin "2"
-			(uuid "fc33fb85-1182-4cff-942d-c82a3b5e5681")
+			(uuid "118379f9-c3d6-49be-8b73-d44c01e09165")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D29")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -10227,16 +10307,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 172.72 108.585 270)
+		(at 165.1 80.645 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d8bb7e4a-8a08-4c46-b460-3228532a63c8")
-		(property "Reference" "D56"
-			(at 175.26 107.3784 90)
+		(uuid "da522977-184f-4f2d-b5d3-22e26b17a85b")
+		(property "Reference" "D37"
+			(at 167.64 79.4384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10245,7 +10325,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 175.26 109.9184 90)
+			(at 167.64 81.9784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10254,8 +10334,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 172.72 108.585 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 165.1 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10264,7 +10344,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 172.72 108.585 90)
+			(at 165.1 80.645 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10273,7 +10353,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 172.72 108.585 0)
+			(at 165.1 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10282,7 +10362,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 172.72 108.585 0)
+			(at 165.1 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10291,15 +10371,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "dd5713f3-fb55-40f7-bd49-799dab9b66d1")
+			(uuid "78c20f22-e854-443c-b2f1-6cb0ad95040a")
 		)
 		(pin "2"
-			(uuid "fc1b5b94-ac6a-4b93-a3d8-6e2f87fa4d63")
+			(uuid "778f9975-223f-4472-b8a5-a460b2a18c5d")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D56")
+					(reference "D37")
 					(unit 1)
 				)
 			)
@@ -10307,16 +10387,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 150.495 71.12 270)
+		(at 180.34 90.17 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "db79bea8-188d-4f48-beea-e91ae29c91fa")
-		(property "Reference" "D22"
-			(at 153.035 69.9134 90)
+		(uuid "e89be778-4d96-4481-b374-c87989ced112")
+		(property "Reference" "D54"
+			(at 182.88 88.9634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10325,7 +10405,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 153.035 72.4534 90)
+			(at 182.88 91.5034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10334,8 +10414,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 150.495 71.12 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 180.34 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10344,7 +10424,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 150.495 71.12 90)
+			(at 180.34 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10353,7 +10433,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 150.495 71.12 0)
+			(at 180.34 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10362,7 +10442,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 150.495 71.12 0)
+			(at 180.34 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10371,95 +10451,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "664d0fb1-20ba-4c58-be17-4a0d3f6ce157")
+			(uuid "a60cf153-c4fa-4e4d-bcac-ff53a44033d7")
 		)
 		(pin "2"
-			(uuid "9ba6cc96-1ecc-4de4-8916-90f7f9d471b1")
+			(uuid "9aa55a36-95ec-4003-b64d-f3c507dfbad0")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 187.96 99.695 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ea051732-3cc5-4fea-8f05-66602d7728a8")
-		(property "Reference" "D63"
-			(at 190.5 98.4884 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 190.5 101.0284 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 187.96 99.695 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 187.96 99.695 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 187.96 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 187.96 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b69e6076-ac8a-4650-9029-9bad06810f9f")
-		)
-		(pin "2"
-			(uuid "71cc90c9-43bb-4d40-a0bf-2b5b39b00c92")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D63")
+					(reference "D54")
 					(unit 1)
 				)
 			)
@@ -10475,7 +10475,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eabd856e-9ef7-4150-bba9-845471184924")
-		(property "Reference" "D8"
+		(property "Reference" "D50"
 			(at 182.88 52.7684 90)
 			(effects
 				(font
@@ -10494,7 +10494,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 180.34 53.975 90)
 			(effects
 				(font
@@ -10539,7 +10539,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D8")
+					(reference "D50")
 					(unit 1)
 				)
 			)
@@ -10547,16 +10547,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 165.1 62.23 270)
+		(at 135.255 90.17 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ee6f2ddc-3902-484b-82b7-8050bce3eb92")
-		(property "Reference" "D14"
-			(at 167.64 61.0234 90)
+		(uuid "eb5ad34b-62ee-44b4-a2dc-4ecc212c2ad5")
+		(property "Reference" "D6"
+			(at 137.795 88.9634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10565,7 +10565,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 167.64 63.5634 90)
+			(at 137.795 91.5034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10574,8 +10574,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 165.1 62.23 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 135.255 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10584,7 +10584,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 62.23 90)
+			(at 135.255 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10593,7 +10593,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 165.1 62.23 0)
+			(at 135.255 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10602,7 +10602,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 165.1 62.23 0)
+			(at 135.255 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10611,15 +10611,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "31999261-8ac0-4f80-9b53-e825f12da177")
+			(uuid "f162afbf-1adb-4c25-9de9-e27c18ca4564")
 		)
 		(pin "2"
-			(uuid "9fd02ec3-347d-4a15-8e96-b13e144abd9a")
+			(uuid "f7725de1-c141-44d2-8391-243668072905")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D14")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -10627,16 +10627,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 187.96 71.12 270)
+		(at 150.495 118.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "eeb493d9-8111-489c-8a5c-48bf0224330b")
-		(property "Reference" "D32"
-			(at 190.5 69.9134 90)
+		(uuid "ee992a61-963d-46f1-8726-8bb7da2f5527")
+		(property "Reference" "D25"
+			(at 153.035 116.9034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10645,7 +10645,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 190.5 72.4534 90)
+			(at 153.035 119.4434 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10654,8 +10654,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 187.96 71.12 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 150.495 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10664,7 +10664,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 71.12 90)
+			(at 150.495 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10673,7 +10673,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 187.96 71.12 0)
+			(at 150.495 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10682,7 +10682,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 187.96 71.12 0)
+			(at 150.495 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10691,15 +10691,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "68a92b96-f242-4361-b55e-68c4ef51562e")
+			(uuid "c75805bc-8c49-40b9-8743-effa88a01550")
 		)
 		(pin "2"
-			(uuid "a81bcfa7-53d0-499b-8285-d67c263aa348")
+			(uuid "b8d844de-16f3-4580-a106-4ae63caf5945")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D32")
+					(reference "D25")
 					(unit 1)
 				)
 			)
@@ -10707,16 +10707,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 158.115 99.695 270)
+		(at 187.96 62.23 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ef537c49-8bab-4c26-b165-cfc1003bdd94")
-		(property "Reference" "D47"
-			(at 160.655 98.4884 90)
+		(uuid "f52b1449-0120-4f29-a3c2-a989a734a6cc")
+		(property "Reference" "D59"
+			(at 190.5 61.0234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10725,7 +10725,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 160.655 101.0284 90)
+			(at 190.5 63.5634 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10734,8 +10734,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 158.115 99.695 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 187.96 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10744,7 +10744,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 158.115 99.695 90)
+			(at 187.96 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10753,7 +10753,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 158.115 99.695 0)
+			(at 187.96 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10762,7 +10762,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 158.115 99.695 0)
+			(at 187.96 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10771,15 +10771,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "114d4c97-6a69-4846-ab10-160e8d93e2a0")
+			(uuid "b453bca7-bcf2-4191-a80f-7816ef8bbdee")
 		)
 		(pin "2"
-			(uuid "08974115-e7e6-4e47-99b5-4193290ffea3")
+			(uuid "b94d119b-3159-4ccb-b1ec-bf9943c8758d")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D47")
+					(reference "D59")
 					(unit 1)
 				)
 			)
@@ -10787,16 +10787,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 142.875 118.11 270)
+		(at 165.1 118.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f8c55056-fb9f-4be7-bef8-4e687e0ad274")
+		(uuid "f7daa010-ac8a-4d79-af20-4d910ddf9a0b")
 		(property "Reference" "D41"
-			(at 145.415 116.9034 90)
+			(at 167.64 116.9034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10805,7 +10805,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 145.415 119.4434 90)
+			(at 167.64 119.4434 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10814,8 +10814,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 142.875 118.11 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 165.1 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10824,7 +10824,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 142.875 118.11 90)
+			(at 165.1 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10833,7 +10833,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 142.875 118.11 0)
+			(at 165.1 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10842,7 +10842,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 142.875 118.11 0)
+			(at 165.1 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10851,10 +10851,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "b1b5a53c-6915-459c-922d-89424530e76c")
+			(uuid "c13523a8-c8bb-4dfd-924f-55f96f601286")
 		)
 		(pin "2"
-			(uuid "4d5acf5a-3696-4740-85d0-955f22212811")
+			(uuid "e9c3a9b3-f480-4727-b8e3-13237b5a3ac5")
 		)
 		(instances
 			(project "RocketClock"
@@ -10867,16 +10867,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
-		(at 187.96 80.645 270)
+		(at 135.255 108.585 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f91e4e8a-e048-4893-b2d6-b7b7930ce700")
-		(property "Reference" "D33"
-			(at 190.5 79.4384 90)
+		(uuid "f8e12b19-7948-4256-adc6-642a5f918392")
+		(property "Reference" "D8"
+			(at 137.795 107.3784 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10885,7 +10885,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 190.5 81.9784 90)
+			(at 137.795 109.9184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10894,8 +10894,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 187.96 80.645 90)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 135.255 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10904,7 +10904,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 80.645 90)
+			(at 135.255 108.585 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10913,7 +10913,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
-			(at 187.96 80.645 0)
+			(at 135.255 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10922,7 +10922,7 @@
 			)
 		)
 		(property "Sim.Pin" "1=K 2=A"
-			(at 187.96 80.645 0)
+			(at 135.255 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10931,95 +10931,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "e5d858d2-ba4c-48e6-a290-7cb945e0f6b6")
+			(uuid "a8e77313-fe3a-48c2-8f66-acfa89812c2e")
 		)
 		(pin "2"
-			(uuid "582e7f41-13d3-47fe-a7db-5de3d2657df2")
+			(uuid "2e1bba3c-d168-442f-a16b-79671939a9cc")
 		)
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D33")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_Small")
-		(at 135.255 99.695 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fdc084e0-9d47-4fb0-9a7d-f3141670a615")
-		(property "Reference" "D35"
-			(at 137.795 98.4884 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 137.795 101.0284 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
-			(at 135.255 99.695 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 135.255 99.695 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 135.255 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 135.255 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "78e8ee90-8722-4f36-92b4-52e70ea3cbc0")
-		)
-		(pin "2"
-			(uuid "218e0bbf-150f-450c-91f8-22df26feca5b")
-		)
-		(instances
-			(project "RocketClock"
-				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D35")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -11054,7 +10974,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 135.255 53.975 90)
 			(effects
 				(font
@@ -11100,6 +11020,86 @@
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 172.72 118.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ff83baf2-e326-47f8-af23-cbbdd788a0da")
+		(property "Reference" "D49"
+			(at 175.26 116.9034 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Green"
+			(at 175.26 119.4434 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 172.72 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 172.72 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 172.72 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pin" "1=K 2=A"
+			(at 172.72 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "33dbf964-3962-4052-a95b-b3e224806fed")
+		)
+		(pin "2"
+			(uuid "6a240698-cc5d-4f11-9e62-1bd6add451b0")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
+					(reference "D49")
 					(unit 1)
 				)
 			)

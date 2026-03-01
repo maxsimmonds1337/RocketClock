@@ -631,10 +631,6 @@
       "USB_2_UART"
     ],
     [
-      "0e42df4e-00bd-42cc-bca6-b98ad5579244",
-      "buzzer"
-    ],
-    [
       "31ceb4ad-97ae-4994-9156-dc2819dfe7a6",
       "MCU"
     ]

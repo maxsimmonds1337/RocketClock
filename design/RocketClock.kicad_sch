@@ -1090,6 +1090,22 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "I2C Pull Ups"
+		(exclude_from_sim no)
+		(at 191.77 38.735 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8a66ac2b-65f7-42ea-a37f-0e08946269f5")
+	)
+	(junction
+		(at 144.78 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0bff22d9-3110-42db-8882-e5b2684c2db1")
+	)
 	(junction
 		(at 144.78 70.485)
 		(diameter 0)
@@ -1103,10 +1119,40 @@
 		(uuid "6b16b963-e9a1-4d6a-bdf9-454c5329bec3")
 	)
 	(junction
+		(at 179.705 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76d98a05-9837-40d3-96b4-794cf609d3c4")
+	)
+	(junction
 		(at 98.425 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c6087a9b-f2b9-4294-9a15-2265ca0377a9")
+	)
+	(junction
+		(at 181.61 69.215)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e201bbf9-28cf-447d-b2eb-ae0d1cb5893d")
+	)
+	(junction
+		(at 181.61 48.895)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e5b04a89-9d66-46ac-aab2-3358cbdb709a")
+	)
+	(junction
+		(at 179.705 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6ecc3a2-4cac-46ec-a96e-3992c0bebf2d")
+	)
+	(junction
+		(at 179.705 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4f1dcf6-a944-4a8a-89bf-112f874c518a")
 	)
 	(no_connect
 		(at 93.345 93.98)
@@ -1134,6 +1180,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.705 41.275) (xy 179.705 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "102972f1-5ef7-422f-8b40-64af9c5adbf8")
+	)
+	(wire
+		(pts
 			(xy 98.425 86.36) (xy 118.745 86.36)
 		)
 		(stroke
@@ -1151,6 +1207,16 @@
 			(type default)
 		)
 		(uuid "31267cfd-29a3-4270-9126-e78559f94844")
+	)
+	(wire
+		(pts
+			(xy 181.61 41.275) (xy 181.61 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "315a1fd7-61ad-4c1a-ae8a-764f518fbaad")
 	)
 	(wire
 		(pts
@@ -1224,6 +1290,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.705 36.83) (xy 181.61 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6325e89a-b269-4125-84f6-e7be8d83b765")
+	)
+	(wire
+		(pts
 			(xy 171.45 95.25) (xy 194.945 95.25)
 		)
 		(stroke
@@ -1241,6 +1317,26 @@
 			(type default)
 		)
 		(uuid "6b076d95-bbca-4484-bf2b-f74f45a7fa5e")
+	)
+	(wire
+		(pts
+			(xy 144.78 36.83) (xy 179.705 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f919d5e-c648-49cc-9ef3-ed7a0a586141")
+	)
+	(wire
+		(pts
+			(xy 177.8 52.07) (xy 179.705 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74b05f75-3536-4279-a8a4-f51e9400c237")
 	)
 	(wire
 		(pts
@@ -1294,7 +1390,17 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 67.31) (xy 144.78 70.485)
+			(xy 177.8 48.895) (xy 181.61 48.895)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dc08875-fb2f-460e-915e-ff9572a4a077")
+	)
+	(wire
+		(pts
+			(xy 144.78 34.29) (xy 144.78 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1311,6 +1417,16 @@
 			(type default)
 		)
 		(uuid "982dc0ff-e86b-4c33-a10b-208e183f8886")
+	)
+	(wire
+		(pts
+			(xy 181.61 69.215) (xy 181.61 48.895)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d390f2c-6d41-4a6d-9bdb-92c2ed7f6df2")
 	)
 	(wire
 		(pts
@@ -1334,6 +1450,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 46.355) (xy 181.61 48.895)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a646577a-ad25-44a1-9350-feaadb1e582b")
+	)
+	(wire
+		(pts
 			(xy 143.51 104.775) (xy 156.21 104.775)
 		)
 		(stroke
@@ -1354,6 +1480,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.705 71.12) (xy 179.705 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0527439-fe67-4f7c-818c-65ca8b4a24f0")
+	)
+	(wire
+		(pts
 			(xy 188.595 86.36) (xy 194.945 86.36)
 		)
 		(stroke
@@ -1361,6 +1497,26 @@
 			(type default)
 		)
 		(uuid "df395a76-a5cf-435f-a69c-8b08a87d9d82")
+	)
+	(wire
+		(pts
+			(xy 179.705 46.355) (xy 179.705 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3b20648-0ada-469b-b8aa-8ee2aae72fd2")
+	)
+	(wire
+		(pts
+			(xy 144.78 36.83) (xy 144.78 70.485)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe6abad9-7364-4a74-a6ec-1423e01c70ab")
 	)
 	(wire
 		(pts
@@ -1402,7 +1558,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1efd0bdb-6aca-4842-8cf7-78d9af739405")
-		(property "Reference" "R5"
+		(property "Reference" "R1"
 			(at 98.425 92.7099 0)
 			(effects
 				(font
@@ -1456,7 +1612,77 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
-					(reference "R5")
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 181.61 43.815 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2008b7de-9fb2-4310-a3c5-afdb748875f4")
+		(property "Reference" "R12"
+			(at 183.515 42.5449 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 183.515 45.0849 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+			(at 181.61 43.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 43.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 181.61 43.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "459868da-f804-4c4f-9330-7173ece9aa54")
+		)
+		(pin "2"
+			(uuid "e20ac589-8bcb-4862-98e5-ca86411e4690")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -1471,7 +1697,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "22268e60-3147-4c0e-8ac5-269ccef83bd1")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR03"
 			(at 96.52 102.87 0)
 			(effects
 				(font
@@ -1521,7 +1747,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
-					(reference "#PWR09")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -1536,7 +1762,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2e9a4b41-2029-4ca1-bde1-e39fbf280d68")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR04"
 			(at 98.425 74.295 0)
 			(effects
 				(font
@@ -1586,7 +1812,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
-					(reference "#PWR010")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -1694,6 +1920,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 179.705 43.815 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3ac2dbbe-85ff-4e93-9ebe-0f89c0ed2986")
+		(property "Reference" "R11"
+			(at 175.26 42.545 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 174.625 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+			(at 179.705 43.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 179.705 43.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 179.705 43.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c5fb49b-4e40-45cf-9b6b-486136c4681b")
+		)
+		(pin "2"
+			(uuid "04eb0bdc-abe0-4770-89d5-7d2a06ae8c63")
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 78.105 124.46 0)
 		(unit 1)
@@ -1703,7 +1998,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7255c3a4-f807-4bf9-a924-6056b84be781")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR02"
 			(at 78.105 130.81 0)
 			(effects
 				(font
@@ -1753,7 +2048,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
-					(reference "#PWR07")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -1768,7 +2063,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "801c068b-9a1f-4bed-8ce4-19858a963673")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR06"
 			(at 188.595 87.63 0)
 			(effects
 				(font
@@ -1818,7 +2113,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
-					(reference "#PWR027")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -1834,7 +2129,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa4717d7-f9d0-4cdd-834f-f66a28dcedd8")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR01"
 			(at 70.485 130.81 0)
 			(effects
 				(font
@@ -1884,7 +2179,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
-					(reference "#PWR08")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -1892,15 +2187,15 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 144.78 67.31 0)
+		(at 144.78 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "b918064b-d908-4640-8ebe-f0b19b4a3850")
-		(property "Reference" "#PWR011"
-			(at 144.78 71.12 0)
+		(property "Reference" "#PWR05"
+			(at 144.78 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1909,7 +2204,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 144.78 63.5 0)
+			(at 144.78 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1917,7 +2212,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 67.31 0)
+			(at 144.78 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1926,7 +2221,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 67.31 0)
+			(at 144.78 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1935,7 +2230,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 144.78 67.31 0)
+			(at 144.78 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1949,7 +2244,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
-					(reference "#PWR011")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2021,6 +2316,48 @@
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
 					(reference "D1")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 154.305 46.99)
+		(size 23.495 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0e42df4e-00bd-42cc-bca6-b98ad5579244")
+		(property "Sheetname" "buzzer"
+			(at 154.305 46.2784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "buzzer.kicad_sch"
+			(at 154.305 56.4646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "RocketClock"
+				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91"
+					(page "7")
 				)
 			)
 		)
