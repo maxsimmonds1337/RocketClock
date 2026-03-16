@@ -750,7 +750,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_MEC_5E"
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -759,7 +762,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0.635 5.715 0)
+				(at 1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -767,8 +770,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "SW_MEC_5E"
-				(at 0 -3.175 0)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -776,7 +779,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 7.62 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -784,8 +787,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371"
-				(at 0 7.62 0)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -793,7 +796,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "MEC 5E single pole normally-open tactile switch"
+			(property "Description" "Push button switch, generic, two pins"
 				(at 0 0 0)
 				(effects
 					(font
@@ -811,42 +814,9 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SW*MEC*5G*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_MEC_5E_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -2.54 2.54) (xy -2.286 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.286 3.81) (xy 2.286 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "SW_Push_0_1"
 				(circle
-					(center -1.778 2.54)
+					(center -2.032 0)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -858,7 +828,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 3.81) (xy 0 5.588)
+						(xy 0 1.27) (xy 0 3.048)
 					)
 					(stroke
 						(width 0)
@@ -869,7 +839,7 @@
 					)
 				)
 				(circle
-					(center 1.778 2.54)
+					(center 2.032 0)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -881,7 +851,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 0) (xy 2.54 2.54) (xy 2.286 2.54)
+						(xy 2.54 1.27) (xy -2.54 1.27)
 					)
 					(stroke
 						(width 0)
@@ -892,7 +862,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -910,7 +880,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 0 180)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -920,42 +890,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1252,18 +1186,6 @@
 		(uuid "07715b15-7155-4349-8324-ce831710cad5")
 	)
 	(junction
-		(at 33.655 91.44)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2606fcdf-6366-43aa-9b2e-2643aa728242")
-	)
-	(junction
-		(at 33.655 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39dcbff6-1e41-44f9-b1ae-920a839fdc09")
-	)
-	(junction
 		(at 40.64 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1274,6 +1196,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "56cc909e-334e-4886-b6fa-37416a465911")
+	)
+	(junction
+		(at 33.655 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "58f42680-5f82-45ca-92e4-6d12bff8c9a2")
 	)
 	(junction
 		(at 120.015 78.105)
@@ -1341,16 +1269,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.655 67.31) (xy 33.655 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04aab8a1-f8d2-4e63-a166-130d18dff440")
-	)
-	(wire
-		(pts
 			(xy 151.765 119.38) (xy 151.765 121.92)
 		)
 		(stroke
@@ -1371,7 +1289,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.195 71.12) (xy 36.195 76.835)
+			(xy 33.655 67.31) (xy 33.655 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1388,16 +1306,6 @@
 			(type default)
 		)
 		(uuid "0c068290-8390-449e-b7b7-9ebcd5bb204c")
-	)
-	(wire
-		(pts
-			(xy 33.655 76.835) (xy 33.655 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17768f3e-f5d9-482f-b090-3480c31e701d")
 	)
 	(wire
 		(pts
@@ -1481,6 +1389,26 @@
 	)
 	(wire
 		(pts
+			(xy 33.655 71.12) (xy 33.655 75.565)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45433ee8-89af-4e40-b625-49df216c55d6")
+	)
+	(wire
+		(pts
+			(xy 29.845 71.12) (xy 33.655 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46d497ab-77de-44b7-a8d0-89f741b4556c")
+	)
+	(wire
+		(pts
 			(xy 120.015 84.455) (xy 136.525 84.455)
 		)
 		(stroke
@@ -1528,16 +1456,6 @@
 			(type default)
 		)
 		(uuid "71834fb6-497f-43b7-a065-ec0f3b08bf8e")
-	)
-	(wire
-		(pts
-			(xy 33.655 71.12) (xy 36.195 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "76ee7304-f4b4-4421-bf53-7a441867c60f")
 	)
 	(wire
 		(pts
@@ -1671,7 +1589,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.655 91.44) (xy 33.655 96.52)
+			(xy 33.655 85.725) (xy 33.655 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1688,16 +1606,6 @@
 			(type default)
 		)
 		(uuid "b6b03674-9f27-4855-a012-91d65c58f8db")
-	)
-	(wire
-		(pts
-			(xy 33.655 91.44) (xy 36.195 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5ff69be-4251-40c1-97b5-ed098946cb9b")
 	)
 	(wire
 		(pts
@@ -1771,16 +1679,6 @@
 	)
 	(wire
 		(pts
-			(xy 36.195 91.44) (xy 36.195 86.995)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9ef61a0-d613-4333-b256-78e23ca3d480")
-	)
-	(wire
-		(pts
 			(xy 56.515 29.21) (xy 56.515 33.02)
 		)
 		(stroke
@@ -1789,25 +1687,15 @@
 		)
 		(uuid "fc2efe78-f81d-4532-b558-500b5380d5ed")
 	)
-	(wire
-		(pts
-			(xy 33.655 86.995) (xy 33.655 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffbd0c00-bc14-40d0-8bf0-762d0e1a42b5")
-	)
-	(label "CS"
-		(at 179.07 102.235 0)
+	(label "~{CS}"
+		(at 179.705 102.235 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "3c261279-dec2-4a45-a9dc-f4a3dd4f082e")
+		(uuid "1fe6fbb0-1286-4df4-b490-a5c003be62ef")
 	)
 	(label "~{RST}"
 		(at 56.515 29.21 0)
@@ -1892,6 +1780,17 @@
 		)
 		(uuid "48914e0b-2d0e-40e1-9acc-027a59bbeff3")
 	)
+	(hierarchical_label "~{RST}"
+		(shape input)
+		(at 29.845 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "70adc620-6677-432b-8c58-558be7e58dfa")
+	)
 	(hierarchical_label "+3.3V"
 		(shape input)
 		(at 99.695 78.105 180)
@@ -1903,7 +1802,7 @@
 		)
 		(uuid "7771f9f4-2eeb-4c57-8152-6965a76121d3")
 	)
-	(hierarchical_label "CS"
+	(hierarchical_label "~{CS}"
 		(shape input)
 		(at 193.675 102.235 0)
 		(effects
@@ -1968,7 +1867,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "35c7d655-c56d-479f-b9df-2d90b2455a09")
-		(property "Reference" "C13"
+		(property "Reference" "C15"
 			(at 59.69 34.2962 0)
 			(effects
 				(font
@@ -2022,24 +1921,24 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "C13")
+					(reference "C15")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_MEC_5E")
-		(at 36.195 81.915 90)
+		(lib_id "Switch:SW_Push")
+		(at 33.655 80.645 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5ae6d5eb-63c4-4c99-bd93-72f36d04e648")
+		(uuid "4403cb8f-4386-4e01-ae87-82709ba1453c")
 		(property "Reference" "SW1"
-			(at 36.83 80.6449 90)
+			(at 35.56 79.3749 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2047,8 +1946,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SW_MEC_5E"
-			(at 36.83 83.1849 90)
+		(property "Value" "SW_Push"
+			(at 35.56 81.9149 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2056,8 +1955,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_MEC_5GSH9"
-			(at 28.575 81.915 0)
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_NO_CK_KSC6xxJ"
+			(at 28.575 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2065,8 +1964,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371"
-			(at 28.575 81.915 0)
+		(property "Datasheet" "~"
+			(at 28.575 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2074,8 +1973,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MEC 5E single pole normally-open tactile switch"
-			(at 36.195 81.915 0)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 33.655 80.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2084,16 +1983,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5d0bbdc0-b64b-4dd0-ae03-398bc5beb435")
+			(uuid "32b9f45b-cb11-41b9-b585-aae623408cff")
 		)
 		(pin "2"
-			(uuid "225258df-5838-420d-bb4b-096fa3f15d60")
-		)
-		(pin "4"
-			(uuid "2099662e-1f2c-492d-8616-3d03bc37f06b")
-		)
-		(pin "3"
-			(uuid "83936b86-b3a6-4f56-8e91-42a50a13882b")
+			(uuid "ea2644e3-ef0f-40ba-af2a-531ab1dc09ee")
 		)
 		(instances
 			(project ""
@@ -2114,7 +2007,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5ef88190-5bc9-42ce-a001-4dc54401c95e")
-		(property "Reference" "R10"
+		(property "Reference" "R20"
 			(at 176.53 79.3749 0)
 			(effects
 				(font
@@ -2168,7 +2061,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "R10")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -2184,7 +2077,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6877c467-bb5e-4735-b3ae-a3d58ede6e3b")
-		(property "Reference" "R8"
+		(property "Reference" "R19"
 			(at 121.92 79.3749 0)
 			(effects
 				(font
@@ -2238,7 +2131,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "R8")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -2254,7 +2147,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7cba4cd2-77cd-4afd-831f-4f980a320757")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR039"
 			(at 151.765 128.27 0)
 			(effects
 				(font
@@ -2304,7 +2197,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "#PWR027")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -2320,7 +2213,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8e948375-519c-4faa-a3d1-11ecd3ce1e38")
-		(property "Reference" "C11"
+		(property "Reference" "C13"
 			(at 30.48 33.6612 0)
 			(effects
 				(font
@@ -2374,7 +2267,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "C11")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -2390,7 +2283,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9593dd01-b0cc-45ff-861b-caa8dfbc191a")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR036"
 			(at 40.64 45.085 0)
 			(effects
 				(font
@@ -2440,7 +2333,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "#PWR025")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -2455,7 +2348,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "972d2d94-a638-4a23-81e3-d32cba37c712")
-		(property "Reference" "U5"
+		(property "Reference" "U6"
 			(at 153.9083 77.47 0)
 			(effects
 				(font
@@ -2569,7 +2462,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "U5")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -2585,7 +2478,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0c318a1-8ab8-42db-9232-6bba397add58")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR035"
 			(at 40.64 34.925 0)
 			(effects
 				(font
@@ -2635,7 +2528,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "#PWR024")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -2651,7 +2544,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb8952cf-5190-4d0e-94c5-2455eb35fa81")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR037"
 			(at 151.765 74.93 0)
 			(effects
 				(font
@@ -2701,7 +2594,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "#PWR026")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -2717,7 +2610,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb9d9ff1-81a6-4fda-95a9-775e0ce26e90")
-		(property "Reference" "C12"
+		(property "Reference" "C14"
 			(at 43.815 33.6612 0)
 			(effects
 				(font
@@ -2771,7 +2664,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "C12")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -2787,7 +2680,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec495357-f7b7-414a-8f99-8611c25df073")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR038"
 			(at 33.655 102.87 0)
 			(effects
 				(font
@@ -2837,7 +2730,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "#PWR023")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -2853,7 +2746,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f614d1c8-3506-40af-b6ca-7e107737c3c4")
-		(property "Reference" "R9"
+		(property "Reference" "R22"
 			(at 173.99 111.7599 0)
 			(effects
 				(font
@@ -2907,7 +2800,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "R9")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -2923,7 +2816,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fbbe04ac-ed8a-457f-9911-ea5ce111e3e6")
-		(property "Reference" "R7"
+		(property "Reference" "R21"
 			(at 114.935 83.1849 0)
 			(effects
 				(font
@@ -2977,7 +2870,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/31ceb4ad-97ae-4994-9156-dc2819dfe7a6"
-					(reference "R7")
+					(reference "R21")
 					(unit 1)
 				)
 			)

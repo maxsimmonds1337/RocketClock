@@ -3423,6 +3423,16 @@
 	)
 	(wire
 		(pts
+			(xy 260.35 83.82) (xy 267.335 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7094aa29-0ad6-478e-99e4-06358cb22d6e")
+	)
+	(wire
+		(pts
 			(xy 154.94 93.98) (xy 154.94 103.505)
 		)
 		(stroke
@@ -5261,6 +5271,16 @@
 		)
 		(uuid "739a7b27-c404-43f9-a397-236526d539a1")
 	)
+	(label "DOUT"
+		(at 260.35 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "78260abc-c9cf-4f42-a896-e165bdc35262")
+	)
 	(label "E"
 		(at 116.84 61.595 0)
 		(effects
@@ -5353,6 +5373,17 @@
 		)
 		(uuid "3518a3f2-40bc-41fc-acad-d22426df725c")
 	)
+	(hierarchical_label "DOUT"
+		(shape input)
+		(at 267.335 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "719cfff6-d014-4460-b74b-7bc2594b7730")
+	)
 	(hierarchical_label "~{CS}"
 		(shape input)
 		(at 64.77 86.995 180)
@@ -5385,7 +5416,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00b31691-d51a-4092-ba6a-a16844f7a417")
-		(property "Reference" "D39"
+		(property "Reference" "D46"
 			(at 167.64 98.4884 90)
 			(effects
 				(font
@@ -5404,7 +5435,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 165.1 99.695 90)
 			(effects
 				(font
@@ -5449,7 +5480,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D39")
+					(reference "D46")
 					(unit 1)
 				)
 			)
@@ -5465,7 +5496,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05091111-4339-4909-b152-7cdeac9cb7c9")
-		(property "Reference" "D52"
+		(property "Reference" "D24"
 			(at 182.88 69.9134 90)
 			(effects
 				(font
@@ -5484,7 +5515,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 180.34 71.12 90)
 			(effects
 				(font
@@ -5529,7 +5560,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D52")
+					(reference "D24")
 					(unit 1)
 				)
 			)
@@ -5564,7 +5595,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 142.875 62.23 90)
 			(effects
 				(font
@@ -5695,7 +5726,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15890a90-27f9-4fa8-9de0-5f4e5bb530fc")
-		(property "Reference" "D32"
+		(property "Reference" "D53"
 			(at 160.655 107.3784 90)
 			(effects
 				(font
@@ -5714,7 +5745,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 158.115 108.585 90)
 			(effects
 				(font
@@ -5759,7 +5790,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D32")
+					(reference "D53")
 					(unit 1)
 				)
 			)
@@ -5775,7 +5806,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1761ea98-4b53-4282-b5ec-d147f8cb8064")
-		(property "Reference" "D13"
+		(property "Reference" "D27"
 			(at 145.415 79.4384 90)
 			(effects
 				(font
@@ -5794,7 +5825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 142.875 80.645 90)
 			(effects
 				(font
@@ -5839,7 +5870,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D13")
+					(reference "D27")
 					(unit 1)
 				)
 			)
@@ -5855,7 +5886,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1a5c075f-cf8e-4eec-9e6e-0db4495df318")
-		(property "Reference" "D63"
+		(property "Reference" "D49"
 			(at 190.5 98.4884 90)
 			(effects
 				(font
@@ -5874,7 +5905,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 187.96 99.695 90)
 			(effects
 				(font
@@ -5919,7 +5950,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D63")
+					(reference "D49")
 					(unit 1)
 				)
 			)
@@ -5935,7 +5966,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22287875-148a-4e03-a781-7b136124917d")
-		(property "Reference" "D4"
+		(property "Reference" "D18"
 			(at 137.795 69.9134 90)
 			(effects
 				(font
@@ -5954,7 +5985,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 135.255 71.12 90)
 			(effects
 				(font
@@ -5999,7 +6030,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D4")
+					(reference "D18")
 					(unit 1)
 				)
 			)
@@ -6015,7 +6046,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "240e9bb2-9528-4324-97cf-89d841e8ab82")
-		(property "Reference" "D31"
+		(property "Reference" "D45"
 			(at 160.655 98.4884 90)
 			(effects
 				(font
@@ -6034,7 +6065,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 158.115 99.695 90)
 			(effects
 				(font
@@ -6079,7 +6110,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D31")
+					(reference "D45")
 					(unit 1)
 				)
 			)
@@ -6095,7 +6126,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24d29f62-94fd-4a98-aa35-5d16647efea2")
-		(property "Reference" "D55"
+		(property "Reference" "D48"
 			(at 182.88 98.4884 90)
 			(effects
 				(font
@@ -6114,7 +6145,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 180.34 99.695 90)
 			(effects
 				(font
@@ -6159,7 +6190,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D55")
+					(reference "D48")
 					(unit 1)
 				)
 			)
@@ -6175,7 +6206,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a833747-27f2-4d18-95d4-6fe6c207aa04")
-		(property "Reference" "D27"
+		(property "Reference" "D13"
 			(at 160.655 61.0234 90)
 			(effects
 				(font
@@ -6194,7 +6225,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 158.115 62.23 90)
 			(effects
 				(font
@@ -6239,7 +6270,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D27")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -6255,7 +6286,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ce3c5c4-7fb5-44af-8c63-ecde0447b938")
-		(property "Reference" "D30"
+		(property "Reference" "D37"
 			(at 160.655 88.9634 90)
 			(effects
 				(font
@@ -6274,7 +6305,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 158.115 90.17 90)
 			(effects
 				(font
@@ -6319,7 +6350,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D30")
+					(reference "D37")
 					(unit 1)
 				)
 			)
@@ -6354,7 +6385,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 180.34 108.585 90)
 			(effects
 				(font
@@ -6415,7 +6446,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ff3f72e-6b69-4095-bfe3-2a264d776a05")
-		(property "Reference" "D35"
+		(property "Reference" "D14"
 			(at 167.64 61.0234 90)
 			(effects
 				(font
@@ -6434,7 +6465,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 165.1 62.23 90)
 			(effects
 				(font
@@ -6479,7 +6510,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D35")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -6495,7 +6526,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a852d13-1bae-4157-a815-dedeb0798fc6")
-		(property "Reference" "D45"
+		(property "Reference" "D31"
 			(at 175.26 79.4384 90)
 			(effects
 				(font
@@ -6514,7 +6545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 172.72 80.645 90)
 			(effects
 				(font
@@ -6559,7 +6590,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D45")
+					(reference "D31")
 					(unit 1)
 				)
 			)
@@ -6575,7 +6606,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3af6e97d-648d-4033-8887-77a6b7ade5e3")
-		(property "Reference" "D36"
+		(property "Reference" "D22"
 			(at 167.64 69.9134 90)
 			(effects
 				(font
@@ -6594,7 +6625,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 165.1 71.12 90)
 			(effects
 				(font
@@ -6639,7 +6670,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D36")
+					(reference "D22")
 					(unit 1)
 				)
 			)
@@ -6655,7 +6686,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b44d176-2e0f-4aec-8806-2621497b61eb")
-		(property "Reference" "D26"
+		(property "Reference" "D5"
 			(at 160.655 52.7684 90)
 			(effects
 				(font
@@ -6674,7 +6705,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 158.115 53.975 90)
 			(effects
 				(font
@@ -6719,7 +6750,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D26")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -6801,7 +6832,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a21f650-8d05-44e7-a428-329a9f86072d")
-		(property "Reference" "D60"
+		(property "Reference" "D25"
 			(at 190.5 69.9134 90)
 			(effects
 				(font
@@ -6820,7 +6851,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 187.96 71.12 90)
 			(effects
 				(font
@@ -6865,7 +6896,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D60")
+					(reference "D25")
 					(unit 1)
 				)
 			)
@@ -6881,7 +6912,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4e80f7d3-f1bd-46e8-9210-9f808af82556")
-		(property "Reference" "D23"
+		(property "Reference" "D44"
 			(at 153.035 98.4884 90)
 			(effects
 				(font
@@ -6900,7 +6931,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 150.495 99.695 90)
 			(effects
 				(font
@@ -6945,7 +6976,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D23")
+					(reference "D44")
 					(unit 1)
 				)
 			)
@@ -6961,7 +6992,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "509acbb0-fa57-4397-9a64-63c328933644")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR015"
 			(at 84.455 106.045 0)
 			(effects
 				(font
@@ -7011,7 +7042,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "#PWR013")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -7027,7 +7058,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53f3d7dd-b70d-4853-93bc-cb3266c5919f")
-		(property "Reference" "D48"
+		(property "Reference" "D55"
 			(at 175.26 107.3784 90)
 			(effects
 				(font
@@ -7046,7 +7077,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 172.72 108.585 90)
 			(effects
 				(font
@@ -7091,7 +7122,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D48")
+					(reference "D55")
 					(unit 1)
 				)
 			)
@@ -7107,7 +7138,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "563fb92d-f8f9-426b-94a4-d7cf8e2a0de7")
-		(property "Reference" "D7"
+		(property "Reference" "D42"
 			(at 137.795 98.4884 90)
 			(effects
 				(font
@@ -7126,7 +7157,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 135.255 99.695 90)
 			(effects
 				(font
@@ -7171,7 +7202,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D7")
+					(reference "D42")
 					(unit 1)
 				)
 			)
@@ -7187,7 +7218,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5acde768-d758-4ac8-bb26-15209b434477")
-		(property "Reference" "D14"
+		(property "Reference" "D35"
 			(at 145.415 88.9634 90)
 			(effects
 				(font
@@ -7206,7 +7237,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 142.875 90.17 90)
 			(effects
 				(font
@@ -7251,7 +7282,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D14")
+					(reference "D35")
 					(unit 1)
 				)
 			)
@@ -7267,7 +7298,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "622e0da5-7a2b-4344-b56a-43dfd5286e85")
-		(property "Reference" "D24"
+		(property "Reference" "D52"
 			(at 153.035 107.3784 90)
 			(effects
 				(font
@@ -7286,7 +7317,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 150.495 108.585 90)
 			(effects
 				(font
@@ -7331,7 +7362,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D24")
+					(reference "D52")
 					(unit 1)
 				)
 			)
@@ -7347,7 +7378,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "688ad25d-c03c-4a4c-a12a-b9685d310da2")
-		(property "Reference" "D10"
+		(property "Reference" "D3"
 			(at 145.415 52.7684 90)
 			(effects
 				(font
@@ -7366,7 +7397,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 142.875 53.975 90)
 			(effects
 				(font
@@ -7411,7 +7442,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D10")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -7427,7 +7458,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "69e169e7-bf9e-474d-b827-7641fceff350")
-		(property "Reference" "D42"
+		(property "Reference" "D7"
 			(at 175.26 52.7684 90)
 			(effects
 				(font
@@ -7446,7 +7477,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 172.72 53.975 90)
 			(effects
 				(font
@@ -7491,7 +7522,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D42")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -7507,7 +7538,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a95655e-94cb-4b3b-b817-552656b54018")
-		(property "Reference" "D57"
+		(property "Reference" "D64"
 			(at 182.88 116.9034 90)
 			(effects
 				(font
@@ -7526,7 +7557,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 180.34 118.11 90)
 			(effects
 				(font
@@ -7571,7 +7602,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D57")
+					(reference "D64")
 					(unit 1)
 				)
 			)
@@ -7587,7 +7618,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6afb1bf5-29ea-4d34-9b5b-6501893589c1")
-		(property "Reference" "D44"
+		(property "Reference" "D23"
 			(at 175.26 69.9134 90)
 			(effects
 				(font
@@ -7606,7 +7637,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 172.72 71.12 90)
 			(effects
 				(font
@@ -7651,7 +7682,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D44")
+					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -7686,7 +7717,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 150.495 71.12 90)
 			(effects
 				(font
@@ -7766,7 +7797,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 172.72 99.695 90)
 			(effects
 				(font
@@ -7827,7 +7858,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74fb4dba-49f7-4ac6-86df-47d8d7be3688")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR014"
 			(at 38.1 66.04 0)
 			(effects
 				(font
@@ -7877,7 +7908,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "#PWR011")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -7893,7 +7924,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78cb4e1d-6903-43ed-9d40-64f4e28a9eb1")
-		(property "Reference" "D3"
+		(property "Reference" "D10"
 			(at 137.795 61.0234 90)
 			(effects
 				(font
@@ -7912,7 +7943,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 135.255 62.23 90)
 			(effects
 				(font
@@ -7957,7 +7988,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D3")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -7973,7 +8004,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7dbc461f-d825-43b1-9047-ba0e0da4ff9c")
-		(property "Reference" "D28"
+		(property "Reference" "D21"
 			(at 160.655 69.9134 90)
 			(effects
 				(font
@@ -7992,7 +8023,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 158.115 71.12 90)
 			(effects
 				(font
@@ -8037,7 +8068,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D28")
+					(reference "D21")
 					(unit 1)
 				)
 			)
@@ -8053,7 +8084,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f8d9a7b-b796-41be-a3ad-8f88ea81b995")
-		(property "Reference" "D40"
+		(property "Reference" "D54"
 			(at 167.64 107.3784 90)
 			(effects
 				(font
@@ -8072,7 +8103,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 165.1 108.585 90)
 			(effects
 				(font
@@ -8117,7 +8148,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D40")
+					(reference "D54")
 					(unit 1)
 				)
 			)
@@ -8133,7 +8164,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8053362e-01f3-4166-88ab-ff76a5f62bf5")
-		(property "Reference" "D34"
+		(property "Reference" "D6"
 			(at 167.64 52.7684 90)
 			(effects
 				(font
@@ -8152,7 +8183,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 165.1 53.975 90)
 			(effects
 				(font
@@ -8197,7 +8228,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D34")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -8213,7 +8244,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "811adf4a-1642-4660-b35f-e1444a4a40fc")
-		(property "Reference" "D21"
+		(property "Reference" "D28"
 			(at 153.035 79.4384 90)
 			(effects
 				(font
@@ -8232,7 +8263,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 150.495 80.645 90)
 			(effects
 				(font
@@ -8277,7 +8308,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D21")
+					(reference "D28")
 					(unit 1)
 				)
 			)
@@ -8293,7 +8324,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "84a1ed52-9215-47bd-96e6-af635cd68046")
-		(property "Reference" "D5"
+		(property "Reference" "D26"
 			(at 137.795 79.4384 90)
 			(effects
 				(font
@@ -8312,7 +8343,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 135.255 80.645 90)
 			(effects
 				(font
@@ -8357,7 +8388,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D5")
+					(reference "D26")
 					(unit 1)
 				)
 			)
@@ -8392,7 +8423,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 165.1 90.17 90)
 			(effects
 				(font
@@ -8453,7 +8484,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97973f43-0688-4f40-8607-9727c51bc5ac")
-		(property "Reference" "D9"
+		(property "Reference" "D58"
 			(at 137.795 116.9034 90)
 			(effects
 				(font
@@ -8472,7 +8503,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 135.255 118.11 90)
 			(effects
 				(font
@@ -8517,7 +8548,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D9")
+					(reference "D58")
 					(unit 1)
 				)
 			)
@@ -8533,7 +8564,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9840819e-9f92-42b5-ac0f-aed494d27a3e")
-		(property "Reference" "D33"
+		(property "Reference" "D61"
 			(at 160.655 116.9034 90)
 			(effects
 				(font
@@ -8552,7 +8583,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 158.115 118.11 90)
 			(effects
 				(font
@@ -8597,7 +8628,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D33")
+					(reference "D61")
 					(unit 1)
 				)
 			)
@@ -8613,7 +8644,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9be3f7f4-be9b-4fef-935a-2652e7362220")
-		(property "Reference" "D64"
+		(property "Reference" "D57"
 			(at 190.5 107.3784 90)
 			(effects
 				(font
@@ -8632,7 +8663,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 187.96 108.585 90)
 			(effects
 				(font
@@ -8677,7 +8708,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D64")
+					(reference "D57")
 					(unit 1)
 				)
 			)
@@ -8693,7 +8724,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ca9e176-c2cd-4637-9cb7-43eb16bda447")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR013"
 			(at 38.1 52.07 0)
 			(effects
 				(font
@@ -8743,7 +8774,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "#PWR010")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -8759,7 +8790,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e419ac4-f2fe-46ca-8647-33a69c943fa4")
-		(property "Reference" "D58"
+		(property "Reference" "D9"
 			(at 190.5 52.7684 90)
 			(effects
 				(font
@@ -8778,7 +8809,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 187.96 53.975 90)
 			(effects
 				(font
@@ -8823,7 +8854,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D58")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -8839,7 +8870,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f50176d-2904-4e60-9fbd-60df764075fb")
-		(property "Reference" "D51"
+		(property "Reference" "D16"
 			(at 182.88 61.0234 90)
 			(effects
 				(font
@@ -8858,7 +8889,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 180.34 62.23 90)
 			(effects
 				(font
@@ -8903,7 +8934,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D51")
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -9055,7 +9086,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "adf9c510-d265-4237-9f78-7f960686b8fe")
-		(property "Reference" "D53"
+		(property "Reference" "D32"
 			(at 182.88 79.4384 90)
 			(effects
 				(font
@@ -9074,7 +9105,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 180.34 80.645 90)
 			(effects
 				(font
@@ -9119,7 +9150,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D53")
+					(reference "D32")
 					(unit 1)
 				)
 			)
@@ -9135,7 +9166,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b345cfe2-644d-4393-b7b4-f1c7bcecaca6")
-		(property "Reference" "D61"
+		(property "Reference" "D33"
 			(at 190.5 79.4384 90)
 			(effects
 				(font
@@ -9154,7 +9185,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 187.96 80.645 90)
 			(effects
 				(font
@@ -9199,7 +9230,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D61")
+					(reference "D33")
 					(unit 1)
 				)
 			)
@@ -9215,7 +9246,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b3849987-ce28-45f1-9d95-dab6bcd89b28")
-		(property "Reference" "D46"
+		(property "Reference" "D39"
 			(at 175.26 88.9634 90)
 			(effects
 				(font
@@ -9234,7 +9265,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 172.72 90.17 90)
 			(effects
 				(font
@@ -9279,7 +9310,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D46")
+					(reference "D39")
 					(unit 1)
 				)
 			)
@@ -9314,7 +9345,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 158.115 80.645 90)
 			(effects
 				(font
@@ -9375,7 +9406,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd33a803-c9ca-4cf6-b20f-695e6bc756ce")
-		(property "Reference" "D19"
+		(property "Reference" "D12"
 			(at 153.035 61.0234 90)
 			(effects
 				(font
@@ -9394,7 +9425,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 150.495 62.23 90)
 			(effects
 				(font
@@ -9439,7 +9470,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D19")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -9455,7 +9486,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd806d81-e8b5-49cf-92e8-12a3c3626a36")
-		(property "Reference" "D18"
+		(property "Reference" "D4"
 			(at 153.035 52.7684 90)
 			(effects
 				(font
@@ -9474,7 +9505,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 150.495 53.975 90)
 			(effects
 				(font
@@ -9519,7 +9550,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D18")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -9535,7 +9566,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c379dcf2-7cac-45bb-8afe-b021d2278050")
-		(property "Reference" "D62"
+		(property "Reference" "D41"
 			(at 190.5 88.9634 90)
 			(effects
 				(font
@@ -9554,7 +9585,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 187.96 90.17 90)
 			(effects
 				(font
@@ -9599,7 +9630,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D62")
+					(reference "D41")
 					(unit 1)
 				)
 			)
@@ -9615,7 +9646,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c5b3bcf2-1ca0-4159-a14e-c4e28961c838")
-		(property "Reference" "D16"
+		(property "Reference" "D51"
 			(at 145.415 107.3784 90)
 			(effects
 				(font
@@ -9634,7 +9665,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 142.875 108.585 90)
 			(effects
 				(font
@@ -9679,7 +9710,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D16")
+					(reference "D51")
 					(unit 1)
 				)
 			)
@@ -9695,7 +9726,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9390059-0c9e-4f38-b3de-a75fdd736358")
-		(property "Reference" "D15"
+		(property "Reference" "D43"
 			(at 145.415 98.4884 90)
 			(effects
 				(font
@@ -9714,7 +9745,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 142.875 99.695 90)
 			(effects
 				(font
@@ -9759,7 +9790,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D15")
+					(reference "D43")
 					(unit 1)
 				)
 			)
@@ -9794,7 +9825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 187.96 118.11 90)
 			(effects
 				(font
@@ -9855,7 +9886,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "caafcb39-02e0-4cb8-b76b-317d954ee416")
-		(property "Reference" "D22"
+		(property "Reference" "D36"
 			(at 153.035 88.9634 90)
 			(effects
 				(font
@@ -9874,7 +9905,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 150.495 90.17 90)
 			(effects
 				(font
@@ -9919,7 +9950,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D22")
+					(reference "D36")
 					(unit 1)
 				)
 			)
@@ -9935,7 +9966,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc92b7db-6a63-4218-b781-e27efc52a89c")
-		(property "Reference" "D43"
+		(property "Reference" "D15"
 			(at 175.26 61.0234 90)
 			(effects
 				(font
@@ -9954,7 +9985,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 172.72 62.23 90)
 			(effects
 				(font
@@ -9999,7 +10030,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D43")
+					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -10015,7 +10046,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cea11500-fc3d-477a-b56b-943015107001")
-		(property "Reference" "R2"
+		(property "Reference" "R4"
 			(at 67.31 45.7199 0)
 			(effects
 				(font
@@ -10069,7 +10100,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "R2")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -10155,7 +10186,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d0bc7bc5-4449-4e6a-883e-1fa03fcac1e8")
-		(property "Reference" "D17"
+		(property "Reference" "D59"
 			(at 145.415 116.9034 90)
 			(effects
 				(font
@@ -10174,7 +10205,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 142.875 118.11 90)
 			(effects
 				(font
@@ -10219,7 +10250,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D17")
+					(reference "D59")
 					(unit 1)
 				)
 			)
@@ -10235,7 +10266,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d33ee1e9-460c-417a-a856-16ea69ec6cb1")
-		(property "Reference" "D12"
+		(property "Reference" "D19"
 			(at 145.415 69.9134 90)
 			(effects
 				(font
@@ -10254,7 +10285,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 142.875 71.12 90)
 			(effects
 				(font
@@ -10299,7 +10330,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D12")
+					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -10315,7 +10346,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "da522977-184f-4f2d-b5d3-22e26b17a85b")
-		(property "Reference" "D37"
+		(property "Reference" "D30"
 			(at 167.64 79.4384 90)
 			(effects
 				(font
@@ -10334,7 +10365,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 165.1 80.645 90)
 			(effects
 				(font
@@ -10379,7 +10410,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D37")
+					(reference "D30")
 					(unit 1)
 				)
 			)
@@ -10395,7 +10426,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e89be778-4d96-4481-b374-c87989ced112")
-		(property "Reference" "D54"
+		(property "Reference" "D40"
 			(at 182.88 88.9634 90)
 			(effects
 				(font
@@ -10414,7 +10445,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 180.34 90.17 90)
 			(effects
 				(font
@@ -10459,7 +10490,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D54")
+					(reference "D40")
 					(unit 1)
 				)
 			)
@@ -10475,7 +10506,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eabd856e-9ef7-4150-bba9-845471184924")
-		(property "Reference" "D50"
+		(property "Reference" "D8"
 			(at 182.88 52.7684 90)
 			(effects
 				(font
@@ -10494,7 +10525,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 180.34 53.975 90)
 			(effects
 				(font
@@ -10539,7 +10570,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D50")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -10555,7 +10586,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb5ad34b-62ee-44b4-a2dc-4ecc212c2ad5")
-		(property "Reference" "D6"
+		(property "Reference" "D34"
 			(at 137.795 88.9634 90)
 			(effects
 				(font
@@ -10574,7 +10605,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 135.255 90.17 90)
 			(effects
 				(font
@@ -10619,7 +10650,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D6")
+					(reference "D34")
 					(unit 1)
 				)
 			)
@@ -10635,7 +10666,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee992a61-963d-46f1-8726-8bb7da2f5527")
-		(property "Reference" "D25"
+		(property "Reference" "D60"
 			(at 153.035 116.9034 90)
 			(effects
 				(font
@@ -10654,7 +10685,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 150.495 118.11 90)
 			(effects
 				(font
@@ -10699,7 +10730,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D25")
+					(reference "D60")
 					(unit 1)
 				)
 			)
@@ -10715,7 +10746,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f52b1449-0120-4f29-a3c2-a989a734a6cc")
-		(property "Reference" "D59"
+		(property "Reference" "D17"
 			(at 190.5 61.0234 90)
 			(effects
 				(font
@@ -10734,7 +10765,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 187.96 62.23 90)
 			(effects
 				(font
@@ -10779,7 +10810,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D59")
+					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -10795,7 +10826,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7daa010-ac8a-4d79-af20-4d910ddf9a0b")
-		(property "Reference" "D41"
+		(property "Reference" "D62"
 			(at 167.64 116.9034 90)
 			(effects
 				(font
@@ -10814,7 +10845,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 165.1 118.11 90)
 			(effects
 				(font
@@ -10859,7 +10890,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D41")
+					(reference "D62")
 					(unit 1)
 				)
 			)
@@ -10875,7 +10906,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f8e12b19-7948-4256-adc6-642a5f918392")
-		(property "Reference" "D8"
+		(property "Reference" "D50"
 			(at 137.795 107.3784 90)
 			(effects
 				(font
@@ -10894,7 +10925,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 135.255 108.585 90)
 			(effects
 				(font
@@ -10939,7 +10970,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D8")
+					(reference "D50")
 					(unit 1)
 				)
 			)
@@ -10974,7 +11005,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 135.255 53.975 90)
 			(effects
 				(font
@@ -11035,7 +11066,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff83baf2-e326-47f8-af23-cbbdd788a0da")
-		(property "Reference" "D49"
+		(property "Reference" "D63"
 			(at 175.26 116.9034 90)
 			(effects
 				(font
@@ -11054,7 +11085,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 172.72 118.11 90)
 			(effects
 				(font
@@ -11099,7 +11130,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/65bf18ae-6f36-44e3-8bda-1d30426f9b64"
-					(reference "D49")
+					(reference "D63")
 					(unit 1)
 				)
 			)

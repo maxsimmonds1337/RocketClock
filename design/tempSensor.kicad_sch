@@ -1106,7 +1106,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0784854b-9c69-403f-bd10-789fa5d3b40f")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR016"
 			(at 98.425 55.88 0)
 			(effects
 				(font
@@ -1156,7 +1156,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/9188ca40-07b5-4412-bf05-62accd580112"
-					(reference "#PWR014")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -1172,7 +1172,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0b19a1c1-c809-4203-bebe-976e585ace9d")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR017"
 			(at 98.425 66.04 0)
 			(effects
 				(font
@@ -1222,7 +1222,7 @@
 		(instances
 			(project "RocketClock"
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/9188ca40-07b5-4412-bf05-62accd580112"
-					(reference "#PWR015")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -1460,7 +1460,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "db54b32e-5d01-4508-9936-23e5386d7cc3")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR018"
 			(at 141.605 82.55 0)
 			(effects
 				(font
@@ -1510,7 +1510,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/9188ca40-07b5-4412-bf05-62accd580112"
-					(reference "#PWR016")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -1526,7 +1526,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f2bf829a-58f7-4372-b34b-adc9ec533557")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR019"
 			(at 141.605 113.03 0)
 			(effects
 				(font
@@ -1576,7 +1576,7 @@
 		(instances
 			(project ""
 				(path "/e36fbef8-3f03-40ce-b8c1-50d21e162c91/9188ca40-07b5-4412-bf05-62accd580112"
-					(reference "#PWR017")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
