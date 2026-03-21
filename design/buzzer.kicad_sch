@@ -2020,7 +2020,7 @@
 		)
 		(uuid "0134bed4-5940-48d7-9a55-24ba260ec227")
 	)
-	(text "0.5A\n40V\n460mV"
+	(text "0.5A\n40V\n510mV"
 		(exclude_from_sim no)
 		(at 140.97 69.85 0)
 		(effects
@@ -3685,7 +3685,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CBT-09427-SMT-TR"
+		(property "Value" "KELIKING KLJ-9032-3627"
 			(at 173.99 71.1199 0)
 			(effects
 				(font
@@ -4020,7 +4020,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "MBR0540T1G"
 			(at 149.86 70.8024 90)
 			(effects
 				(font
