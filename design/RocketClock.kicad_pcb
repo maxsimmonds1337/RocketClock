@@ -17810,6 +17810,7 @@
 		)
 		(embedded_fonts no)
 		(model "/Users/max/repos/RocketClock/lib/models/MagConn Female.step"
+			(hide yes)
 			(offset
 				(xyz 2.5 -7.6 0.4)
 			)
@@ -17818,6 +17819,17 @@
 			)
 			(rotate
 				(xyz 90 180 90)
+			)
+		)
+		(model "${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x05_P2.54mm_Vertical.step"
+			(offset
+				(xyz 2 -2.5 0.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -90 -0)
 			)
 		)
 	)
@@ -21935,6 +21947,7 @@
 		)
 		(embedded_fonts no)
 		(model "/Users/max/repos/RocketClock/lib/models/MagConn Male.step"
+			(hide yes)
 			(offset
 				(xyz 2.54 -7.66 0.5)
 			)
@@ -21943,6 +21956,17 @@
 			)
 			(rotate
 				(xyz -90 -0 -90)
+			)
+		)
+		(model "${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x05_P2.54mm_Vertical.step"
+			(offset
+				(xyz 2 -12.5 0.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 90 -180)
 			)
 		)
 	)

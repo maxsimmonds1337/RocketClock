@@ -1255,7 +1255,7 @@
       "plot": "../manufacturing/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "RocketClock.step",
       "svg": "",
       "vrml": ""
     },
