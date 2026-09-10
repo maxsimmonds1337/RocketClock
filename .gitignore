@@ -15,3 +15,15 @@ _autosave-*
 *.lck
 
 **/*.zip
+
+# --- Secrets (WiFi creds etc.) - never commit; copy secrets.h.example ---
+secrets.h
+**/secrets.h
+
+# --- Build artifacts, caches, OS junk ---
+.DS_Store
+.wrangler/
+**/build/
+a.out
+*.o
+software/tests/test
