@@ -309,14 +309,22 @@ char marsStr[160] = "MARS...";
 char marsWx[40]   = "";        // " -71/-5C Sunny" from proxy, or empty
 unsigned long lastMarsBuild = 0, lastMarsWx = 0;
 
-// Pull a value out of flat JSON (quoted or bare), e.g. jsonVal(p,"min_c").
+// Pull a value out of flat JSON, e.g. jsonVal(p,"headline"). Quoted strings are
+// read to their closing quote (so commas inside a value are kept); bare values
+// (numbers) stop at the next delimiter.
 String jsonVal(const String &p, const char *key) {
   int i = p.indexOf(String("\"") + key + "\"");
   if (i < 0) return "";
   i = p.indexOf(':', i); if (i < 0) return "";
-  for (i++; i < (int)p.length() && (p[i] == ' ' || p[i] == '"'); i++) {}
-  int j = i;
-  while (j < (int)p.length() && p[j] != '"' && p[j] != ',' && p[j] != '}') j++;
+  i++;
+  while (i < (int)p.length() && p[i] == ' ') i++;
+  if (i < (int)p.length() && p[i] == '"') {          // quoted string
+    i++; int j = i;
+    while (j < (int)p.length() && p[j] != '"') j++;  // to closing quote (keeps commas)
+    return p.substring(i, j);
+  }
+  int j = i;                                         // bare value (number/bool)
+  while (j < (int)p.length() && p[j] != ',' && p[j] != '}' && p[j] != ' ') j++;
   String v = p.substring(i, j); v.trim();
   return v;
 }
