@@ -42,12 +42,24 @@ const uint8_t TMP112_ADDR = 0x48;
 #ifndef AIR_PROXY_URL
 #define AIR_PROXY_URL ""
 #endif
+#ifndef NEWS_PROXY_URL
+#define NEWS_PROXY_URL ""
+#endif
 
 // Air-quality location (Open-Meteo, free, no key). Default: Tallinn, EE.
 #define AQ_LAT "59.437"
 #define AQ_LON "24.754"
 
-enum Mode { MODE_TEXT, MODE_TIMER, MODE_TEMP, MODE_CLOCK, MODE_WEATHER, MODE_LAUNCH, MODE_MARS, MODE_AQI, MODE_OFF };
+enum Mode { MODE_TEXT, MODE_TIMER, MODE_TEMP, MODE_CLOCK, MODE_WEATHER, MODE_LAUNCH, MODE_MARS, MODE_AQI, MODE_NEWS, MODE_OFF };
+
+// Event-engine types up here so Arduino's auto-generated prototypes resolve them.
+#define MAX_EVENTS 6
+#define MAX_ACTIONS 6
+enum { A_TEXT, A_WEATHER, A_NEWS, A_MARS, A_AIR, A_CLOCK, A_TEMP, A_BUZZER };
+enum { T_AT, T_RANGE, T_THR, T_DELTA };
+struct Action { uint8_t type, param; uint16_t value; bool sec; char text[28]; };
+struct Event { bool en; char name[20]; uint8_t trig, h, m, eh, em, src; bool above; int16_t x;
+               uint8_t nAct; Action act[MAX_ACTIONS]; };
 
 // Panel layout defaults - edit here, or change live from the dashboard
 // (POST /api/panels). cols x rows modules; serpentine = snake wiring;
@@ -104,8 +116,12 @@ bool cfgDirty = false;
 unsigned long cfgTouched = 0;
 void markDirty() { cfgDirty = true; cfgTouched = millis(); }   // debounced save
 
+void eventsToJson(JsonArray arr);      // defined in the event engine below
+void eventsFromJson(JsonArray arr);
+
 void saveConfig() {
   JsonDocument d;
+  eventsToJson(d["events"].to<JsonArray>());
   d["mode"] = (int)cfg.mode; d["bright"] = cfg.brightness; d["scroll"] = cfg.scrollMs;
   d["text"] = cfg.text; d["timer"] = cfg.timerSecs;
   d["cols"] = cfg.cols; d["rows"] = cfg.rows; d["serp"] = cfg.serpentine; d["flip"] = cfg.flip;
@@ -137,6 +153,7 @@ void loadConfig() {
   cfg.timerSound = d["tSnd"] | cfg.timerSound;
   cfg.fillOrder = d["fill"] | cfg.fillOrder;
   cfg.flip180 = d["flip180"] | cfg.flip180;
+  if (d["events"].is<JsonArray>()) eventsFromJson(d["events"].as<JsonArray>());
   logln("CFG loaded");
 }
 
@@ -148,13 +165,15 @@ int  timerLast = -1;
 bool timerDone = false;
 char tempStr[16] = "";
 unsigned long lastTemp = 0;
+float tempVal = NAN, aqiVal = NAN;   // latest sampled values for event triggers
 
 // ---- rendering helpers -----------------------------------------------------
+long scrollCycle = 0;   // bumps each time the scroll wraps (for cycle-based actions)
 void scrollText(const char *s) {
   if (millis() - lastScroll < cfg.scrollMs) return;
   lastScroll = millis();
   RocketFont::drawText(matrix, s, scrollX);
-  if (--scrollX < -RocketFont::textWidth(s)) scrollX = matrix.width();
+  if (--scrollX < -RocketFont::textWidth(s)) { scrollX = matrix.width(); scrollCycle++; }
 }
 
 // Apply the panel layout to the driver (must re-init the chain).
@@ -363,11 +382,168 @@ void fetchAir() {
     }
     const char *bands[] = {"GOOD", "FAIR", "MODERATE", "POOR", "V.POOR", "EXT.POOR"};
     int bi = aqi.toInt() / 20; if (bi > 5) bi = 5; if (bi < 0) bi = 0;
+    aqiVal = aqi.toInt();        // cache numeric AQI for event triggers
     snprintf(airStr, sizeof(airStr), "AIR %s %s  PM2.5 %s  PM10 %s",
              aqi.c_str(), bands[bi], pm25.c_str(), pm10.c_str());
   } else { strcpy(airStr, "AQ ERR"); }
   http.end();
   logln("%s", airStr);
+}
+
+// ---- news (BBC via proxy) --------------------------------------------------
+char newsStr[120] = "NEWS...";
+unsigned long lastNews = 0;
+
+void fetchNews() {
+  if (strlen(NEWS_PROXY_URL) == 0) { strcpy(newsStr, "NEWS: set NEWS_PROXY_URL"); return; }
+  if (WiFi.status() != WL_CONNECTED) { strcpy(newsStr, "NO WIFI"); return; }
+  WiFiClientSecure client; client.setInsecure(); client.setTimeout(12000);
+  HTTPClient http;
+  if (!http.begin(client, NEWS_PROXY_URL)) { strcpy(newsStr, "NEWS ERR"); return; }
+  if (http.GET() == 200) {
+    String p = http.getString();
+    String h = jsonVal(p, "headline");
+    if (h.length()) snprintf(newsStr, sizeof(newsStr), "%s", h.c_str());
+  } else { strcpy(newsStr, "NEWS ERR"); }
+  http.end();
+  logln("NEWS %s", newsStr);
+}
+
+// ============================ EVENT ENGINE ============================
+// An event = a trigger + an ordered sequence of timed actions. On trigger the
+// sequencer takes over the display, plays each action for its window (cycles or
+// seconds), then returns to the base mode. Types are defined near the top of
+// the file (so Arduino's auto-generated prototypes can see them).
+Event events[MAX_EVENTS];
+uint8_t nEvents = 0;
+
+int evActive = -1, evStep = -1;
+unsigned long actStart = 0; long actStartCycle = 0, lastTrigTick = 0, lastAqiSample = 0;
+int evLastMin[MAX_EVENTS]; bool evPrevCond[MAX_EVENTS], evValInit[MAX_EVENTS];
+float evLastVal[MAX_EVENTS];
+
+float srcValue(uint8_t src) { return src == 1 ? aqiVal : tempVal; }
+
+void eventsToJson(JsonArray arr) {
+  for (int i = 0; i < nEvents; i++) {
+    Event &e = events[i];
+    JsonObject o = arr.add<JsonObject>();
+    o["en"] = e.en; o["name"] = e.name; o["trig"] = e.trig;
+    o["h"] = e.h; o["m"] = e.m; o["eh"] = e.eh; o["em"] = e.em;
+    o["src"] = e.src; o["above"] = e.above; o["x"] = e.x;
+    JsonArray a = o["act"].to<JsonArray>();
+    for (int j = 0; j < e.nAct; j++) {
+      Action &c = e.act[j];
+      JsonObject ao = a.add<JsonObject>();
+      ao["t"] = c.type; ao["p"] = c.param; ao["v"] = c.value; ao["s"] = c.sec; ao["x"] = c.text;
+    }
+  }
+}
+
+void eventsFromJson(JsonArray arr) {
+  nEvents = 0;
+  for (JsonObject o : arr) {
+    if (nEvents >= MAX_EVENTS) break;
+    Event &e = events[nEvents];
+    e.en = o["en"] | true; strlcpy(e.name, o["name"] | "event", sizeof(e.name));
+    e.trig = o["trig"] | 0; e.h = o["h"] | 0; e.m = o["m"] | 0; e.eh = o["eh"] | 0; e.em = o["em"] | 0;
+    e.src = o["src"] | 0; e.above = o["above"] | true; e.x = o["x"] | 0;
+    e.nAct = 0;
+    for (JsonObject ao : o["act"].as<JsonArray>()) {
+      if (e.nAct >= MAX_ACTIONS) break;
+      Action &c = e.act[e.nAct];
+      c.type = ao["t"] | 0; c.param = ao["p"] | 0; c.value = ao["v"] | 3; c.sec = ao["s"] | false;
+      strlcpy(c.text, ao["x"] | "", sizeof(c.text));
+      e.nAct++;
+    }
+    evLastMin[nEvents] = -1; evPrevCond[nEvents] = false; evValInit[nEvents] = false;
+    nEvents++;
+  }
+}
+
+// Render the current action; true when its duration (cycles or seconds) elapsed.
+bool renderAction(Action &a) {
+  const char *s = a.text;
+  switch (a.type) {
+    case A_WEATHER: s = weatherStr; break;
+    case A_NEWS:    s = newsStr; break;
+    case A_MARS:    buildMarsStr(); s = marsStr; break;
+    case A_AIR:     s = airStr; break;
+    case A_CLOCK:   updateClockStr(); s = clockStr; break;
+    case A_TEMP:    s = tempStr; break;
+    case A_BUZZER:  return millis() - actStart >= 400;   // brief hold after the beep
+  }
+  scrollText(s);
+  if (a.sec) return millis() - actStart >= (unsigned long)a.value * 1000UL;
+  return (scrollCycle - actStartCycle) >= a.value;
+}
+
+void enterStep() {
+  Action &a = events[evActive].act[evStep];
+  actStart = millis(); actStartCycle = scrollCycle; scrollX = matrix.width();
+  if (a.type == A_WEATHER) fetchWeather();
+  else if (a.type == A_NEWS) fetchNews();
+  else if (a.type == A_AIR)  fetchAir();
+  else if (a.type == A_TEMP) { float t = readTempC();
+    if (isnan(t)) strcpy(tempStr, "TEMP?"); else snprintf(tempStr, sizeof(tempStr), "%.1f\xB0""C", t); }
+  else if (a.type == A_BUZZER) {
+    if (a.param == 1)      buzzer.playMelody(RocketMelodies::HEDWIG, RocketBuzzer::VOL_MAX);
+    else if (a.param == 2) buzzer.playMelody(RocketMelodies::CLOSE_ENCOUNTERS, RocketBuzzer::VOL_MAX);
+    else                   buzzer.playMelody(RocketMelodies::SIREN, RocketBuzzer::VOL_MAX);
+  }
+}
+
+void runSequencer() {
+  if (renderAction(events[evActive].act[evStep])) {
+    if (++evStep >= events[evActive].nAct) {
+      logln("EVENT '%s' done", events[evActive].name);
+      evActive = -1; scrollX = matrix.width();
+    } else enterStep();
+  }
+}
+
+void evalTriggers() {
+  if (evActive >= 0 || millis() - lastTrigTick < 3000) return;
+  lastTrigTick = millis();
+  tempVal = readTempC();
+  // Keep AQI fresh for threshold/delta events (every 30 min).
+  bool needAqi = false;
+  for (int i = 0; i < nEvents; i++)
+    if (events[i].en && events[i].src == 1 && (events[i].trig == T_THR || events[i].trig == T_DELTA)) needAqi = true;
+  if (needAqi && (lastAqiSample == 0 || millis() - lastAqiSample > 30UL * 60 * 1000)) { lastAqiSample = millis(); fetchAir(); }
+
+  time_t now = timeReady() ? time(nullptr) : 0;
+  struct tm *t = now ? localtime(&now) : nullptr;
+  for (int i = 0; i < nEvents; i++) {
+    Event &e = events[i]; if (!e.en) continue;
+    bool fire = false;
+    if (e.trig == T_AT && t) {
+      if (t->tm_hour == e.h && t->tm_min == e.m && evLastMin[i] != t->tm_min) { evLastMin[i] = t->tm_min; fire = true; }
+    } else if (e.trig == T_RANGE && t) {
+      int c = t->tm_hour * 60 + t->tm_min, a = e.h * 60 + e.m, b = e.eh * 60 + e.em;
+      if (a <= b ? (c >= a && c < b) : (c >= a || c < b)) fire = true;
+    } else if (e.trig == T_THR) {
+      float v = srcValue(e.src);
+      if (!isnan(v)) { bool cond = e.above ? v > e.x : v < e.x; if (cond && !evPrevCond[i]) fire = true; evPrevCond[i] = cond; }
+    } else if (e.trig == T_DELTA) {
+      float v = srcValue(e.src);
+      if (!isnan(v)) { if (evValInit[i] && fabs(v - evLastVal[i]) >= e.x) fire = true; evLastVal[i] = v; evValInit[i] = true; }
+    }
+    if (fire) { evActive = i; evStep = 0; logln("EVENT '%s' start", e.name); enterStep(); break; }
+  }
+}
+
+void handleEventsGet() {
+  JsonDocument d; eventsToJson(d["events"].to<JsonArray>());
+  String out; serializeJson(d, out);
+  server.send(200, "application/json", out);
+}
+void handleEventsPost() {
+  JsonDocument d;
+  if (deserializeJson(d, server.arg("plain"))) { server.send(400, "application/json", "{\"err\":\"bad json\"}"); return; }
+  eventsFromJson(d["events"].as<JsonArray>());
+  markDirty(); logln("EVENTS updated (%u)", nEvents);
+  handleEventsGet();
 }
 
 float readTempC() {
@@ -435,7 +611,8 @@ void sendStatus() {
   const char *m = cfg.mode == MODE_TEXT ? "text" : cfg.mode == MODE_TIMER ? "timer"
                 : cfg.mode == MODE_TEMP ? "temp" : cfg.mode == MODE_CLOCK ? "clock"
                 : cfg.mode == MODE_WEATHER ? "weather" : cfg.mode == MODE_LAUNCH ? "launch"
-                : cfg.mode == MODE_MARS ? "mars" : cfg.mode == MODE_AQI ? "air" : "off";
+                : cfg.mode == MODE_MARS ? "mars" : cfg.mode == MODE_AQI ? "air"
+                : cfg.mode == MODE_NEWS ? "news" : "off";
   char buf[680];
   snprintf(buf, sizeof(buf),
     "{\"mode\":\"%s\",\"brightness\":%u,\"scrollMs\":%u,\"text\":\"%s\",\"timerSecs\":%lu,"
@@ -460,6 +637,7 @@ void handleMode() {
   else if (m == "launch")  { cfg.mode = MODE_LAUNCH; lastLaunchFetch = 0; }
   else if (m == "mars")    { cfg.mode = MODE_MARS; lastMarsBuild = 0; }
   else if (m == "air")     { cfg.mode = MODE_AQI; lastAir = 0; }
+  else if (m == "news")    { cfg.mode = MODE_NEWS; lastNews = 0; }
   else if (m == "off")  { cfg.mode = MODE_OFF; matrix.clear(); }
   scrollX = matrix.width();
   logln("MODE -> %s", m.c_str());
@@ -601,7 +779,7 @@ label{display:block;margin:.5rem 0 .2rem;font-size:.72rem;color:var(--dim);lette
 </style></head><body>
 <header><h1>&#9650; RocketClock &middot; Mission Control</h1>
 <div id="conn"><span id="dot"></span><span id="cst">OFFLINE</span></div></header>
-<nav><button class="on" data-tab="control">CONTROL</button><button data-tab="telemetry">TELEMETRY</button></nav>
+<nav><button class="on" data-tab="control">CONTROL</button><button data-tab="events">EVENTS</button><button data-tab="telemetry">TELEMETRY</button></nav>
 <main>
 <section id="control">
  <div class="panel"><span class="lbl">STATUS</span><div class="body"><div id="met">awaiting telemetry&hellip;</div></div></div>
@@ -614,6 +792,7 @@ label{display:block;margin:.5rem 0 .2rem;font-size:.72rem;color:var(--dim);lette
   <button class="act" data-mode="launch" onclick="mode('launch')">&#128640; LAUNCH</button>
   <button class="act" data-mode="mars" onclick="mode('mars')">&#128308; MARS</button>
   <button class="act" data-mode="air" onclick="mode('air')">&#127787; AIR</button>
+  <button class="act" data-mode="news" onclick="mode('news')">&#128240; NEWS</button>
   <button class="act" data-mode="off" onclick="mode('off')">OFF</button></div></div></div>
  <div class="panel"><span class="lbl">SCROLLING TEXT</span><div class="body row">
   <input id="msg" value="ROCKETCLOCK" style="flex:1"><button class="act" onclick="setText()">SET</button></div></div>
@@ -641,6 +820,21 @@ label{display:block;margin:.5rem 0 .2rem;font-size:.72rem;color:var(--dim);lette
   <label><input type="checkbox" id="rot180"> ROTATE WHOLE DISPLAY 180&deg; (USB DOWN)</label>
   <button class="act" onclick="setPanels()">APPLY</button></div></div>
 </section>
+<section id="events" class="hidden">
+ <div class="panel"><span class="lbl">EVENTS</span><div class="body"><div id="evlist">none</div></div></div>
+ <div class="panel"><span class="lbl">NEW EVENT</span><div class="body">
+  <label>NAME</label><input id="evname" value="Morning" style="width:60%">
+  <label>TRIGGER</label>
+  <select id="evtrig" onchange="trigUI()"><option value="0">At time</option><option value="1">Time range</option><option value="2">Threshold</option><option value="3">Delta (change by)</option></select>
+  <div id="trigAt" class="row" style="margin-top:.4rem">TIME <input id="tgh" type="number" min="0" max="23" value="9" style="width:3.5rem">:<input id="tgm" type="number" min="0" max="59" value="0" style="width:3.5rem"></div>
+  <div id="trigEnd" class="row hidden">to <input id="tgeh" type="number" min="0" max="23" value="17" style="width:3.5rem">:<input id="tgem" type="number" min="0" max="59" value="0" style="width:3.5rem"></div>
+  <div id="trigThr" class="row hidden"><select id="tgsrc"><option value="0">Temp &deg;C</option><option value="1">AQI</option></select>
+   <select id="tgop"><option value="1">above</option><option value="0">below</option></select>
+   <input id="tgx" type="number" value="28" style="width:4.5rem"></div>
+  <label>ACTIONS</label><div id="acts"></div>
+  <div class="row" style="margin-top:.4rem"><button class="act" onclick="addAct()">+ ACTION</button><button class="act" onclick="saveEvent()">SAVE EVENT</button></div>
+ </div></div>
+</section>
 <section id="telemetry" class="hidden">
  <div class="panel"><span class="lbl">SERIAL TELEMETRY &middot; LIVE</span><div class="body"><div id="console"></div></div></div>
 </section></main>
@@ -649,8 +843,8 @@ const $=id=>document.getElementById(id);
 function setConn(ok){$('conn').className=ok?'ok':'';$('cst').textContent=ok?'CONNECTED':'OFFLINE';}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
  document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
- $('control').classList.toggle('hidden',b.dataset.tab!=='control');
- $('telemetry').classList.toggle('hidden',b.dataset.tab!=='telemetry');});
+ ['control','events','telemetry'].forEach(id=>$(id).classList.toggle('hidden',b.dataset.tab!==id));
+ if(b.dataset.tab==='events')loadEvents();});
 let formInit=false;
 const show=s=>{setConn(true);
  $('met').innerHTML='MODE <b>'+(s.mode||'?').toUpperCase()+'</b> &middot; CLK <b>'+(s.time||'--:--')+'</b> &middot; ARRAY <b>'+s.cols+'&times;'+s.rows+'</b> &middot; BRT <b>'+s.brightness+'</b>';
@@ -680,6 +874,23 @@ function logs(){req('/api/logs',{since:logSeq}).then(d=>{setConn(true);logSeq=d.
   if(c.textContent.length>9000)c.textContent=c.textContent.slice(-9000);c.scrollTop=c.scrollHeight;}
  }).catch(()=>setConn(false));}
 setInterval(logs,1500);logs();
+// ---- events builder ----
+let EV=[],NA=[];const ATN=['Text','Weather','News','Mars','Air','Clock','Temp','Buzzer'];
+const p2=n=>String(n).padStart(2,'0');
+function trigUI(){const v=+evtrig.value;$('trigAt').classList.toggle('hidden',v>1);$('trigEnd').classList.toggle('hidden',v!=1);$('trigThr').classList.toggle('hidden',v<2);}
+function trigDesc(e){return [`@${p2(e.h)}:${p2(e.m)}`,`${p2(e.h)}:${p2(e.m)}-${p2(e.eh)}:${p2(e.em)}`,`${e.src?'AQI':'temp'}${e.above?'>':'<'}${e.x}`,`${e.src?'AQI':'temp'} Δ${e.x}`][e.trig];}
+function loadEvents(){req('/api/events').then(d=>{EV=d.events||[];renderEvents();setConn(true);}).catch(()=>setConn(false));}
+function renderEvents(){const l=$('evlist');l.innerHTML=EV.length?'':'none';EV.forEach((e,i)=>{const d=document.createElement('div');d.style.margin='.35rem 0';d.innerHTML=`<button class=act onclick=delEv(${i})>&#10005;</button> <b>${e.name}</b> — ${trigDesc(e)} → ${(e.act||[]).length} action(s)`;l.appendChild(d);});}
+function addAct(){NA.push({t:0,p:0,v:3,s:false,x:'HELLO'});renderActs();}
+function renderActs(){const w=$('acts');w.innerHTML='';NA.forEach((a,i)=>{const d=document.createElement('div');d.className='row';d.style.margin='.2rem 0';
+ d.innerHTML=`<select onchange="NA[${i}].t=+this.value;renderActs()">${ATN.map((n,j)=>`<option value=${j} ${a.t==j?'selected':''}>${n}</option>`).join('')}</select>`
+ +(a.t==0?`<input value="${a.x}" oninput="NA[${i}].x=this.value" style="flex:1">`:'')
+ +(a.t==7?`<select onchange="NA[${i}].p=+this.value">${['Siren','Hedwig','CloseEnc'].map((n,j)=>`<option value=${j} ${a.p==j?'selected':''}>${n}</option>`).join('')}</select>`:'')
+ +`<input type=number value=${a.v} style="width:3.5rem" oninput="NA[${i}].v=+this.value"><select onchange="NA[${i}].s=this.value=='1'"><option value=0 ${!a.s?'selected':''}>cyc</option><option value=1 ${a.s?'selected':''}>sec</option></select><button class=act onclick="NA.splice(${i},1);renderActs()">&#10005;</button>`;
+ w.appendChild(d);});}
+function saveEvent(){const v=+evtrig.value;EV.push({name:evname.value||'event',en:true,trig:v,h:+tgh.value,m:+tgm.value,eh:+tgeh.value,em:+tgem.value,src:+tgsrc.value,above:tgop.value=='1',x:+tgx.value,act:NA.map(a=>({t:a.t,p:a.p,v:a.v,s:a.s,x:a.x}))});NA=[];renderActs();saveEvents();}
+function delEv(i){EV.splice(i,1);saveEvents();}
+function saveEvents(){fetch('/api/events',{method:'POST',body:JSON.stringify({events:EV})}).then(r=>r.json()).then(d=>{EV=d.events||[];renderEvents();setConn(true);}).catch(()=>setConn(false));}
 </script></body></html>)HTML";
 
 void handleRoot() { server.send_P(200, "text/html", INDEX_HTML); }
@@ -721,6 +932,8 @@ void setup() {
   server.on("/api/panels", HTTP_POST, handlePanels);
   server.on("/api/alarm",  HTTP_POST, handleAlarm);
   server.on("/api/weather",HTTP_POST, handleWeather);
+  server.on("/api/events", HTTP_GET,  handleEventsGet);
+  server.on("/api/events", HTTP_POST, handleEventsPost);
   server.on("/api/temp",   handleTemp);
   server.on("/api/logs",   handleLogs);
   server.begin();
@@ -733,6 +946,9 @@ void loop() {
   server.handleClient();
   checkAlarm();                       // fires regardless of active mode
   if (cfgDirty && millis() - cfgTouched > 2500) { cfgDirty = false; saveConfig(); }
+
+  evalTriggers();                     // event triggers (time / threshold / delta)
+  if (evActive >= 0) { runSequencer(); return; }   // an event sequence takes over
 
   switch (cfg.mode) {
     case MODE_TEXT: scrollText(cfg.text); break;
@@ -773,6 +989,10 @@ void loop() {
     case MODE_AQI:
       if (lastAir == 0 || millis() - lastAir > 30UL * 60 * 1000) { lastAir = millis(); fetchAir(); }
       scrollText(airStr);
+      break;
+    case MODE_NEWS:
+      if (lastNews == 0 || millis() - lastNews > 10UL * 60 * 1000) { lastNews = millis(); fetchNews(); }
+      scrollText(newsStr);
       break;
     case MODE_OFF: break;
   }
