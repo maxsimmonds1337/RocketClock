@@ -262,7 +262,7 @@ time_t utcToEpoch(int Y, int M, int D, int h, int mi, int s) {
 // so callers refresh infrequently. Crude string extraction (no JSON lib).
 void fetchLaunch() {
   if (WiFi.status() != WL_CONNECTED) { strcpy(launchName, "NO WIFI"); launchNet = 0; return; }
-  WiFiClientSecure client; client.setInsecure(); client.setTimeout(15000);
+  WiFiClientSecure client; client.setInsecure(); client.setBufferSizes(2048, 512); client.setTimeout(15000);
   HTTPClient http;
   // Use the trimming proxy if configured; else hit Launch Library 2 directly.
   const char *url = strlen(LAUNCH_PROXY_URL) ? LAUNCH_PROXY_URL
@@ -325,7 +325,7 @@ String jsonVal(const String &p, const char *key) {
 void fetchMarsWx() {
   marsWx[0] = 0;
   if (strlen(MARS_PROXY_URL) == 0 || WiFi.status() != WL_CONNECTED) return;
-  WiFiClientSecure client; client.setInsecure(); client.setTimeout(12000);
+  WiFiClientSecure client; client.setInsecure(); client.setBufferSizes(2048, 512); client.setTimeout(12000);
   HTTPClient http;
   if (!http.begin(client, MARS_PROXY_URL)) return;
   if (http.GET() == 200) {
@@ -368,7 +368,7 @@ void fetchAir() {
   String url = proxy ? String(AIR_PROXY_URL)
              : String("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=")
                + AQ_LAT + "&longitude=" + AQ_LON + "&current=european_aqi,pm2_5,pm10";
-  WiFiClientSecure client; client.setInsecure(); client.setTimeout(12000);
+  WiFiClientSecure client; client.setInsecure(); client.setBufferSizes(2048, 512); client.setTimeout(12000);
   HTTPClient http;
   if (!http.begin(client, url)) { strcpy(airStr, "AQ ERR"); return; }
   if (http.GET() == 200) {
@@ -397,7 +397,7 @@ unsigned long lastNews = 0;
 void fetchNews() {
   if (strlen(NEWS_PROXY_URL) == 0) { strcpy(newsStr, "NEWS: set NEWS_PROXY_URL"); return; }
   if (WiFi.status() != WL_CONNECTED) { strcpy(newsStr, "NO WIFI"); return; }
-  WiFiClientSecure client; client.setInsecure(); client.setTimeout(12000);
+  WiFiClientSecure client; client.setInsecure(); client.setBufferSizes(2048, 512); client.setTimeout(12000);
   HTTPClient http;
   if (!http.begin(client, NEWS_PROXY_URL)) { strcpy(newsStr, "NEWS ERR"); return; }
   if (http.GET() == 200) {
