@@ -70,6 +70,25 @@ RocketMatrix matrix;
 RocketBuzzer buzzer;
 ESP8266WebServer server(80);
 
+// ---- log ring: serial mirrored to /api/logs for the dashboard console ------
+#define LOG_LINES 40
+#define LOG_LEN   84
+char logRing[LOG_LINES][LOG_LEN];
+uint32_t logSeq = 0;
+
+void logln(const char *fmt, ...) {
+  char msg[LOG_LEN];
+  va_list ap; va_start(ap, fmt);
+  vsnprintf(msg, sizeof(msg), fmt, ap);
+  va_end(ap);
+  char line[LOG_LEN];
+  snprintf(line, sizeof(line), "T+%lus  %s", millis() / 1000, msg);  // mission-elapsed
+  strncpy(logRing[logSeq % LOG_LINES], line, LOG_LEN - 1);
+  logRing[logSeq % LOG_LINES][LOG_LEN - 1] = 0;
+  logSeq++;
+  Serial.println(line);
+}
+
 // ---- runtime state ---------------------------------------------------------
 int scrollX = 8;
 unsigned long lastScroll = 0;
@@ -116,6 +135,7 @@ void checkAlarm() {
   struct tm *t = localtime(&now);
   if (t->tm_hour == cfg.alarmH && t->tm_min == cfg.alarmM && lastAlarmMin != t->tm_min) {
     lastAlarmMin = t->tm_min;
+    logln("*** ALARM FIRING %02u:%02u ***", cfg.alarmH, cfg.alarmM);
     for (int i = 0; i < 3; i++) {
       matrix.fill(true);  buzzer.playMelody(RocketMelodies::HEDWIG, RocketBuzzer::VOL_MAX);
       matrix.clear();     delay(200);
@@ -145,6 +165,7 @@ void fetchWeather() {
     snprintf(weatherStr, sizeof(weatherStr), "WX ERR %d", code);
   }
   http.end();
+  logln("WX %s", weatherStr);
 }
 
 // --- rocket launch (Launch Library 2) ---
@@ -195,6 +216,7 @@ void fetchLaunch() {
     snprintf(launchName, sizeof(launchName), "LL2 ERR %d", code); launchNet = 0;
   }
   http.end();
+  logln("LAUNCH %s", launchName);
 }
 
 // Compose "<name>  T-HH:MM:SS" (or T-Nd HH:MM far out, T+ after liftoff).
@@ -284,6 +306,7 @@ void fetchAir() {
              aqi.c_str(), bands[bi], pm25.c_str(), pm10.c_str());
   } else { strcpy(airStr, "AQ ERR"); }
   http.end();
+  logln("%s", airStr);
 }
 
 float readTempC() {
@@ -343,6 +366,7 @@ void handleMode() {
   else if (m == "air")     { cfg.mode = MODE_AQI; lastAir = 0; }
   else if (m == "off")  { cfg.mode = MODE_OFF; matrix.clear(); }
   scrollX = matrix.width();
+  logln("MODE -> %s", m.c_str());
   sendStatus();
 }
 
@@ -373,6 +397,7 @@ void handlePanels() {
   if (server.hasArg("serpentine")) cfg.serpentine = server.arg("serpentine") == "1";
   if (server.hasArg("flip"))       cfg.flip       = server.arg("flip") == "1";
   applyLayout();
+  logln("PANELS %ux%u serp=%d flip=%d", cfg.cols, cfg.rows, cfg.serpentine, cfg.flip);
   sendStatus();
 }
 
@@ -417,56 +442,112 @@ void handleTemp() {
   server.send(200, "application/json", buf);
 }
 
+// Stream log lines newer than ?since=<seq>. Returns {seq, lines:[...]}.
+void handleLogs() {
+  uint32_t since = strtoul(server.arg("since").c_str(), nullptr, 10);
+  uint32_t start = (since > logSeq) ? logSeq : since;               // clamp
+  if (logSeq - start > LOG_LINES) start = logSeq - LOG_LINES;       // ring cap
+  String out; out.reserve(2800);
+  out = "{\"seq\":" + String(logSeq) + ",\"lines\":[";
+  for (uint32_t s = start; s < logSeq; s++) {
+    if (s != start) out += ',';
+    out += '"';
+    for (const char *p = logRing[s % LOG_LINES]; *p; p++) {
+      if (*p == '"' || *p == '\\') out += '\\';
+      out += *p;
+    }
+    out += '"';
+  }
+  out += "]}";
+  server.send(200, "application/json", out);
+}
+
 // Dashboard SPA (served from PROGMEM).
 const char INDEX_HTML[] PROGMEM = R"HTML(<!doctype html><html><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RocketClock</title><style>
-body{font-family:system-ui,sans-serif;max-width:520px;margin:1.5rem auto;padding:0 1rem;background:#0b0e14;color:#e6e6e6}
-h1{font-size:1.3rem}fieldset{border:1px solid #333;border-radius:10px;margin:.8rem 0;padding:.8rem}
-legend{color:#8ab4f8;padding:0 .4rem}button,input,select{font-size:1rem;padding:.5rem;border-radius:8px;border:1px solid #444;background:#161b22;color:#e6e6e6}
-button{background:#1f6feb;border:0;cursor:pointer}button.sec{background:#30363d}label{display:block;margin:.5rem 0 .2rem}
-.row{display:flex;gap:.5rem;flex-wrap:wrap}input[type=range]{width:100%}#status{font-family:monospace;font-size:.8rem;color:#9aa}
-button.active{background:#2ea043;box-shadow:0 0 0 2px #8ab4f8}#cur{font-weight:600;color:#8ab4f8;margin:.2rem 0 .6rem}
+<title>RocketClock Mission Control</title><style>
+:root{--bg:#05080d;--panel:#0b121c;--edge:#1c2a3a;--grn:#39ff9e;--amb:#ffb347;--red:#ff5252;--txt:#cfe3f0;--dim:#5a7089}
+*{box-sizing:border-box}
+body{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;margin:0;color:var(--txt);min-height:100vh;background:radial-gradient(circle at 50% -10%,#0a1420,#05080d)}
+header{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;border-bottom:1px solid var(--edge);background:#070c14}
+header h1{font-size:.95rem;letter-spacing:.18em;margin:0;color:var(--grn);text-transform:uppercase}
+#conn{font-size:.72rem;letter-spacing:.12em;display:flex;align-items:center;gap:.45rem;color:var(--red)}
+#dot{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red)}
+#conn.ok{color:var(--grn)}#conn.ok #dot{background:var(--grn);box-shadow:0 0 9px var(--grn);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.35}}
+nav{display:flex;border-bottom:1px solid var(--edge);background:#070c14}
+nav button{flex:1;background:none;border:0;color:var(--dim);padding:.65rem;font:inherit;letter-spacing:.12em;cursor:pointer;border-bottom:2px solid transparent}
+nav button.on{color:var(--grn);border-bottom-color:var(--grn)}
+main{max-width:660px;margin:0 auto;padding:.6rem 1rem 2rem}
+.panel{border:1px solid var(--edge);border-radius:6px;margin:1rem 0;background:var(--panel);position:relative}
+.panel>.lbl{position:absolute;top:-.55rem;left:.7rem;background:var(--panel);padding:0 .4rem;font-size:.62rem;letter-spacing:.16em;color:var(--amb)}
+.panel>.body{padding:.9rem .8rem .75rem}
+.row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+button.act{background:#10202e;border:1px solid var(--edge);color:var(--txt);border-radius:4px;padding:.5rem .7rem;font:inherit;cursor:pointer}
+button.act:hover{border-color:var(--grn);color:var(--grn)}
+button.act.active{background:#0d3a2a;border-color:var(--grn);color:var(--grn);box-shadow:0 0 6px rgba(57,255,158,.4)}
+input,select{background:#060b12;border:1px solid var(--edge);color:var(--txt);border-radius:4px;padding:.45rem;font:inherit}
+input[type=range]{width:100%;accent-color:var(--grn);padding:0}
+label{display:block;margin:.5rem 0 .2rem;font-size:.72rem;color:var(--dim);letter-spacing:.05em}
+#met{font-size:.78rem;color:var(--dim);line-height:1.7}#met b{color:var(--grn)}
+#console{background:#02050a;border:1px solid var(--edge);border-radius:6px;height:62vh;overflow:auto;padding:.6rem;font-size:.72rem;line-height:1.55;color:var(--grn);white-space:pre-wrap;word-break:break-word}
+.hidden{display:none}
 </style></head><body>
-<h1>🚀 RocketClock</h1>
-<div id="cur">Mode: —</div>
-<fieldset><legend>Mode</legend><div class="row" id="modes">
-<button data-mode="text" onclick="mode('text')">Text</button><button data-mode="timer" onclick="mode('timer')">Timer</button>
-<button data-mode="clock" onclick="mode('clock')">Clock</button><button data-mode="temp" onclick="mode('temp')">Temp</button>
-<button data-mode="weather" onclick="mode('weather')">Weather</button><button data-mode="launch" onclick="mode('launch')">🚀 Launch</button>
-<button data-mode="mars" onclick="mode('mars')">🔴 Mars</button><button data-mode="air" onclick="mode('air')">🌫️ Air</button>
-<button data-mode="off" class="sec" onclick="mode('off')">Off</button></div></fieldset>
-<fieldset><legend>Scrolling text</legend>
-<input id="msg" value="ROCKETCLOCK" style="width:70%"><button onclick="setText()">Set</button></fieldset>
-<fieldset><legend>Timer</legend>
-<input id="mins" type="number" value="20" step="0.5" style="width:40%"> minutes
-<button onclick="setTimer()">Start</button></fieldset>
-<fieldset><legend>Display</legend>
-<label>Brightness <span id="bv">5</span></label><input id="br" type="range" min="0" max="15" value="5" oninput="bv.textContent=this.value" onchange="cfg()">
-<label>Scroll speed (ms/step) <span id="sv">60</span></label><input id="sp" type="range" min="5" max="300" value="60" oninput="sv.textContent=this.value" onchange="cfg()"></fieldset>
-<fieldset><legend>Alarm</legend>
-<input id="atime" type="time" value="07:30" style="width:35%">
-<label><input type="checkbox" id="aon" style="width:auto"> Enabled</label>
-<button onclick="setAlarm()">Set</button></fieldset>
-<fieldset><legend>Weather</legend>
-<input id="city" placeholder="city (blank = auto by IP)" style="width:55%">
-<button onclick="setWeather()">Show</button></fieldset>
-<fieldset><legend>Buzzer</legend><div class="row">
-<button onclick="buzz('hedwig')">Hedwig</button><button onclick="buzz('close_encounters')">Close Encounters</button></div></fieldset>
-<fieldset><legend>Panels</legend>
-<div class="row">Cols <input id="cols" type="number" min="1" max="16" value="1" style="width:20%">
-Rows <input id="rows" type="number" min="1" max="16" value="1" style="width:20%"></div>
-<label><input type="checkbox" id="snake" checked style="width:auto"> Serpentine (snake wiring)</label>
-<label><input type="checkbox" id="flip" checked style="width:auto"> Flip reverse rows 180°</label>
-<button onclick="setPanels()">Apply</button></fieldset>
-<pre id="status">loading...</pre>
+<header><h1>&#9650; RocketClock &middot; Mission Control</h1>
+<div id="conn"><span id="dot"></span><span id="cst">OFFLINE</span></div></header>
+<nav><button class="on" data-tab="control">CONTROL</button><button data-tab="telemetry">TELEMETRY</button></nav>
+<main>
+<section id="control">
+ <div class="panel"><span class="lbl">STATUS</span><div class="body"><div id="met">awaiting telemetry&hellip;</div></div></div>
+ <div class="panel"><span class="lbl">MODE</span><div class="body"><div class="row" id="modes">
+  <button class="act" data-mode="text" onclick="mode('text')">TEXT</button>
+  <button class="act" data-mode="timer" onclick="mode('timer')">TIMER</button>
+  <button class="act" data-mode="clock" onclick="mode('clock')">CLOCK</button>
+  <button class="act" data-mode="temp" onclick="mode('temp')">TEMP</button>
+  <button class="act" data-mode="weather" onclick="mode('weather')">WEATHER</button>
+  <button class="act" data-mode="launch" onclick="mode('launch')">&#128640; LAUNCH</button>
+  <button class="act" data-mode="mars" onclick="mode('mars')">&#128308; MARS</button>
+  <button class="act" data-mode="air" onclick="mode('air')">&#127787; AIR</button>
+  <button class="act" data-mode="off" onclick="mode('off')">OFF</button></div></div></div>
+ <div class="panel"><span class="lbl">SCROLLING TEXT</span><div class="body row">
+  <input id="msg" value="ROCKETCLOCK" style="flex:1"><button class="act" onclick="setText()">SET</button></div></div>
+ <div class="panel"><span class="lbl">TIMER</span><div class="body row">
+  <input id="mins" type="number" value="20" step="0.5" style="width:6rem"><span style="color:var(--dim)">min</span>
+  <button class="act" onclick="setTimer()">START</button></div></div>
+ <div class="panel"><span class="lbl">DISPLAY</span><div class="body">
+  <label>BRIGHTNESS <span id="bv">5</span></label><input id="br" type="range" min="0" max="15" value="5" oninput="bv.textContent=this.value" onchange="cfg()">
+  <label>SCROLL SPEED <span id="sv">60</span> ms</label><input id="sp" type="range" min="5" max="300" value="60" oninput="sv.textContent=this.value" onchange="cfg()"></div></div>
+ <div class="panel"><span class="lbl">ALARM</span><div class="body row">
+  <input id="atime" type="time" value="07:30"><label style="margin:0"><input type="checkbox" id="aon"> ARM</label>
+  <button class="act" onclick="setAlarm()">SET</button></div></div>
+ <div class="panel"><span class="lbl">WEATHER / AIR LOCATION</span><div class="body row">
+  <input id="city" placeholder="city (blank = auto by IP)" style="flex:1"><button class="act" onclick="setWeather()">SHOW</button></div></div>
+ <div class="panel"><span class="lbl">BUZZER</span><div class="body row">
+  <button class="act" onclick="buzz('hedwig')">HEDWIG</button><button class="act" onclick="buzz('close_encounters')">CLOSE ENCOUNTERS</button></div></div>
+ <div class="panel"><span class="lbl">PANEL ARRAY</span><div class="body">
+  <div class="row"><label style="margin:0">COLS <input id="cols" type="number" min="1" max="16" value="1" style="width:4rem"></label>
+  <label style="margin:0">ROWS <input id="rows" type="number" min="1" max="16" value="1" style="width:4rem"></label></div>
+  <label style="margin-top:.5rem"><input type="checkbox" id="snake" checked> SERPENTINE (SNAKE WIRING)</label>
+  <label><input type="checkbox" id="flip" checked> FLIP REVERSE ROWS 180&deg;</label>
+  <button class="act" onclick="setPanels()">APPLY</button></div></div>
+</section>
+<section id="telemetry" class="hidden">
+ <div class="panel"><span class="lbl">SERIAL TELEMETRY &middot; LIVE</span><div class="body"><div id="console"></div></div></div>
+</section></main>
 <script>
-const q=(p,o)=>fetch(p+(o?'?'+new URLSearchParams(o):''),{method:'POST'}).then(r=>r.json()).then(show);
-const show=s=>{status.textContent=JSON.stringify(s,null,1);cur.textContent='Mode: '+(s.mode||'?').toUpperCase();
-document.querySelectorAll('#modes button').forEach(b=>b.classList.toggle('active',b.dataset.mode===s.mode));
-if(s.cols){cols.value=s.cols;rows.value=s.rows;snake.checked=s.serpentine;flip.checked=s.flip;}
-if(s.alarm){atime.value=s.alarm;aon.checked=s.alarmOn;}if(s.city!==undefined)city.value=s.city;
-if(s.time&&s.mode!=='clock')cur.textContent+='  ('+s.time+')';};
+const $=id=>document.getElementById(id);
+function setConn(ok){$('conn').className=ok?'ok':'';$('cst').textContent=ok?'CONNECTED':'OFFLINE';}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
+ $('control').classList.toggle('hidden',b.dataset.tab!=='control');
+ $('telemetry').classList.toggle('hidden',b.dataset.tab!=='telemetry');});
+const show=s=>{setConn(true);
+ $('met').innerHTML='MODE <b>'+(s.mode||'?').toUpperCase()+'</b> &middot; CLK <b>'+(s.time||'--:--')+'</b> &middot; ARRAY <b>'+s.cols+'&times;'+s.rows+'</b> &middot; BRT <b>'+s.brightness+'</b>';
+ document.querySelectorAll('#modes button').forEach(b=>b.classList.toggle('active',b.dataset.mode===s.mode));
+ if(s.cols){cols.value=s.cols;rows.value=s.rows;snake.checked=s.serpentine;flip.checked=s.flip;}
+ if(s.alarm){atime.value=s.alarm;aon.checked=s.alarmOn;}if(s.city!==undefined)city.value=s.city;};
+const req=(p,o,post)=>fetch(p+(o?'?'+new URLSearchParams(o):''),post?{method:'POST'}:{}).then(r=>r.json());
+const q=(p,o)=>req(p,o,true).then(show).catch(()=>setConn(false));
 const mode=m=>q('/api/mode',{mode:m});
 const setText=()=>q('/api/text',{message:msg.value});
 const setTimer=()=>q('/api/timer',{seconds:Math.max(1,Math.round(mins.value*60))});
@@ -474,29 +555,39 @@ const setPanels=()=>q('/api/panels',{cols:cols.value,rows:rows.value,serpentine:
 const setAlarm=()=>q('/api/alarm',{time:atime.value,enabled:aon.checked?1:0});
 const setWeather=()=>q('/api/weather',{city:city.value});
 const cfg=()=>q('/api/config',{brightness:br.value,scrollMs:sp.value});
-const buzz=t=>fetch('/api/buzzer?tune='+t,{method:'POST'});
-fetch('/api/status').then(r=>r.json()).then(show);
+const buzz=t=>fetch('/api/buzzer?tune='+t,{method:'POST'}).then(()=>setConn(true)).catch(()=>setConn(false));
+function poll(){req('/api/status').then(show).catch(()=>setConn(false));}
+setInterval(poll,2000);poll();
+let logSeq=0;
+function logs(){req('/api/logs',{since:logSeq}).then(d=>{setConn(true);logSeq=d.seq;
+ if(d.lines&&d.lines.length){const c=$('console');d.lines.forEach(l=>c.textContent+=l+'\n');
+  if(c.textContent.length>9000)c.textContent=c.textContent.slice(-9000);c.scrollTop=c.scrollHeight;}
+ }).catch(()=>setConn(false));}
+setInterval(logs,1500);logs();
 </script></body></html>)HTML";
 
 void handleRoot() { server.send_P(200, "text/html", INDEX_HTML); }
 
 void setup() {
   Serial.begin(115200);
+  delay(150);
+  logln("BOOT RocketClock server");
   matrix.setLayout(cfg.cols, cfg.rows, cfg.serpentine, cfg.flip);
   matrix.begin(cfg.brightness);
   buzzer.begin();               // Wire.begin() (SDA=4, SCL=5)
+  logln("MATRIX %ux%u  BUZZER %s", cfg.cols, cfg.rows, buzzer.present() ? "OK" : "absent");
 
   WiFi.mode(WIFI_STA);
   WiFi.begin(STA_SSID, STA_PASS);
-  Serial.print("WiFi");
-  for (int i = 0; i < 20 && WiFi.status() != WL_CONNECTED; i++) { delay(500); Serial.print("."); }
+  logln("WIFI connecting to %s", STA_SSID);
+  for (int i = 0; i < 20 && WiFi.status() != WL_CONNECTED; i++) delay(500);
   if (WiFi.status() == WL_CONNECTED) {
-    Serial.println("\nSTA: " + WiFi.localIP().toString());
+    logln("WIFI up  IP %s", WiFi.localIP().toString().c_str());
     configTime(TZ_INFO, "pool.ntp.org", "time.nist.gov");   // NTP for clock/alarm
   } else {
     WiFi.mode(WIFI_AP);
     WiFi.softAP(AP_SSID);
-    Serial.println("\nSoftAP: " + WiFi.softAPIP().toString() + " (SSID " + AP_SSID + ")");
+    logln("WIFI failed - SoftAP %s  IP %s", AP_SSID, WiFi.softAPIP().toString().c_str());
   }
 
   server.on("/", handleRoot);
@@ -510,8 +601,9 @@ void setup() {
   server.on("/api/alarm",  HTTP_POST, handleAlarm);
   server.on("/api/weather",HTTP_POST, handleWeather);
   server.on("/api/temp",   handleTemp);
+  server.on("/api/logs",   handleLogs);
   server.begin();
-  Serial.println("HTTP server started");
+  logln("HTTP server started");
 }
 
 void handleStatus() { sendStatus(); }

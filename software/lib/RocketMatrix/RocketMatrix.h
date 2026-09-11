@@ -40,14 +40,21 @@ public:
   int panels() const { return _n; }
 
   // Init pins + every MAX7219 (no-decode, scan all 8 digits) and clear.
+  //
+  // Order matters: the chip powers up with RANDOM display-data registers, so we
+  // configure AND clear while still in shutdown, then enable normal operation
+  // LAST. Otherwise the random power-up data flashes on screen before clear()
+  // runs (the "random all-lit at boot" bug). Display-test is forced off too.
   void begin(uint8_t brightness = 5) {
     pinMode(_din, OUTPUT); pinMode(_clk, OUTPUT); pinMode(_cs, OUTPUT);
     digitalWrite(_cs, HIGH); digitalWrite(_clk, LOW);
-    broadcast(REG_SHUTDOWN,    0x01);   // normal operation
+    broadcast(REG_SHUTDOWN,    0x00);   // stay shut down while we set up
+    broadcast(REG_DISPLAYTEST, 0x00);   // display-test off (else all LEDs on)
     broadcast(REG_DECODE_MODE, 0x00);   // no decode - raw segment bits
     broadcast(REG_SCAN_LIMIT,  0x07);   // scan digits 0..7
     setBrightness(brightness);
-    clear();
+    clear();                            // zero every digit register (blank)
+    broadcast(REG_SHUTDOWN,    0x01);   // now enable the display (already blank)
   }
 
   // Physical row (0..7) -> MAX7219 no-decode data bit (datasheet Table 6).
@@ -151,6 +158,7 @@ private:
   static const uint8_t REG_INTENSITY   = 0x0A;
   static const uint8_t REG_SCAN_LIMIT  = 0x0B;
   static const uint8_t REG_SHUTDOWN    = 0x0C;
+  static const uint8_t REG_DISPLAYTEST = 0x0F;
 
   uint8_t _din, _clk, _cs;
   uint8_t _cols = 1, _rows = 1;

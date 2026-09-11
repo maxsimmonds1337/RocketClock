@@ -24,13 +24,15 @@ Lightweight issue log (hardware, firmware, features). Eventually this feeds an
 | F3 | open | high | Buzzer not verified end-to-end | `buzzer_test` flashes; confirm tune + ATtiny84 has Qwiic firmware. |
 | F4 | open | med | Panel orientation not finalised | `setOrientation()` exists; corner test (`orientation`) confirmed default OK for images — re-check per assembled unit. |
 | F5 | open | low | font8x8 glyphs thinner than hand-drawn set | Option: keep bold uppercase, font8x8 for rest, or center glyphs in cell. |
+| F6 | done | med | Random all-LEDs-lit at boot | Fixed `RocketMatrix::begin()` order: configure+clear while shut down, enable display LAST, display-test off. |
 
 ## Features / backlog (see docs/CONTROL_SYSTEM.md)
 
 | # | Status | Title |
 |---|--------|-------|
 | B1 | in-progress | Mode engine + config struct on server | v0 built (text/timer/temp modes + config). Compiles; untested on HW (needs WiFi/SoftAP). |
-| B2 | in-progress | Dashboard SPA (mode select, brightness, speed, text, buzzer) | v0 embedded in PROGMEM, served at `/`. Untested in browser. |
+| B2 | done | Dashboard SPA | Mission-control revamp: CONTROL/TELEMETRY tabs, live CONNECTED/OFFLINE indicator, panel styling. Served at `/` (8.6KB). Verified HTTP 200. |
+| B19 | done | Serial-over-WiFi log streaming | Ring buffer (40 lines) mirrors serial; `/api/logs?since=N` polled by TELEMETRY console. Verified boot telemetry streams. |
 | B3 | in-progress | Horizontal scrolling across chained modules | Driver rewritten for N panels + serpentine/180-flip (`setLayout`). 1x1 verified on HW; multi-panel needs 2nd board to calibrate. |
 | B4 | in-progress | `launch` mode + T- countdown — **namesake**. Cloudflare proxy DEPLOYED (rocketclock-launch, lldev endpoint to dodge per-IP throttle) + wired in secrets.h. Verified proxy returns 110B. Flash+HW test pending. |
 | B5 | open | `calendar` + `news` modes |
