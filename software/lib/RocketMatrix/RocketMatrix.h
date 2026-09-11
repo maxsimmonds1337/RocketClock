@@ -67,6 +67,11 @@ public:
     _flipC = flipCols; _flipR = flipRows; _transpose = transpose;
   }
 
+  // Rotate the WHOLE display 180 deg (e.g. mounting it USB-down instead of up).
+  // Applied at the canvas level before panel mapping, so the image stays upright
+  // and the chain-0 (master) panel effectively becomes bottom-right.
+  void setFlip180(bool f) { _flip180 = f; }
+
   // Set/clear one pixel on the virtual canvas and push it to the chain.
   void setPixel(int x, int y, bool on = true) {
     int module, lx, ly;
@@ -108,6 +113,7 @@ private:
   // Map virtual (x,y) -> (chain module, local x, local y). false if off-canvas.
   bool map(int x, int y, int &module, int &lx, int &ly) const {
     if (x < 0 || y < 0 || x >= width() || y >= height()) return false;
+    if (_flip180) { x = width() - 1 - x; y = height() - 1 - y; }   // whole-display 180
     int pc = x / 8, pr = y / 8;
     lx = x % 8; ly = y % 8;
     int chainCol = pc;
@@ -165,5 +171,5 @@ private:
   int _n = 1;
   bool _serpentine = true, _flipReverse = true;
   uint8_t _fb[MAX_PANELS][8] = {{0}};   // per-module framebuffer, indexed by DIG
-  bool _flipC = false, _flipR = false, _transpose = false;
+  bool _flipC = false, _flipR = false, _transpose = false, _flip180 = false;
 };

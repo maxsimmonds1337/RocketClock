@@ -12,6 +12,8 @@
 #include <WiFiClientSecure.h>
 #include <Wire.h>
 #include <time.h>
+#include <LittleFS.h>
+#include <ArduinoJson.h>
 #include <RocketMatrix.h>
 #include <RocketFont.h>
 #include <RocketBuzzer.h>
@@ -36,6 +38,9 @@ const uint8_t TMP112_ADDR = 0x48;
 #endif
 #ifndef LAUNCH_PROXY_URL
 #define LAUNCH_PROXY_URL ""
+#endif
+#ifndef AIR_PROXY_URL
+#define AIR_PROXY_URL ""
 #endif
 
 // Air-quality location (Open-Meteo, free, no key). Default: Tallinn, EE.
@@ -63,6 +68,10 @@ struct Config {
   uint8_t  alarmH = 7, alarmM = 30;   // alarm time (24h)
   bool     alarmOn = false;
   char     city[32] = "";       // weather location; empty = auto (by IP)
+  bool     timerReverse = false; // false = fill on; true = start full, empty off
+  uint8_t  timerSound = 0;       // 0=siren 1=hedwig 2=close_encounters
+  uint8_t  fillOrder = 0;        // 0=rows 1=cols 2=snake-rows 3=snake-cols 4=panel
+  bool     flip180 = false;      // rotate whole display 180 (USB-down mounting)
 } cfg;
 
 // ---- hardware --------------------------------------------------------------
@@ -89,6 +98,48 @@ void logln(const char *fmt, ...) {
   Serial.println(line);
 }
 
+// ---- persistence (LittleFS + ArduinoJson; config only, not the TLS path) ----
+const char *CFG_PATH = "/config.json";
+bool cfgDirty = false;
+unsigned long cfgTouched = 0;
+void markDirty() { cfgDirty = true; cfgTouched = millis(); }   // debounced save
+
+void saveConfig() {
+  JsonDocument d;
+  d["mode"] = (int)cfg.mode; d["bright"] = cfg.brightness; d["scroll"] = cfg.scrollMs;
+  d["text"] = cfg.text; d["timer"] = cfg.timerSecs;
+  d["cols"] = cfg.cols; d["rows"] = cfg.rows; d["serp"] = cfg.serpentine; d["flip"] = cfg.flip;
+  d["alarmH"] = cfg.alarmH; d["alarmM"] = cfg.alarmM; d["alarmOn"] = cfg.alarmOn; d["city"] = cfg.city;
+  d["tRev"] = cfg.timerReverse; d["tSnd"] = cfg.timerSound; d["fill"] = cfg.fillOrder; d["flip180"] = cfg.flip180;
+  File f = LittleFS.open(CFG_PATH, "w");
+  if (!f) { logln("CFG save FAILED"); return; }
+  serializeJson(d, f); f.close();
+  logln("CFG saved");
+}
+
+void loadConfig() {
+  File f = LittleFS.open(CFG_PATH, "r");
+  if (!f) { logln("CFG none - defaults"); return; }
+  JsonDocument d;
+  DeserializationError e = deserializeJson(d, f); f.close();
+  if (e) { logln("CFG parse error"); return; }
+  cfg.mode = (Mode)(int)(d["mode"] | (int)cfg.mode);
+  cfg.brightness = d["bright"] | cfg.brightness;
+  cfg.scrollMs = d["scroll"] | cfg.scrollMs;
+  strlcpy(cfg.text, d["text"] | cfg.text, sizeof(cfg.text));
+  cfg.timerSecs = d["timer"] | cfg.timerSecs;
+  cfg.cols = d["cols"] | cfg.cols; cfg.rows = d["rows"] | cfg.rows;
+  cfg.serpentine = d["serp"] | cfg.serpentine; cfg.flip = d["flip"] | cfg.flip;
+  cfg.alarmH = d["alarmH"] | cfg.alarmH; cfg.alarmM = d["alarmM"] | cfg.alarmM;
+  cfg.alarmOn = d["alarmOn"] | cfg.alarmOn;
+  strlcpy(cfg.city, d["city"] | cfg.city, sizeof(cfg.city));
+  cfg.timerReverse = d["tRev"] | cfg.timerReverse;
+  cfg.timerSound = d["tSnd"] | cfg.timerSound;
+  cfg.fillOrder = d["fill"] | cfg.fillOrder;
+  cfg.flip180 = d["flip180"] | cfg.flip180;
+  logln("CFG loaded");
+}
+
 // ---- runtime state ---------------------------------------------------------
 int scrollX = 8;
 unsigned long lastScroll = 0;
@@ -109,6 +160,7 @@ void scrollText(const char *s) {
 // Apply the panel layout to the driver (must re-init the chain).
 void applyLayout() {
   matrix.setLayout(cfg.cols, cfg.rows, cfg.serpentine, cfg.flip);
+  matrix.setFlip180(cfg.flip180);
   matrix.begin(cfg.brightness);
   scrollX = matrix.width();
 }
@@ -202,7 +254,8 @@ void fetchLaunch() {
   int code = http.GET();
   if (code == 200) {
     String p = http.getString();
-    int r = p.indexOf("\"results\"");
+    int r = p.indexOf("\"results\"");   // direct LL2 wraps in results[]; proxy is flat
+    if (r < 0) r = 0;
     int ni = p.indexOf("\"name\":\"", r);
     int ti = p.indexOf("\"net\":\"", r);
     if (ni >= 0) { ni += 8; int e = p.indexOf('"', ni); p.substring(ni, e).toCharArray(launchName, sizeof(launchName)); }
@@ -292,14 +345,22 @@ unsigned long lastAir = 0;
 
 void fetchAir() {
   if (WiFi.status() != WL_CONNECTED) { strcpy(airStr, "NO WIFI"); return; }
+  bool proxy = strlen(AIR_PROXY_URL) > 0;   // proxy avoids the heavy direct-TLS handshake
+  String url = proxy ? String(AIR_PROXY_URL)
+             : String("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=")
+               + AQ_LAT + "&longitude=" + AQ_LON + "&current=european_aqi,pm2_5,pm10";
   WiFiClientSecure client; client.setInsecure(); client.setTimeout(12000);
   HTTPClient http;
-  String url = String("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=")
-             + AQ_LAT + "&longitude=" + AQ_LON + "&current=european_aqi,pm2_5,pm10";
   if (!http.begin(client, url)) { strcpy(airStr, "AQ ERR"); return; }
   if (http.GET() == 200) {
     String p = http.getString();
-    String aqi = jsonVal(p, "european_aqi"), pm25 = jsonVal(p, "pm2_5"), pm10 = jsonVal(p, "pm10");
+    String aqi, pm25, pm10;
+    if (proxy) {                          // flat {aqi,pm25,pm10}
+      aqi = jsonVal(p, "aqi"); pm25 = jsonVal(p, "pm25"); pm10 = jsonVal(p, "pm10");
+    } else {                              // direct: skip "current_units" (unit labels)
+      int c = p.indexOf("\"current\":"); String cur = (c >= 0) ? p.substring(c) : p;
+      aqi = jsonVal(cur, "european_aqi"); pm25 = jsonVal(cur, "pm2_5"); pm10 = jsonVal(cur, "pm10");
+    }
     const char *bands[] = {"GOOD", "FAIR", "MODERATE", "POOR", "V.POOR", "EXT.POOR"};
     int bi = aqi.toInt() / 20; if (bi > 5) bi = 5; if (bi < 0) bi = 0;
     snprintf(airStr, sizeof(airStr), "AIR %s %s  PM2.5 %s  PM10 %s",
@@ -319,21 +380,54 @@ float readTempC() {
   return (raw >> 4) * 0.0625f;
 }
 
-void startTimer() { timerStart = millis(); timerLast = -1; timerDone = false; }
+void playTimerSound() {
+  if (cfg.timerSound == 1)      buzzer.playMelody(RocketMelodies::HEDWIG, RocketBuzzer::VOL_MAX);
+  else if (cfg.timerSound == 2) buzzer.playMelody(RocketMelodies::CLOSE_ENCOUNTERS, RocketBuzzer::VOL_MAX);
+  else                          buzzer.playMelody(RocketMelodies::SIREN, RocketBuzzer::VOL_MAX);
+}
+
+// Map a linear fill index -> canvas (x,y) in the configured propagation order.
+// setPixel() then maps (x,y) to the right physical panel, so this is purely the
+// visual order the fill sweeps the whole COLS*8 x ROWS*8 canvas.
+void fillCoord(int idx, int W, int H, int &x, int &y) {
+  switch (cfg.fillOrder) {
+    default:
+    case 0: x = idx % W; y = idx / W; break;                               // row-major
+    case 1: y = idx % H; x = idx / H; break;                               // column-major
+    case 2: { int r = idx / W, c = idx % W; y = r; x = (r & 1) ? W-1-c : c; } break;  // snake rows
+    case 3: { int c = idx / H, r = idx % H; x = c; y = (c & 1) ? H-1-r : r; } break;  // snake cols
+    case 4: { int p = idx / 64, l = idx % 64;                              // panel-by-panel (chain order)
+              x = (p % cfg.cols) * 8 + l % 8; y = (p / cfg.cols) * 8 + l / 8; } break;
+  }
+}
+
+// Start: clear/fill the whole display up front so the sweep is visible.
+// forward = start empty then light; reverse = start full then extinguish.
+void startTimer() {
+  timerStart = millis(); timerLast = -1; timerDone = false;
+  matrix.fill(cfg.timerReverse);        // reverse -> full, forward -> empty
+}
 
 void runTimer() {
-  if (timerDone) {
-    buzzer.playMelody(RocketMelodies::HEDWIG, RocketBuzzer::VOL_MAX);
-    delay(1200);
+  int total = matrix.width() * matrix.height();   // all LEDs across all panels
+  unsigned long span = cfg.timerSecs * 1000UL;
+  unsigned long elapsed = millis() - timerStart;
+  if (elapsed >= span) {
+    if (!timerDone) {                    // one-shot finale, then hold (non-blocking)
+      matrix.fill(!cfg.timerReverse);    // forward -> all on, reverse -> all off
+      timerDone = true;
+      logln("TIMER done");
+      playTimerSound();                  // plays once; switching mode exits/stops
+    }
     return;
   }
-  unsigned long total = cfg.timerSecs * 1000UL;
-  unsigned long elapsed = millis() - timerStart;
-  if (elapsed >= total) { matrix.fill(true); timerDone = true; return; }
-  int idx = (int)(elapsed / (total / 64));
-  if (idx == timerLast) return;
-  for (int i = timerLast + 1; i <= idx && i < 64; i++) matrix.setPixel(i / 8, i % 8);
-  timerLast = idx;
+  int lit = (int)((uint64_t)elapsed * total / span);   // 0..total
+  if (lit == timerLast) return;
+  for (int i = timerLast + 1; i <= lit && i < total; i++) {
+    int x, y; fillCoord(i, matrix.width(), matrix.height(), x, y);
+    matrix.setPixel(x, y, !cfg.timerReverse);          // forward on, reverse off
+  }
+  timerLast = lit;
 }
 
 // ---- API -------------------------------------------------------------------
@@ -342,13 +436,15 @@ void sendStatus() {
                 : cfg.mode == MODE_TEMP ? "temp" : cfg.mode == MODE_CLOCK ? "clock"
                 : cfg.mode == MODE_WEATHER ? "weather" : cfg.mode == MODE_LAUNCH ? "launch"
                 : cfg.mode == MODE_MARS ? "mars" : cfg.mode == MODE_AQI ? "air" : "off";
-  char buf[560];
+  char buf[680];
   snprintf(buf, sizeof(buf),
     "{\"mode\":\"%s\",\"brightness\":%u,\"scrollMs\":%u,\"text\":\"%s\",\"timerSecs\":%lu,"
-    "\"cols\":%u,\"rows\":%u,\"serpentine\":%s,\"flip\":%s,"
+    "\"cols\":%u,\"rows\":%u,\"serpentine\":%s,\"flip\":%s,\"flip180\":%s,"
+    "\"tRev\":%s,\"tSnd\":%u,\"fill\":%u,"
     "\"alarm\":\"%02u:%02u\",\"alarmOn\":%s,\"city\":\"%s\",\"time\":\"%s\",\"launch\":\"%s\"}",
     m, cfg.brightness, cfg.scrollMs, cfg.text, (unsigned long)cfg.timerSecs,
     cfg.cols, cfg.rows, cfg.serpentine ? "true" : "false", cfg.flip ? "true" : "false",
+    cfg.flip180 ? "true" : "false", cfg.timerReverse ? "true" : "false", cfg.timerSound, cfg.fillOrder,
     cfg.alarmH, cfg.alarmM, cfg.alarmOn ? "true" : "false", cfg.city,
     (updateClockStr(), clockStr), launchStr);
   server.send(200, "application/json", buf);
@@ -367,6 +463,7 @@ void handleMode() {
   else if (m == "off")  { cfg.mode = MODE_OFF; matrix.clear(); }
   scrollX = matrix.width();
   logln("MODE -> %s", m.c_str());
+  markDirty();
   sendStatus();
 }
 
@@ -381,12 +478,14 @@ void handleAlarm() {
   }
   if (server.hasArg("enabled")) cfg.alarmOn = server.arg("enabled") == "1";
   lastAlarmMin = -1;
+  markDirty();
   sendStatus();
 }
 
 void handleWeather() {                       // set city + switch to weather mode
   if (server.hasArg("city")) server.arg("city").toCharArray(cfg.city, sizeof(cfg.city));
   cfg.mode = MODE_WEATHER; lastWeather = 0; scrollX = matrix.width();
+  markDirty();
   sendStatus();
 }
 
@@ -396,8 +495,10 @@ void handlePanels() {
   if (cfg.cols * cfg.rows > RocketMatrix::MAX_PANELS) cfg.rows = RocketMatrix::MAX_PANELS / cfg.cols;
   if (server.hasArg("serpentine")) cfg.serpentine = server.arg("serpentine") == "1";
   if (server.hasArg("flip"))       cfg.flip       = server.arg("flip") == "1";
+  if (server.hasArg("flip180"))    cfg.flip180    = server.arg("flip180") == "1";
   applyLayout();
-  logln("PANELS %ux%u serp=%d flip=%d", cfg.cols, cfg.rows, cfg.serpentine, cfg.flip);
+  logln("PANELS %ux%u serp=%d flip=%d rot180=%d", cfg.cols, cfg.rows, cfg.serpentine, cfg.flip, cfg.flip180);
+  markDirty();
   sendStatus();
 }
 
@@ -408,6 +509,7 @@ void handleConfig() {
   }
   if (server.hasArg("scrollMs"))
     cfg.scrollMs = constrain(server.arg("scrollMs").toInt(), 5, 1000);
+  markDirty();
   sendStatus();
 }
 
@@ -417,14 +519,18 @@ void handleText() {
     scrollX = 8;
   }
   cfg.mode = MODE_TEXT;
+  markDirty();
   sendStatus();
 }
 
 void handleTimer() {
-  if (server.hasArg("seconds"))
-    cfg.timerSecs = max(1L, server.arg("seconds").toInt());
+  if (server.hasArg("seconds")) cfg.timerSecs = max(1L, server.arg("seconds").toInt());
+  if (server.hasArg("reverse")) cfg.timerReverse = server.arg("reverse") == "1";
+  if (server.hasArg("sound"))   cfg.timerSound = constrain(server.arg("sound").toInt(), 0, 2);
+  if (server.hasArg("fill"))    cfg.fillOrder = constrain(server.arg("fill").toInt(), 0, 4);
   cfg.mode = MODE_TIMER;
   startTimer();
+  markDirty();
   sendStatus();
 }
 
@@ -511,9 +617,12 @@ label{display:block;margin:.5rem 0 .2rem;font-size:.72rem;color:var(--dim);lette
   <button class="act" data-mode="off" onclick="mode('off')">OFF</button></div></div></div>
  <div class="panel"><span class="lbl">SCROLLING TEXT</span><div class="body row">
   <input id="msg" value="ROCKETCLOCK" style="flex:1"><button class="act" onclick="setText()">SET</button></div></div>
- <div class="panel"><span class="lbl">TIMER</span><div class="body row">
-  <input id="mins" type="number" value="20" step="0.5" style="width:6rem"><span style="color:var(--dim)">min</span>
-  <button class="act" onclick="setTimer()">START</button></div></div>
+ <div class="panel"><span class="lbl">TIMER</span><div class="body">
+  <div class="row"><input id="mins" type="number" value="20" step="0.5" style="width:5rem"><span style="color:var(--dim)">min</span>
+   <select id="tdir"><option value="0">FILL ON</option><option value="1">EMPTY OFF</option></select>
+   <button class="act" onclick="setTimer()">START</button></div>
+  <label>FILL ORDER</label><select id="tfill"><option value="0">Rows</option><option value="1">Columns</option><option value="2">Snake rows</option><option value="3">Snake cols</option><option value="4">Panel by panel</option></select>
+  <label>END SOUND</label><select id="tsnd"><option value="0">Siren</option><option value="1">Hedwig</option><option value="2">Close Encounters</option></select></div></div>
  <div class="panel"><span class="lbl">DISPLAY</span><div class="body">
   <label>BRIGHTNESS <span id="bv">5</span></label><input id="br" type="range" min="0" max="15" value="5" oninput="bv.textContent=this.value" onchange="cfg()">
   <label>SCROLL SPEED <span id="sv">60</span> ms</label><input id="sp" type="range" min="5" max="300" value="60" oninput="sv.textContent=this.value" onchange="cfg()"></div></div>
@@ -529,6 +638,7 @@ label{display:block;margin:.5rem 0 .2rem;font-size:.72rem;color:var(--dim);lette
   <label style="margin:0">ROWS <input id="rows" type="number" min="1" max="16" value="1" style="width:4rem"></label></div>
   <label style="margin-top:.5rem"><input type="checkbox" id="snake" checked> SERPENTINE (SNAKE WIRING)</label>
   <label><input type="checkbox" id="flip" checked> FLIP REVERSE ROWS 180&deg;</label>
+  <label><input type="checkbox" id="rot180"> ROTATE WHOLE DISPLAY 180&deg; (USB DOWN)</label>
   <button class="act" onclick="setPanels()">APPLY</button></div></div>
 </section>
 <section id="telemetry" class="hidden">
@@ -541,17 +651,23 @@ document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
  document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
  $('control').classList.toggle('hidden',b.dataset.tab!=='control');
  $('telemetry').classList.toggle('hidden',b.dataset.tab!=='telemetry');});
+let formInit=false;
 const show=s=>{setConn(true);
  $('met').innerHTML='MODE <b>'+(s.mode||'?').toUpperCase()+'</b> &middot; CLK <b>'+(s.time||'--:--')+'</b> &middot; ARRAY <b>'+s.cols+'&times;'+s.rows+'</b> &middot; BRT <b>'+s.brightness+'</b>';
  document.querySelectorAll('#modes button').forEach(b=>b.classList.toggle('active',b.dataset.mode===s.mode));
- if(s.cols){cols.value=s.cols;rows.value=s.rows;snake.checked=s.serpentine;flip.checked=s.flip;}
- if(s.alarm){atime.value=s.alarm;aon.checked=s.alarmOn;}if(s.city!==undefined)city.value=s.city;};
+ if(!formInit){formInit=true;  // populate inputs once so polls don't clobber typing
+  if(s.cols){cols.value=s.cols;rows.value=s.rows;snake.checked=s.serpentine;flip.checked=s.flip;rot180.checked=s.flip180;}
+  if(s.alarm){atime.value=s.alarm;aon.checked=s.alarmOn;}if(s.city!==undefined)city.value=s.city;
+  if(s.brightness!==undefined){br.value=s.brightness;bv.textContent=s.brightness;}
+  if(s.scrollMs){sp.value=s.scrollMs;sv.textContent=s.scrollMs;}
+  if(s.timerSecs)mins.value=(s.timerSecs/60);
+  if(s.tRev!==undefined)tdir.value=s.tRev?1:0;if(s.fill!==undefined)tfill.value=s.fill;if(s.tSnd!==undefined)tsnd.value=s.tSnd;}};
 const req=(p,o,post)=>fetch(p+(o?'?'+new URLSearchParams(o):''),post?{method:'POST'}:{}).then(r=>r.json());
 const q=(p,o)=>req(p,o,true).then(show).catch(()=>setConn(false));
 const mode=m=>q('/api/mode',{mode:m});
 const setText=()=>q('/api/text',{message:msg.value});
-const setTimer=()=>q('/api/timer',{seconds:Math.max(1,Math.round(mins.value*60))});
-const setPanels=()=>q('/api/panels',{cols:cols.value,rows:rows.value,serpentine:snake.checked?1:0,flip:flip.checked?1:0});
+const setTimer=()=>q('/api/timer',{seconds:Math.max(1,Math.round(mins.value*60)),reverse:tdir.value,fill:tfill.value,sound:tsnd.value});
+const setPanels=()=>q('/api/panels',{cols:cols.value,rows:rows.value,serpentine:snake.checked?1:0,flip:flip.checked?1:0,flip180:rot180.checked?1:0});
 const setAlarm=()=>q('/api/alarm',{time:atime.value,enabled:aon.checked?1:0});
 const setWeather=()=>q('/api/weather',{city:city.value});
 const cfg=()=>q('/api/config',{brightness:br.value,scrollMs:sp.value});
@@ -572,7 +688,12 @@ void setup() {
   Serial.begin(115200);
   delay(150);
   logln("BOOT RocketClock server");
+  bool fs = LittleFS.begin();
+  if (!fs) { LittleFS.format(); fs = LittleFS.begin(); }   // first boot: format FS
+  logln("FS %s", fs ? "mounted" : "UNAVAILABLE");
+  if (fs) loadConfig();
   matrix.setLayout(cfg.cols, cfg.rows, cfg.serpentine, cfg.flip);
+  matrix.setFlip180(cfg.flip180);
   matrix.begin(cfg.brightness);
   buzzer.begin();               // Wire.begin() (SDA=4, SCL=5)
   logln("MATRIX %ux%u  BUZZER %s", cfg.cols, cfg.rows, buzzer.present() ? "OK" : "absent");
@@ -611,6 +732,7 @@ void handleStatus() { sendStatus(); }
 void loop() {
   server.handleClient();
   checkAlarm();                       // fires regardless of active mode
+  if (cfgDirty && millis() - cfgTouched > 2500) { cfgDirty = false; saveConfig(); }
 
   switch (cfg.mode) {
     case MODE_TEXT: scrollText(cfg.text); break;

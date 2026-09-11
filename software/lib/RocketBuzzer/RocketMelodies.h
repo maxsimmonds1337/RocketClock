@@ -19,4 +19,9 @@ static const uint16_t ce_f[] = { D4,  E4,  C4,  C3,  G4,  REST, C5,  E5,  G5 };
 static const uint16_t ce_d[] = { 400, 400, 400, 400, 700, 200,  200, 200, 600 };
 static const Melody CLOSE_ENCOUNTERS = { ce_f, ce_d, 9, "close_encounters" };
 
+// Classic alarm/timer siren: two tones alternating (rising-falling wail).
+static const uint16_t siren_f[] = { A5, E5, A5, E5, A5, E5, A5, E5 };
+static const uint16_t siren_d[] = { 350, 350, 350, 350, 350, 350, 350, 350 };
+static const Melody SIREN = { siren_f, siren_d, 8, "siren" };
+
 }  // namespace RocketMelodies

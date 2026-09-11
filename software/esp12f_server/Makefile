@@ -1,4 +1,4 @@
-FQBN    = esp8266:esp8266:generic:ResetMethod=nodemcu,baud=115200
+FQBN    = esp8266:esp8266:generic:ResetMethod=nodemcu,baud=115200,eesz=4M1M
 PORT   ?= /dev/cu.wchusbserial10
 HERE    = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 SKETCH  = $(HERE)esp12f_server

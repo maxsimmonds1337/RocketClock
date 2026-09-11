@@ -25,6 +25,9 @@ Lightweight issue log (hardware, firmware, features). Eventually this feeds an
 | F4 | open | med | Panel orientation not finalised | `setOrientation()` exists; corner test (`orientation`) confirmed default OK for images — re-check per assembled unit. |
 | F5 | open | low | font8x8 glyphs thinner than hand-drawn set | Option: keep bold uppercase, font8x8 for rest, or center glyphs in cell. |
 | F6 | done | med | Random all-LEDs-lit at boot | Fixed `RocketMatrix::begin()` order: configure+clear while shut down, enable display LAST, display-test off. |
+| F7 | done | med | Dashboard clobbered inputs mid-edit | Status poll re-wrote form fields every 2s; now populated once on load, polls only update readout/mode. |
+| F8 | done | high | Timer only used 64 LEDs, didn't clear, blocked forever at end | Rewrote: full COLS*8 x ROWS*8 canvas; clears/fills at start; configurable fill order (rows/cols/snake-rows/snake-cols/panel); forward or reverse (empty-off); one-shot non-blocking finale (switch mode to reset, no power-cycle); configurable end sound + new SIREN default. |
+| F9 | done | low | Global 180 display flip | `RocketMatrix::setFlip180` + dashboard toggle, for USB-down mounting (master becomes bottom-right, image stays upright). |
 
 ## Features / backlog (see docs/CONTROL_SYSTEM.md)
 
@@ -41,11 +44,15 @@ Lightweight issue log (hardware, firmware, features). Eventually this feeds an
 | B12 | open | Word of the day (dictionary API) — from blog wishlist |
 | B13 | open | Image display mode: greyscale→kernel-avg→threshold@127 (helper `image_to_led_grid.c` exists) |
 | B14 | open | Launch-synced countdown (10s/T- countdown aligned to a real launch time) |
-| B7 | open | Persist config to LittleFS (settings reset on reboot) |
+| B7 | done | Persist config to LittleFS (LittleFS+ArduinoJson, debounced save, FQBN eesz=4M1M). Verified: brightness/mode survive power-cycle. |
+| B20 | open | **Event engine**: `{name, enabled, trigger, actions[]}` persisted. Triggers: AT_TIME, IN_RANGE, **THRESHOLD** (temp/AQI >/< X), **DELTA** (value changes by >=X, e.g. AQI drops), and later feed-change (weather sunny→rainy) + BBC breaking-news feed. Actions = ordered {type, text, value, unit=cycles|seconds} reusing existing renderers + buzzer. Build time+threshold+delta first. |
+| B21 | open | News feed (BBC RSS 26KB → proxy trims headline; add `news` mode + action). BBC has breaking-news feeds → feed the DELTA/change trigger. |
+| B22 | open | Vertical (top-down) text scrolling — RocketFont needs a y-offset draw; add scroll-direction config. Most useful with multi-row panels. |
+| B23 | open | Multi-location/timezone: per-event location + TZ (e.g. London time + London weather) so events can show other zones. Design the event/action model to carry an optional location. |
 | B8 | done | NTP `clock` mode + `alarm` (HH:MM, fires buzzer). Verified: time syncs, API works. |
 | B15 | in-progress | `mars` mode: Mars time (MTC), Sol Date, Curiosity/Perseverance sols, season — all on-device (Mars24), no API. Compiles; math verified vs NASA (Ls 240.09 vs 240.20). Flash+eyeball pending. |
 | B16 | in-progress | Live Curiosity Mars temp via trimming proxy. Cloudflare Worker DEPLOYED (rocketclock-mars, trims NASA MSL 1.7MB→150B) + wired in secrets.h. Verified live (-71/-5C Sunny). Flash pending. |
 | B17 | wontfix | Rover location / "moving vs sleeping" status: no working free live API (NASA mars-photos backend 404; no public motion-state feed). |
 | B9 | done | `weather` mode via wttr.in (HTTP, IP-located). Verified: fetch returns, no hang. |
-| B18 | in-progress | `air` mode via Open-Meteo Air Quality (free, no key, 397B): European AQI + band + PM2.5/PM10. Verified off-board (AQI 20 Fair). Coords `AQ_LAT/AQ_LON` default Tallinn. Flash+test pending. |
+| B18 | done | `air` mode: European AQI + band + PM2.5/PM10. Now via Cloudflare proxy (rocketclock-air) - direct Open-Meteo TLS OOM'd the ESP once persistence loaded. Verified on HW: "AIR 17 GOOD PM2.5 2 PM10 3.9". |
 | B10 | done | Live panel-layout config (cols/rows/serpentine/flip) via dashboard + `/api/panels`. |
