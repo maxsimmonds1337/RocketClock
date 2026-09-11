@@ -45,8 +45,8 @@ Lightweight issue log (hardware, firmware, features). Eventually this feeds an
 | B13 | open | Image display mode: greyscale→kernel-avg→threshold@127 (helper `image_to_led_grid.c` exists) |
 | B14 | open | Launch-synced countdown (10s/T- countdown aligned to a real launch time) |
 | B7 | done | Persist config to LittleFS (LittleFS+ArduinoJson, debounced save, FQBN eesz=4M1M). Verified: brightness/mode survive power-cycle. |
-| B20 | open | **Event engine**: `{name, enabled, trigger, actions[]}` persisted. Triggers: AT_TIME, IN_RANGE, **THRESHOLD** (temp/AQI >/< X), **DELTA** (value changes by >=X, e.g. AQI drops), and later feed-change (weather sunny→rainy) + BBC breaking-news feed. Actions = ordered {type, text, value, unit=cycles|seconds} reusing existing renderers + buzzer. Build time+threshold+delta first. |
-| B21 | open | News feed (BBC RSS 26KB → proxy trims headline; add `news` mode + action). BBC has breaking-news feeds → feed the DELTA/change trigger. |
+| B20 | done | **Event engine**: `{name, enabled, trigger, actions[]}` persisted to LittleFS. Triggers AT_TIME, IN_RANGE, THRESHOLD (temp/AQI >/< X), DELTA (change by >=X). Actions run N cycles or N seconds via existing renderers + buzzer; sequencer overrides display then returns. EVENTS dashboard tab. Verified on HW. Deferred: feed-change trigger (weather sunny→rainy) + breaking-news diffing. |
+| B21 | done | News: BBC RSS → Cloudflare proxy (rocketclock-news) headline; `news` mode + `A_NEWS` action. Breaking-news trigger (diff headline) still TODO under B20 deferred. |
 | B22 | open | Vertical (top-down) text scrolling — RocketFont needs a y-offset draw; add scroll-direction config. Most useful with multi-row panels. |
 | B23 | open | Multi-location/timezone: per-event location + TZ (e.g. London time + London weather) so events can show other zones. Design the event/action model to carry an optional location. |
 | B8 | done | NTP `clock` mode + `alarm` (HH:MM, fires buzzer). Verified: time syncs, API works. |
