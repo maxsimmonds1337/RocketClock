@@ -198,6 +198,7 @@ void applyLayout() {
 
 // --- clock / alarm / weather ---
 char clockStr[8]    = "--:--";
+char clockShown[8]  = "";        // last statically-drawn clock (force redraw on change)
 char weatherStr[48] = "WEATHER...";
 unsigned long lastWeather = 0;
 int  lastAlarmMin = -1;
@@ -652,7 +653,7 @@ void handleMode() {
   if (m == "text") cfg.mode = MODE_TEXT;
   else if (m == "timer") { cfg.mode = MODE_TIMER; startTimer(); }
   else if (m == "temp") cfg.mode = MODE_TEMP;
-  else if (m == "clock") cfg.mode = MODE_CLOCK;
+  else if (m == "clock") { cfg.mode = MODE_CLOCK; clockShown[0] = 0; }
   else if (m == "weather") { cfg.mode = MODE_WEATHER; lastWeather = 0; }
   else if (m == "launch")  { cfg.mode = MODE_LAUNCH; lastLaunchFetch = 0; }
   else if (m == "mars")    { cfg.mode = MODE_MARS; lastMarsBuild = 0; }
@@ -988,10 +989,14 @@ void loop() {
       }
       scrollText(tempStr);
       break;
-    case MODE_CLOCK:
+    case MODE_CLOCK: {
       updateClockStr();
-      scrollText(clockStr);
+      // Fits across the display -> show it static & centred; else scroll.
+      if (RocketFont::textWidthGap(clockStr, 0) <= matrix.width()) {
+        if (strcmp(clockShown, clockStr)) { strcpy(clockShown, clockStr); RocketFont::drawCentered(matrix, clockStr); }
+      } else scrollText(clockStr);
       break;
+    }
     case MODE_WEATHER:
       if (lastWeather == 0 || millis() - lastWeather > 15UL * 60 * 1000) {
         lastWeather = millis();

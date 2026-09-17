@@ -99,4 +99,27 @@ inline void drawTextVertical(RocketMatrix &m, const char *s, int yOffset) {
   }
 }
 
+// Width of a string laid out with a specific inter-glyph gap.
+inline int textWidthGap(const char *s, int gap) {
+  int x = 0;
+  for (const char *p = s; *p; p++) x += glyphWidth(indexOf(*p)) + gap;
+  return x > 0 ? x - gap : 0;
+}
+
+// Draw a short string STATICALLY, centred both axes (no scrolling). Tightens
+// the inter-glyph gap (1 -> 0) if needed so it fits the canvas width, e.g. so
+// "HH:MM" fits across a 4-panel-wide display. Good for clocks / short readouts.
+inline void drawCentered(RocketMatrix &m, const char *s) {
+  int gap = 1, tw = textWidthGap(s, gap);
+  if (tw > m.width()) { gap = 0; tw = textWidthGap(s, gap); }
+  m.clear();
+  int x = (m.width() - tw) / 2;          // may be <0 if still too wide; clips
+  int y = (m.height() - 8) / 2;
+  for (const char *p = s; *p; p++) {
+    int g = indexOf(*p), w = glyphWidth(g);
+    drawGlyphAt(m, g, x, y);
+    x += w + gap;
+  }
+}
+
 }  // namespace RocketFont
