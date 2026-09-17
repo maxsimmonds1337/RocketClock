@@ -84,6 +84,7 @@ struct Config {
   uint8_t  timerSound = 0;       // 0=siren 1=hedwig 2=close_encounters
   uint8_t  fillOrder = 0;        // 0=rows 1=cols 2=snake-rows 3=snake-cols 4=panel
   bool     flip180 = false;      // rotate whole display 180 (USB-down mounting)
+  uint8_t  scrollDir = 0;        // 0=horiz top, 1=horiz vertically-centred, 2=vertical top-down
 } cfg;
 
 // ---- hardware --------------------------------------------------------------
@@ -127,6 +128,7 @@ void saveConfig() {
   d["cols"] = cfg.cols; d["rows"] = cfg.rows; d["serp"] = cfg.serpentine; d["flip"] = cfg.flip;
   d["alarmH"] = cfg.alarmH; d["alarmM"] = cfg.alarmM; d["alarmOn"] = cfg.alarmOn; d["city"] = cfg.city;
   d["tRev"] = cfg.timerReverse; d["tSnd"] = cfg.timerSound; d["fill"] = cfg.fillOrder; d["flip180"] = cfg.flip180;
+  d["sdir"] = cfg.scrollDir;
   File f = LittleFS.open(CFG_PATH, "w");
   if (!f) { logln("CFG save FAILED"); return; }
   serializeJson(d, f); f.close();
@@ -153,6 +155,7 @@ void loadConfig() {
   cfg.timerSound = d["tSnd"] | cfg.timerSound;
   cfg.fillOrder = d["fill"] | cfg.fillOrder;
   cfg.flip180 = d["flip180"] | cfg.flip180;
+  cfg.scrollDir = d["sdir"] | cfg.scrollDir;
   if (d["events"].is<JsonArray>()) eventsFromJson(d["events"].as<JsonArray>());
   logln("CFG loaded");
 }
@@ -172,9 +175,18 @@ long scrollCycle = 0;   // bumps each time the scroll wraps (for cycle-based act
 void scrollText(const char *s) {
   if (millis() - lastScroll < cfg.scrollMs) return;
   lastScroll = millis();
-  RocketFont::drawText(matrix, s, scrollX);
-  if (--scrollX < -RocketFont::textWidth(s)) { scrollX = matrix.width(); scrollCycle++; }
+  if (cfg.scrollDir == 2) {                 // vertical: line slides top -> bottom
+    RocketFont::drawTextVertical(matrix, s, scrollX);
+    if (++scrollX > matrix.height()) { scrollX = -8; scrollCycle++; }
+  } else {                                  // horizontal (optionally v-centred)
+    int y = cfg.scrollDir == 1 ? RocketFont::centreY(matrix) : 0;
+    RocketFont::drawText(matrix, s, scrollX, y);
+    if (--scrollX < -RocketFont::textWidth(s)) { scrollX = matrix.width(); scrollCycle++; }
+  }
 }
+
+// Reset the scroll position for the current direction (call on mode/dir change).
+void resetScroll() { scrollX = (cfg.scrollDir == 2) ? -8 : matrix.width(); }
 
 // Apply the panel layout to the driver (must re-init the chain).
 void applyLayout() {
@@ -621,13 +633,13 @@ void sendStatus() {
                 : cfg.mode == MODE_WEATHER ? "weather" : cfg.mode == MODE_LAUNCH ? "launch"
                 : cfg.mode == MODE_MARS ? "mars" : cfg.mode == MODE_AQI ? "air"
                 : cfg.mode == MODE_NEWS ? "news" : "off";
-  char buf[680];
+  char buf[700];
   snprintf(buf, sizeof(buf),
-    "{\"mode\":\"%s\",\"brightness\":%u,\"scrollMs\":%u,\"text\":\"%s\",\"timerSecs\":%lu,"
+    "{\"mode\":\"%s\",\"brightness\":%u,\"scrollMs\":%u,\"scrollDir\":%u,\"text\":\"%s\",\"timerSecs\":%lu,"
     "\"cols\":%u,\"rows\":%u,\"serpentine\":%s,\"flip\":%s,\"flip180\":%s,"
     "\"tRev\":%s,\"tSnd\":%u,\"fill\":%u,"
     "\"alarm\":\"%02u:%02u\",\"alarmOn\":%s,\"city\":\"%s\",\"time\":\"%s\",\"launch\":\"%s\"}",
-    m, cfg.brightness, cfg.scrollMs, cfg.text, (unsigned long)cfg.timerSecs,
+    m, cfg.brightness, cfg.scrollMs, cfg.scrollDir, cfg.text, (unsigned long)cfg.timerSecs,
     cfg.cols, cfg.rows, cfg.serpentine ? "true" : "false", cfg.flip ? "true" : "false",
     cfg.flip180 ? "true" : "false", cfg.timerReverse ? "true" : "false", cfg.timerSound, cfg.fillOrder,
     cfg.alarmH, cfg.alarmM, cfg.alarmOn ? "true" : "false", cfg.city,
@@ -695,6 +707,10 @@ void handleConfig() {
   }
   if (server.hasArg("scrollMs"))
     cfg.scrollMs = constrain(server.arg("scrollMs").toInt(), 5, 1000);
+  if (server.hasArg("scrollDir")) {
+    cfg.scrollDir = constrain(server.arg("scrollDir").toInt(), 0, 2);
+    resetScroll();
+  }
   markDirty();
   sendStatus();
 }
@@ -812,7 +828,8 @@ label{display:block;margin:.5rem 0 .2rem;font-size:.72rem;color:var(--dim);lette
   <label>END SOUND</label><select id="tsnd"><option value="0">Siren</option><option value="1">Hedwig</option><option value="2">Close Encounters</option></select></div></div>
  <div class="panel"><span class="lbl">DISPLAY</span><div class="body">
   <label>BRIGHTNESS <span id="bv">5</span></label><input id="br" type="range" min="0" max="15" value="5" oninput="bv.textContent=this.value" onchange="cfg()">
-  <label>SCROLL SPEED <span id="sv">60</span> ms</label><input id="sp" type="range" min="5" max="300" value="60" oninput="sv.textContent=this.value" onchange="cfg()"></div></div>
+  <label>SCROLL SPEED <span id="sv">60</span> ms</label><input id="sp" type="range" min="5" max="300" value="60" oninput="sv.textContent=this.value" onchange="cfg()">
+  <label>SCROLL DIRECTION</label><select id="sdir" onchange="cfg()"><option value="0">Horizontal (top)</option><option value="1">Horizontal (centred)</option><option value="2">Vertical (top-down)</option></select></div></div>
  <div class="panel"><span class="lbl">ALARM</span><div class="body row">
   <input id="atime" type="time" value="07:30"><label style="margin:0"><input type="checkbox" id="aon"> ARM</label>
   <button class="act" onclick="setAlarm()">SET</button></div></div>
@@ -862,6 +879,7 @@ const show=s=>{setConn(true);
   if(s.alarm){atime.value=s.alarm;aon.checked=s.alarmOn;}if(s.city!==undefined)city.value=s.city;
   if(s.brightness!==undefined){br.value=s.brightness;bv.textContent=s.brightness;}
   if(s.scrollMs){sp.value=s.scrollMs;sv.textContent=s.scrollMs;}
+  if(s.scrollDir!==undefined)sdir.value=s.scrollDir;
   if(s.timerSecs)mins.value=(s.timerSecs/60);
   if(s.tRev!==undefined)tdir.value=s.tRev?1:0;if(s.fill!==undefined)tfill.value=s.fill;if(s.tSnd!==undefined)tsnd.value=s.tSnd;}};
 const req=(p,o,post)=>fetch(p+(o?'?'+new URLSearchParams(o):''),post?{method:'POST'}:{}).then(r=>r.json());
@@ -872,7 +890,7 @@ const setTimer=()=>q('/api/timer',{seconds:Math.max(1,Math.round(mins.value*60))
 const setPanels=()=>q('/api/panels',{cols:cols.value,rows:rows.value,serpentine:snake.checked?1:0,flip:flip.checked?1:0,flip180:rot180.checked?1:0});
 const setAlarm=()=>q('/api/alarm',{time:atime.value,enabled:aon.checked?1:0});
 const setWeather=()=>q('/api/weather',{city:city.value});
-const cfg=()=>q('/api/config',{brightness:br.value,scrollMs:sp.value});
+const cfg=()=>q('/api/config',{brightness:br.value,scrollMs:sp.value,scrollDir:sdir.value});
 const buzz=t=>fetch('/api/buzzer?tune='+t,{method:'POST'}).then(()=>setConn(true)).catch(()=>setConn(false));
 function poll(){req('/api/status').then(show).catch(()=>setConn(false));}
 setInterval(poll,2000);poll();

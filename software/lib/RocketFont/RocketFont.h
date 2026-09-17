@@ -37,14 +37,17 @@ inline int glyphWidth(int g) {
 // Draw glyph `g` with its left edge at column `xOffset` (may be off-screen).
 // Columns landing anywhere on the canvas (0..width-1) are drawn, so glyphs
 // span multiple chained panels. Pixels are OR-ed via setPixel.
-inline void drawGlyphAt(RocketMatrix &m, int g, int xOffset) {
+inline void drawGlyphAt(RocketMatrix &m, int g, int xOffset, int yOffset = 0) {
   if (g < 0 || g >= FONT_COUNT) return;
-  int w = m.width();
+  int w = m.width(), h = m.height();
   for (int col = 0; col < CELL; col++) {
     int dx = xOffset + col;
     if (dx < 0 || dx >= w) continue;
-    for (int row = 0; row < 8; row++)
-      if (FONT_GLYPHS[g][col * 8 + row]) m.setPixel(dx, row, true);
+    for (int row = 0; row < 8; row++) {
+      int dy = row + yOffset;
+      if (dy < 0 || dy >= h) continue;
+      if (FONT_GLYPHS[g][col * 8 + row]) m.setPixel(dx, dy, true);
+    }
   }
 }
 
@@ -61,16 +64,37 @@ inline int textWidth(const char *s) {
   return x > 0 ? x - GAP : 0;         // no trailing gap
 }
 
-// Render a string with its left edge at `xOffset` (clears first). Scroll by
-// calling each frame with a decreasing xOffset from +8 down to -textWidth().
-inline void drawText(RocketMatrix &m, const char *s, int xOffset) {
+// Render a string with its left edge at `xOffset`, top edge at `yOffset`
+// (clears first). Horizontal scroll: decrease xOffset from +width to -textWidth.
+inline void drawText(RocketMatrix &m, const char *s, int xOffset, int yOffset = 0) {
   m.clear();
   int x = xOffset, canvas = m.width();
   for (const char *p = s; *p; p++) {
     int g = indexOf(*p);
     int w = glyphWidth(g);
     if (x >= canvas) break;           // rest is off the right edge of the canvas
-    if (x + w > 0) drawGlyphAt(m, g, x);
+    if (x + w > 0) drawGlyphAt(m, g, x, yOffset);
+    x += w + GAP;
+  }
+}
+
+// Y offset that vertically centres an 8px-tall glyph row on the canvas
+// (e.g. 4 on a 16-tall 2-row display, 0 on a single row).
+inline int centreY(RocketMatrix &m) { return (m.height() - 8) / 2; }
+
+// Vertical (top-down) scroll: text is laid out horizontally, left-aligned (or
+// centred if it fits), and the whole line slides down as yOffset increases from
+// -8 (above the top) to height (below the bottom).
+inline void drawTextVertical(RocketMatrix &m, const char *s, int yOffset) {
+  int tw = textWidth(s);
+  int x = tw < m.width() ? (m.width() - tw) / 2 : 0;   // centre if it fits
+  m.clear();
+  int canvas = m.width();
+  for (const char *p = s; *p; p++) {
+    int g = indexOf(*p);
+    int w = glyphWidth(g);
+    if (x >= canvas) break;
+    if (x + w > 0) drawGlyphAt(m, g, x, yOffset);
     x += w + GAP;
   }
 }
